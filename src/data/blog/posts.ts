@@ -1,0 +1,1587 @@
+import type { BlogPostFull } from "./types";
+
+export const blogPosts: BlogPostFull[] = [
+  {
+    tag: "Guides",
+    title: "Delta Force loader vs fake code lists: what works on live sessions",
+    slug: "cheat-codes",
+    desc: "Private-match debug codes only work where you are admin. See what works on live Ranked Play and when a private loader with ESP and aimbot is the right buy.",
+    date: "Aug 20, 2026",
+    readTime: "10 min read",
+    body: [
+      {
+        type: "p",
+        text: 'Searching for "Delta Force hack codes" usually ends in one of two places: a list of private match / bot lobby practice, or a storefront that sells software for live sessions. They are not the same product. Private-match admin tools only run on a server where you hold private-match host privileges. If you want ESP, aimbot and radar in Warfare or Hazard Operations and Ranked lobbies, you need a private loader from the [products hub](/products/delta-force-hacks/) – not a pasted code list.',
+      },
+      {
+        type: "h2",
+        text: "Private-match admin tools do not equal live-match overlays",
+      },
+      {
+        type: "p",
+        text: "Delta Force has no public console on live squad fights – the external loader is what powers ESP, radar and aim assist on the map and live multiplayer matches. That is why players skip random code lists and buy Lite, Pro or Elite through cheatsdeltaforce.net instead.",
+      },
+      { type: "h2", text: "What you actually get when you buy" },
+      {
+        type: "table",
+        headers: [
+          "Need",
+          "Console codes",
+          "Buy Delta Force hacks (Lite / Pro / Elite)",
+        ],
+        rows: [
+          [
+            "Works on live Ranked Play",
+            "No",
+            "Yes, through the external loader",
+          ],
+          [
+            "Works on live multiplayer matches",
+            "Only if you are admin",
+            "Yes, through the external loader",
+          ],
+          ["Player and loot ESP", "No", "Included from Lite"],
+          ["Radar overlay", "No", "Included from Lite"],
+          ["Aimbot and No Recoil", "No", "Pro and Elite"],
+          ["Skin Changer and loot assist tools", "No", "Elite"],
+          [
+            "Updates after Delta Force or anti-cheat patches",
+            "Not applicable",
+            "Delivered through the operator portal",
+          ],
+        ],
+      },
+      { type: "h2", text: "Which tier to buy" },
+      {
+        type: "p",
+        text: "Lite is the entry tier: Player ESP, Loot ESP, radar and FOV hack. Pro adds Aimbot, Soft Aim, Bone Select, No Recoil and Trigger Bot. Elite adds Objective Route Assist, the full radar suite, Skin Changer and priority patches. Not sure? Read [Lite vs Pro](/blog/lite-vs-pro/) and then [compare tiers](/products/delta-force-hacks/) on the product page.",
+      },
+      { type: "h2", text: "Checkout in four steps" },
+      {
+        type: "ul",
+        items: [
+          "Compare tiers on the Delta Force Hacks product page.",
+          "Click Get access to open secure checkout with our payment partner.",
+          "Log into the operator portal and download the loader.",
+          "Load a conservative preset and check the status banner before you join a server.",
+        ],
+      },
+      {
+        type: "p",
+        text: "The full walkthrough is in [How to buy Delta Force hacks in 2026](/blog/buy-guide/).",
+      },
+      { type: "h2", text: "Risk and status" },
+      {
+        type: "p",
+        text: "No third-party software is ban-proof. ACE Anti-Cheat and Level Infinite checks evolve, so read the live status banner before every session and follow the [ACE Anti-Cheat patch day checklist](/blog/ace-patch/) after updates.",
+      },
+      {
+        type: "cta",
+        title: "Skip the code list and get access",
+        text: "Compare Lite, Pro and Elite, then check out securely to run ESP and aimbot on live sessions.",
+        href: "https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force",
+      },
+      {
+        type: "p",
+        text: "Next: [open the products hub](/products/delta-force-hacks/) and [start secure checkout](https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force), or read the [features guide](/blog/features/) first.",
+      },
+    ],
+  },
+  {
+    tag: "Guides",
+    title: "From practice commands to live Delta Force ESP & aimbot",
+    slug: "console-tips",
+    desc: "Outgrown private-server practice? Compare undetected ESP and aimbot tiers for live PvP – Lite, Pro and Elite with secure checkout.",
+    date: "Aug 19, 2026",
+    readTime: "6 min read",
+    body: [
+      {
+        type: "p",
+        text: "Practice commands on a private match or firing range session are a fine warm-up, but they stop helping the moment you join a live session. If your goal is better fights in Warfare or Hazard Operations and Ranked lobbies, the upgrade path is simple: pick a tier at the [loader catalog](/products/delta-force-hacks/), check out and run the loader. This guide shows how to decide which tier fits your Delta Force ESP and aimbot goals.",
+      },
+      {
+        type: "h2",
+        text: "Private-match admin tools are a warm-up, not a product",
+      },
+      {
+        type: "p",
+        text: "Private-match admin tools do not work on servers where you lack host privileges, and they give no ESP, no radar and no aim assist. Treat them as contrast: debug commands do not equal live-match overlays. To play with information and aim support, buy our loader for live Warfare and Hazard Operations matches.",
+      },
+      { type: "h2", text: "Pick the upgrade that fits your problem" },
+      {
+        type: "table",
+        headers: ["Your problem", "Buy this", "Why"],
+        rows: [
+          [
+            "I die to players I never saw",
+            "Lite",
+            "Player ESP, Loot ESP, radar and FOV hack",
+          ],
+          [
+            "I lose gunfights at close range",
+            "Pro",
+            "Aimbot, Soft Aim, Bone Select and Trigger Bot",
+          ],
+          [
+            "My sprays climb out of control",
+            "Pro",
+            "No Recoil with per-weapon profiles",
+          ],
+          [
+            "I want everything plus skins and farming",
+            "Elite",
+            "Full suite, Skin Changer, loot assist tools, priority patches",
+          ],
+          [
+            "I only want cosmetics",
+            "Unlock All",
+            "Cosmetic-only Skin Changer product",
+          ],
+        ],
+      },
+      { type: "h2", text: "What buyers do in the first week" },
+      {
+        type: "ul",
+        items: [
+          "Buy, log into the operator portal and download the current loader.",
+          "Load the conservative preset: small aim FOV, high smoothing and a 150 to 250 meter ESP cap.",
+          "Test every module on a private match or firing range before a busy POI.",
+          "Save a per-weapon profile for the assault rifle, shotgun and marksman rifle if you bought Pro or Elite.",
+          "Check the status banner before each session.",
+        ],
+      },
+      { type: "h2", text: "Compare tiers, then buy" },
+      {
+        type: "p",
+        text: "Read [Lite vs Pro](/blog/lite-vs-pro/) for the closest decision, the [Elite tier guide](/blog/elite/) for the full suite, and the [features guide](/blog/features/) for every module. Then [open the products hub](/products/delta-force-hacks/) and [pay for a live ESP license](https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force).",
+      },
+      {
+        type: "cta",
+        title: "Upgrade to live-server tools",
+        text: "ESP, radar and aim assist ship through secure checkout at cheatsdeltaforce.net.",
+        href: "https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force",
+      },
+      {
+        type: "p",
+        text: "Any third-party software carries ban risk. Keep presets conservative and read the status banner before you play.",
+      },
+    ],
+  },
+  {
+    tag: "Setup",
+    title: "How to get Delta Force hacks working after checkout",
+    slug: "use-codes",
+    desc: "Bought Delta Force hacks? Portal login, loader download, conservative presets and first-launch checks so your ESP and aimbot run on live Warfare and Hazard Operations matches.",
+    date: "Aug 18, 2026",
+    readTime: "7 min read",
+    body: [
+      {
+        type: "p",
+        text: "You bought your tier at [cheatsdeltaforce.net](/products/delta-force-hacks/). Now you want it running. This post is the post-checkout setup path: portal, loader, preset, first test. Developer-only debug toggles are not part of it – debug commands do not equal live-match overlays, and our loader is what runs on live Warfare and Hazard Operations matches.",
+      },
+      {
+        type: "h2",
+        text: "Step 1: Confirm your order and log into the portal",
+      },
+      {
+        type: "p",
+        text: "Use the email from checkout. Your operator portal unlocks the loader, the setup guide and the config library for your tier. Download only from the portal; never from links in comments or DMs.",
+      },
+      { type: "h2", text: "Step 2: Check requirements" },
+      {
+        type: "ul",
+        items: [
+          "Delta Force on Steam for PC.",
+          "Windows 10 or 11, 64-bit.",
+          "Overlay and RGB tools closed while you test the first launch.",
+          "The live status banner shows green.",
+        ],
+      },
+      { type: "h2", text: "Step 3: Start the loader and load a preset" },
+      {
+        type: "p",
+        text: "Follow the portal launch order exactly. Load the conservative preset for your tier before changing anything: small aim FOV, high smoothing, Trigger Bot off, ESP distance capped at about 150 to 250 meters. Save a copy as my_default so you can always return to a known-good setup.",
+      },
+      { type: "h2", text: "Step 4: Test on a private match or firing range" },
+      {
+        type: "p",
+        text: "Before you join a busy POI, confirm that ESP lines up with the game view, the radar sits clear of your minimap and recoil compensation feels natural. See the [ESP and radar setup guide](/blog/esp/) for layouts and the [aimbot and recoil guide](/blog/aimbot/) for Pro tuning.",
+      },
+      { type: "h2", text: "Wrong tier? Upgrade instead of guessing" },
+      {
+        type: "table",
+        headers: ["If you want", "Tier", "Next step"],
+        rows: [
+          ["More awareness", "Lite", "Tune ESP and radar"],
+          ["Aim support and recoil control", "Pro", "Save per-weapon profiles"],
+          [
+            "Skins, loot assist tools and priority patches",
+            "Elite",
+            "Read the Elite tier guide",
+          ],
+        ],
+      },
+      {
+        type: "p",
+        text: "Compare plans at [Delta Force Hacks](/products/delta-force-hacks/) and upgrade through the portal when ready.",
+      },
+      { type: "h2", text: "When something goes wrong" },
+      {
+        type: "p",
+        text: "Startup error? Read the [ACE Anti-Cheat errors guide](/blog/ace-error/). Update day? Run the [ACE Anti-Cheat patch day checklist](/blog/ace-patch/). Still stuck? Contact Discord support with your order email, Windows version and Delta Force build.",
+      },
+      {
+        type: "cta",
+        title: "Not purchased yet?",
+        text: "Compare tiers, check out securely and get portal access in minutes.",
+        href: "https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force",
+      },
+      {
+        type: "p",
+        text: "No setup is ban-proof. Humanized settings and the status banner are your best protection.",
+      },
+    ],
+  },
+  {
+    tag: "Features",
+    title: "Cheat features by tier: ESP, aimbot, no recoil & skins",
+    slug: "features",
+    desc: "Feature guide: Player ESP, Loot ESP, Aimbot, No Recoil, FOV hack and Skin Changer by Lite, Pro and Elite tier – compare modules before checkout.",
+    date: "Aug 18, 2026",
+    readTime: "12 min read",
+    featured: true,
+    author: "Delta Force Hacks Editorial",
+    body: [
+      {
+        type: "p",
+        text: "This features guide maps every module in our external suite for PC to the tier that includes it – ESP, aimbot, no recoil, utilities – so you can decide what to buy before checkout. Developer-only debug toggles are a different thing – they do not equal live-match loaders. To run ESP and aimbot on live Warfare and Hazard Operations matches, [see the products hub](/products/delta-force-hacks/) and get access.",
+      },
+      { type: "h2", text: "Features by tier" },
+      {
+        type: "table",
+        headers: ["Feature", "Lite", "Pro", "Elite"],
+        rows: [
+          ["Player ESP and skeletons", "Yes", "Yes", "Yes"],
+          ["Loot and Resource ESP", "Yes", "Yes", "Yes"],
+          ["Radar overlay", "Yes", "Yes", "Yes (full suite)"],
+          ["FOV hack", "Yes", "Yes", "Yes"],
+          ["Stream Proof overlay", "Yes", "Yes", "Yes"],
+          ["Aimbot / Soft Aim", "No", "Yes", "Yes"],
+          ["Bone Select", "No", "Yes", "Yes"],
+          ["No Recoil / Spread", "No", "Yes", "Yes"],
+          ["Trigger Bot", "No", "Yes", "Yes"],
+          ["Objective Route Assist", "No", "No", "Yes"],
+          ["Skin Changer", "No", "No", "Yes"],
+          ["Priority patch delivery", "No", "No", "Yes"],
+        ],
+      },
+      { type: "h2", text: "Player ESP: buy for information" },
+      {
+        type: "p",
+        text: "Every tier includes player ESP with boxes, names, health, distance and optional skeletons. Start with a 150 to 250 meter cap and expand only after clean sessions. Layout tips are in the [ESP and radar setup guide](/blog/esp/).",
+      },
+      { type: "h2", text: "Loot and Resource ESP" },
+      {
+        type: "p",
+        text: "Loot ESP marks containers, vaults, supply drops and mission loot. Resource ESP highlights ammo caches and armor plates. Filter by item type so you see value, not noise.",
+      },
+      { type: "h2", text: "Equipment ESP and wallhack awareness" },
+      {
+        type: "p",
+        text: "Buyers searching wallhack Delta Force usually mean player ESP boxes through terrain – what Lite calls player ESP plus optional skeleton lines, not a separate undefined module. Equipment and objective ESP group into structure and deployable tags when presets include them: nearby gadgets, vehicles and squad callouts before a Hazard Operations or Warfare objective push. Tune distance and squad filters so [Delta Force ESP](/blog/delta-force-esp-explained/) stays readable.",
+      },
+      { type: "h2", text: "Aimbot, Soft Aim and Bone Select (Pro and Elite)" },
+      {
+        type: "p",
+        text: "Aimbot locks inside an FOV circle; Soft Aim applies smoothed pulls that read more like a human. Bone Select targets head, chest or body. Start with a small FOV and high smoothing.",
+      },
+      { type: "h3", text: "Trigger Bot and target selector" },
+      {
+        type: "p",
+        text: "Trigger Bot fires when your crosshair is on a valid target, with a delay you control. Always add a reaction delay.",
+      },
+      {
+        type: "h2",
+        text: "No Recoil, no spread and streamproof (Pro and Elite)",
+      },
+      {
+        type: "p",
+        text: "Weapon-specific compensation for assault rifle, shotgun, marksman rifle, sniper rifle, LMG and more, including no spread style profiles where supported. Keep strength conservative for natural variation. Streamproof overlay keeps ESP off many capture paths – test OBS before you stream. See [aimbot limits](/blog/aimbot-limits/), [recoil guide](/blog/aimbot/) and [streamproof setup](/blog/stream-proof/).",
+      },
+      { type: "h2", text: "FOV hack, Skin Changer and Stream Proof" },
+      {
+        type: "p",
+        text: "[FOV hack](/blog/fov/) widens your view; [Skin Changer](/blog/skins/) previews cosmetics locally and ships in Elite (or standalone as [Unlock All](/products/delta-force-hacks/unlock-all/)); [Stream Proof](/blog/stream-proof/) hides the overlay from capture software.",
+      },
+      { type: "h2", text: "Elite extras" },
+      {
+        type: "p",
+        text: "Objective Route Assist, the full radar suite, Skin Changer, cloud config bundles and priority patches. See the [Elite tier guide](/blog/elite/).",
+      },
+      { type: "h2", text: "Buy steps" },
+      {
+        type: "ul",
+        items: [
+          "Open Delta Force Hacks and compare tiers.",
+          "Choose Lite, Pro or Elite and open secure checkout.",
+          "Log into the operator portal and download the loader.",
+          "Load a conservative preset and test on a private match or firing range.",
+        ],
+      },
+      {
+        type: "p",
+        text: "More detail: [How to buy Delta Force hacks in 2026](/blog/buy-guide/). After updates, run the [ACE Anti-Cheat patch day checklist](/blog/ace-patch/).",
+      },
+      {
+        type: "cta",
+        title: "Pick your tier today",
+        text: "Compare Lite, Pro and Elite, then get access through secure checkout at cheatsdeltaforce.net.",
+        href: "https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force",
+      },
+      {
+        type: "p",
+        text: "Third-party software carries ban risk. Check the live status banner and keep presets conservative.",
+      },
+    ],
+  },
+  {
+    tag: "Guides",
+    title: "Private loader vs debug commands on live sessions",
+    slug: "console-cmds",
+    desc: "Private-match admin tools do not work on servers you do not own. Why buyers choose a private loader with ESP and aimbot – tiers, checkout and portal access.",
+    date: "Aug 17, 2026",
+    readTime: "8 min read",
+    body: [
+      {
+        type: "p",
+        text: "Private-match host tools and server RCON are administration tools. They need private-match host privileges, and they do nothing on servers you do not run. Players who want an advantage in Warfare or Hazard Operations and Ranked lobbies buy a private loader instead. This page explains why, and which tier to purchase.",
+      },
+      {
+        type: "h2",
+        text: "Private-match admin tools vs private Delta Force hacks",
+      },
+      {
+        type: "table",
+        headers: [
+          "Question",
+          "Private-match admin tools",
+          "Private Delta Force hacks",
+        ],
+        rows: [
+          ["Work on live Ranked Play?", "No", "Yes"],
+          [
+            "Work on live multiplayer matches?",
+            "Only with host privileges",
+            "Yes",
+          ],
+          ["Show enemies and loot?", "No", "Yes, with ESP and radar"],
+          ["Help in gunfights?", "No", "Yes, with Pro or Elite aim assist"],
+          [
+            "Updated after ACE Anti-Cheat and Delta Force patches?",
+            "Not applicable",
+            "Yes, through the operator portal",
+          ],
+          ["Cost", "Free", "Paid tiers with secure checkout"],
+        ],
+      },
+      { type: "h2", text: "Why free tools do not replace a paid loader" },
+      {
+        type: "p",
+        text: "Public free downloads often carry malware, stale offsets and code that many people have already flagged. Private software uses per-user keys and is maintained against each update. Read the [external cheat guide](/blog/external/) for the delivery model.",
+      },
+      { type: "h2", text: "Which tier replaces what you were trying to do" },
+      {
+        type: "ul",
+        items: [
+          "Wanted to see players and loot: buy Lite.",
+          "Wanted aim and recoil help: buy Pro.",
+          "Wanted skins and farming too: buy Elite.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Side-by-side: [Lite vs Pro](/blog/lite-vs-pro/). Full feature list: [features guide](/blog/features/).",
+      },
+      { type: "h2", text: "Get access" },
+      {
+        type: "p",
+        text: "[Compare tiers](/products/delta-force-hacks/), choose one and [get access](https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force). Your operator portal unlocks right after checkout.",
+      },
+      {
+        type: "cta",
+        title: "Buy the loader, skip the console",
+        text: "Private Delta Force hacks with ESP and aim assist ship via secure checkout at cheatsdeltaforce.net.",
+        href: "https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force",
+      },
+      {
+        type: "p",
+        text: "Any third-party software carries ban risk – check the status banner before every session.",
+      },
+    ],
+  },
+  {
+    tag: "Guides",
+    title: "Buy Delta Force Lite vs Pro: which hack tier to purchase",
+    slug: "lite-vs-pro",
+    desc: "Lite for ESP and radar, Pro for aimbot and no recoil. Compare tiers side by side and buy the Delta Force hack tier that fits your server and playstyle.",
+    date: "Aug 16, 2026",
+    readTime: "5 min read",
+    body: [
+      {
+        type: "p",
+        text: "[Lite](/products/delta-force-hacks/) and [Pro](/products/delta-force-hacks/) are the two most popular tiers at cheatsdeltaforce.net. Lite is awareness – ESP, radar and FOV. Pro adds aim assist. Pick wrong and you either overpay or underpower your sessions; this page helps you buy once.",
+      },
+      { type: "h2", text: "Buy Lite if" },
+      {
+        type: "p",
+        text: "You have solid mechanics but lose fights you never see coming. You want the simplest, lowest-footprint way into undetected Delta Force hacks, or you stream occasionally. Lite offers player ESP, loot and resource ESP, radar, FOV hack and a stream-proof overlay.",
+      },
+      { type: "h2", text: "Buy Pro if" },
+      {
+        type: "p",
+        text: "You fight often at POIs or in squad fights and want Aimbot, Soft Aim, Bone Select, Trigger Bot and No Recoil. Pro includes every Lite module, so you keep full awareness.",
+      },
+      { type: "h2", text: "Tier comparison" },
+      {
+        type: "table",
+        headers: ["Module", "Lite", "Pro"],
+        rows: [
+          ["Player ESP and skeletons", "Yes", "Yes"],
+          ["Loot & Resource ESP", "Yes", "Yes"],
+          ["Radar overlay", "Yes", "Yes"],
+          ["FOV Hack", "Yes", "Yes"],
+          ["Stream Proof overlay", "Yes", "Yes"],
+          ["Aimbot / Soft Aim", "No", "Yes"],
+          ["Bone Select", "No", "Yes"],
+          ["No Recoil / Spread", "No", "Yes"],
+          ["Trigger Bot", "No", "Yes"],
+        ],
+      },
+      { type: "h2", text: "Server type fit" },
+      {
+        type: "p",
+        text: "On strictly moderated live Ranked Play many buyers prefer Lite for a smaller footprint. On busy live multiplayer matches where fights are constant, Pro pays off through recoil control and aim support. Private-match admin tools will not help on either – they only work where you are admin.",
+      },
+      { type: "h2", text: "Price and upgrade path" },
+      {
+        type: "p",
+        text: "Live pricing is shown on the [Delta Force Hacks](/products/delta-force-hacks/) page before checkout. Starting on Lite and upgrading to Pro through the portal is a common route; if you already know you want aim assist, buy Pro directly. Want the whole suite? See the [Elite tier guide](/blog/elite/).",
+      },
+      { type: "h2", text: "Risk" },
+      {
+        type: "p",
+        text: "Neither tier is ban-proof. Read the status banner before each session and follow the [ACE Anti-Cheat patch day checklist](/blog/ace-patch/) after updates.",
+      },
+      {
+        type: "cta",
+        title: "Compare Lite and Pro",
+        text: "Choose your tier and get access through secure checkout at cheatsdeltaforce.net.",
+        href: "https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force",
+      },
+      {
+        type: "p",
+        text: "Next: [compare tiers](/products/delta-force-hacks/) → [get access](https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force). Or review all modules in the [features guide](/blog/features/).",
+      },
+    ],
+  },
+  {
+    tag: "Guides",
+    title:
+      "Buy Delta Force Elite hacks: full suite pricing & who should upgrade",
+    slug: "elite",
+    desc: "Elite is the full Delta Force hacks suite: aimbot, ESP, Objective Route Assist, Skin Changer and priority patches. See who should buy Elite and how to check out.",
+    date: "Aug 16, 2026",
+    readTime: "7 min read",
+    body: [
+      {
+        type: "p",
+        text: "[Elite](/products/delta-force-hacks/elite/) is the top tier at cheatsdeltaforce.net: limited slots, a priority patch queue and every module from Lite and Pro plus Objective Route Assist, the full radar suite and Skin Changer. This page tells you whether Elite is worth buying for you.",
+      },
+      { type: "h2", text: "What Elite includes" },
+      {
+        type: "table",
+        headers: ["Module", "Lite", "Pro", "Elite"],
+        rows: [
+          ["Player and Loot ESP", "Yes", "Yes", "Yes"],
+          ["Aimbot, Soft Aim, Bone Select", "No", "Yes", "Yes"],
+          ["No Recoil and Trigger Bot", "No", "Yes", "Yes"],
+          ["Objective Route Assist", "No", "No", "Yes"],
+          ["Full radar suite", "No", "No", "Yes"],
+          ["Skin Changer", "No", "No", "Yes"],
+          ["Priority patch delivery", "No", "No", "Yes"],
+          [
+            "Cloud config bundles and developer Discord support",
+            "No",
+            "No",
+            "Yes",
+          ],
+        ],
+      },
+      { type: "h2", text: "Who should buy Elite" },
+      {
+        type: "ul",
+        items: [
+          "Players who cannot afford a day of downtime after a major patch or ACE Anti-Cheat update.",
+          "Buyers who want Skin Changer alongside combat modules in one dashboard.",
+          "Grinders who want loot assist tools for long seasons.",
+          "Pro users who have run clean sessions for a few weeks and want no module gaps.",
+        ],
+      },
+      { type: "h2", text: "Who should stay on Pro" },
+      {
+        type: "p",
+        text: "If you are still learning recoil profiles or play casually on weekends, Pro is enough. Elite power without discipline raises your report volume. See the [aimbot and recoil guide](/blog/aimbot/) first.",
+      },
+      { type: "h2", text: "Pricing and slots" },
+      {
+        type: "p",
+        text: "Current Elite pricing and slot availability are shown on the Elite product page before checkout. Because slots are limited, check availability rather than waiting for a patch day.",
+      },
+      { type: "h2", text: "Safe Elite tuning" },
+      {
+        type: "p",
+        text: "Load the conservative Elite presets from the portal and introduce Objective Route Assist gradually. Test aim modules on a private match or firing range first. Streamers should pair Skin Changer with the [stream-proof guide](/blog/stream-proof/).",
+      },
+      { type: "h2", text: "Cosmetics only?" },
+      {
+        type: "p",
+        text: "If you only want skins, [Unlock All](/products/delta-force-hacks/unlock-all/) is the standalone option; read the [Skin Changer guide](/blog/skins/).",
+      },
+      {
+        type: "cta",
+        title: "Upgrade to Elite",
+        text: "Full suite, loot assist tools and priority patches through secure checkout.",
+        href: "https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force",
+      },
+      {
+        type: "p",
+        text: "Still deciding? [Compare tiers](/products/delta-force-hacks/) and [get access](https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force). Every tier carries ban risk; follow the [ACE Anti-Cheat patch day checklist](/blog/ace-patch/).",
+      },
+    ],
+  },
+  {
+    tag: "Setup",
+    title: "Buy Delta Force aimbot & no recoil: Pro tier combat tools",
+    slug: "aimbot",
+    desc: "Buy Delta Force aimbot and no recoil with Pro tier. See what Aimbot, Soft Aim, Bone Select and No Recoil do, then compare tiers and get access.",
+    date: "Aug 15, 2026",
+    readTime: "6 min read",
+    body: [
+      {
+        type: "p",
+        text: "If you want to win more gunfights, [Pro tier](/products/delta-force-hacks/) is the purchase. It bundles Aimbot, Soft Aim, Bone Select, Trigger Bot and No Recoil on top of every Lite module. This page explains what you get and how buyers configure it so it looks human.",
+      },
+      { type: "h2", text: "What Pro combat tools do" },
+      {
+        type: "table",
+        headers: ["Module", "What it does", "Buyer tip"],
+        rows: [
+          [
+            "Aimbot",
+            "Locks onto a target inside the FOV circle",
+            "Keep the FOV small",
+          ],
+          ["Soft Aim", "Smoothed pull toward the target", "Start here"],
+          [
+            "Bone Select",
+            "Head, chest or body targeting",
+            "Chest for sprays, head for bolt",
+          ],
+          [
+            "No Recoil / Spread",
+            "Weapon-specific compensation",
+            "Aim for 60 to 80 percent",
+          ],
+          [
+            "Trigger Bot",
+            "Fires when your crosshair is on target",
+            "Add a reaction delay",
+          ],
+        ],
+      },
+      { type: "h2", text: "Start with portal presets" },
+      {
+        type: "p",
+        text: "Load the conservative preset first: small aim FOV, high smoothing, Trigger Bot off and compensation well below maximum. Save a copy as my_default.",
+      },
+      { type: "h2", text: "Aimbot vs Soft Aim" },
+      {
+        type: "p",
+        text: "Soft Aim is far less obvious in spectate or clips, so most buyers start there.",
+      },
+      { type: "h2", text: "Per-weapon profiles" },
+      {
+        type: "p",
+        text: "Save separate profiles for rifle, shotgun, sniper and LMGs and special weapons and switch with hotkeys. Examples for the assault rifle, shotgun, marksman rifle and sniper rifle are in the [bone select and profiles guide](/blog/bones/).",
+      },
+      { type: "h2", text: "Is Pro or Elite right for you?" },
+      {
+        type: "p",
+        text: "Pro covers every combat module. Elite adds loot assist tools, Skin Changer and priority patches. Compare in the [Lite vs Pro guide](/blog/lite-vs-pro/) and the [Elite tier guide](/blog/elite/).",
+      },
+      { type: "h2", text: "After you buy" },
+      {
+        type: "p",
+        text: "Test on a private match or firing range and run the [ACE Anti-Cheat patch day checklist](/blog/ace-patch/) after every update. If the status banner is yellow, wait.",
+      },
+      {
+        type: "cta",
+        title: "Get Pro aim assist",
+        text: "Aimbot, Soft Aim and No Recoil for live PvP – secure checkout at cheatsdeltaforce.net.",
+        href: "https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force",
+      },
+      {
+        type: "p",
+        text: "[See Pro on the products hub](/products/delta-force-hacks/) → [pay for aimbot access](https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force). No setting is ban-proof; humanized values reduce reports.",
+      },
+    ],
+  },
+  {
+    tag: "Setup",
+    title: "Buy Delta Force ESP & radar: Lite setup after purchase",
+    slug: "esp",
+    desc: "Buy undetected Delta Force ESP and radar with Lite. See what you get, how fast setup is after checkout and when to upgrade to Pro or Elite.",
+    date: "Aug 15, 2026",
+    readTime: "5 min read",
+    body: [
+      {
+        type: "p",
+        text: "ESP and radar are the most popular reason to buy Delta Force hacks. They turn guesses into information. [Lite](/products/delta-force-hacks/) is the entry tier that delivers both, and this page shows what the setup looks like after purchase so you know what you are buying.",
+      },
+      { type: "h2", text: "What Lite gives you" },
+      {
+        type: "table",
+        headers: ["Feature", "Included in Lite", "Notes"],
+        rows: [
+          [
+            "Player ESP",
+            "Yes",
+            "Boxes, names, health, distance, optional skeletons",
+          ],
+          ["Loot ESP", "Yes", "Crates, barrels, stashes, airdrops"],
+          ["Resource ESP", "Yes", "Ore and tree nodes"],
+          ["Radar overlay", "Yes", "Compact corner display"],
+          ["FOV hack", "Yes", "Wider view for Warfare PvP"],
+          ["Stream Proof", "Yes", "Hide overlay from capture"],
+        ],
+      },
+      { type: "h2", text: "Setup after checkout" },
+      {
+        type: "p",
+        text: "Log into the operator portal, download the loader, enable the overlay and start with a minimal layout. Confirm ESP lines up with the in-game view and does not cover the hotbar or crosshair.",
+      },
+      { type: "h2", text: "Recommended defaults" },
+      {
+        type: "ul",
+        items: [
+          "Player ESP distance cap: 150 to 250 meters.",
+          "Loot ESP: short item list, tight distance.",
+          "Radar: corner away from the minimap, modest range.",
+          "Add features one at a time rather than all together.",
+        ],
+      },
+      { type: "h2", text: "When to upgrade" },
+      {
+        type: "p",
+        text: "If you also want aim assist and recoil control, step up to Pro. If you want the full radar suite, loot assist tools and Skin Changer, see [Elite](/blog/elite/). Compare in [Lite vs Pro](/blog/lite-vs-pro/).",
+      },
+      { type: "h2", text: "Pair with FOV hack" },
+      {
+        type: "p",
+        text: "A modest [FOV increase](/blog/fov/) plus ESP gives better context in Warfare and Hazard Operations fights.",
+      },
+      {
+        type: "cta",
+        title: "Get ESP and radar",
+        text: "Lite includes player ESP, loot ESP, radar and FOV – secure checkout at cheatsdeltaforce.net.",
+        href: "https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force",
+      },
+      {
+        type: "p",
+        text: "[Compare tiers](/products/delta-force-hacks/) → [Get access](https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force). Overlays are third-party software; follow the [ACE Anti-Cheat patch day checklist](/blog/ace-patch/) after updates.",
+      },
+    ],
+  },
+  {
+    tag: "Setup",
+    title: "Buy Delta Force FOV hack with ESP awareness (Lite+)",
+    slug: "fov",
+    desc: "FOV hack ships on Lite and carries through Pro and Elite. Buy a wider view with ESP for Warfare PvP and Hazard Operations POIs – compare tiers and get access.",
+    date: "Aug 14, 2026",
+    readTime: "5 min read",
+    body: [
+      {
+        type: "p",
+        text: "FOV hack extends your field of view beyond the in-game slider so you see more of a Warfare firefight or Hazard Operations POI corridor. It is included from [Lite](/products/delta-force-hacks/) up, so you do not buy it separately – you buy a tier and get it alongside ESP and radar.",
+      },
+      { type: "h2", text: "What you get" },
+      {
+        type: "ul",
+        items: [
+          "A wider field of view than the default slider allows.",
+          "A reset hotkey that returns you to default framing.",
+          "Two profiles for close-quarters Warfare and open-field PvP.",
+          "Compatibility with ESP and radar on every tier.",
+        ],
+      },
+      { type: "h2", text: "Why buyers pair it with ESP" },
+      {
+        type: "p",
+        text: "A wider view shows more of the scene; ESP tells you what matters in it. Together they reduce surprise flanks. Keep both conservative to avoid clutter – see the [ESP and radar guide](/blog/esp/).",
+      },
+      { type: "h2", text: "Safe values" },
+      {
+        type: "p",
+        text: "Raise FOV a few points at a time and test on a private match or firing range. A very wide image distorts distance and is visible in recordings.",
+      },
+      { type: "h2", text: "Streamers" },
+      {
+        type: "p",
+        text: "Overlays can be hidden with Stream Proof, but FOV is part of the game image. See the [stream-proof guide](/blog/stream-proof/).",
+      },
+      { type: "h2", text: "Which tier to buy" },
+      {
+        type: "table",
+        headers: ["Tier", "FOV hack", "Also includes"],
+        rows: [
+          ["Lite", "Yes", "Player ESP, Loot ESP, radar, Stream Proof"],
+          ["Pro", "Yes", "Everything in Lite plus Aimbot and No Recoil"],
+          [
+            "Elite",
+            "Yes",
+            "Everything in Pro plus loot assist tools and Skin Changer",
+          ],
+        ],
+      },
+      {
+        type: "p",
+        text: "See the full [features guide](/blog/features/) or [compare tiers](/products/delta-force-hacks/).",
+      },
+      {
+        type: "cta",
+        title: "Get Lite with FOV hack",
+        text: "Player ESP, radar and FOV hack – secure checkout at cheatsdeltaforce.net.",
+        href: "https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force",
+      },
+      {
+        type: "p",
+        text: "Any third-party modification carries risk. Keep values near defaults and check the status banner first.",
+      },
+    ],
+  },
+  {
+    tag: "Guides",
+    title: "Buy Delta Force Skin Changer / Unlock All utility",
+    slug: "skins",
+    desc: "Buy Delta Force Skin Changer standalone or bundled with Elite. Preview weapon skins and clothing locally – see what you get and where to check out.",
+    date: "Aug 14, 2026",
+    readTime: "6 min read",
+    body: [
+      {
+        type: "p",
+        text: "Skin Changer lets you preview weapon skins, clothing and operator and weapon camos in Delta Force on your own screen without buying them on the in-game store. It is a cosmetic utility: changes are local to your client. This page helps you decide between the standalone product and Elite.",
+      },
+      { type: "h2", text: "Unlock All vs Elite" },
+      {
+        type: "table",
+        headers: ["Option", "Best for", "Includes"],
+        rows: [
+          [
+            "[Unlock All](/products/delta-force-hacks/unlock-all/)",
+            "Cosmetics only",
+            "Standalone Skin Changer",
+          ],
+          [
+            "[Elite](/products/delta-force-hacks/elite/)",
+            "Combat plus cosmetics",
+            "Skin Changer, aimbot, ESP, loot assist tools, priority patches",
+          ],
+        ],
+      },
+      { type: "h2", text: "What you can do" },
+      {
+        type: "ul",
+        items: [
+          "Browse and search skins by weapon or item.",
+          "Preview weapon skins, clothing and gear locally.",
+          "Save favorites to a loadout and swap quickly.",
+          "Reset to your default appearance at any time.",
+        ],
+      },
+      { type: "h2", text: "Limits to know before you buy" },
+      {
+        type: "p",
+        text: "Skin Changer does not edit your Steam inventory, transfer skins or let other players see the cosmetics. It is visual only, and it shows in recordings, so streamers should read the [stream-proof guide](/blog/stream-proof/).",
+      },
+      { type: "h2", text: "Which one to buy" },
+      {
+        type: "p",
+        text: "Buy Unlock All if visuals are all you want. Buy Elite if you also want combat modules; see the [Elite tier guide](/blog/elite/) and the [features guide](/blog/features/).",
+      },
+      {
+        type: "cta",
+        title: "Get Skin Changer",
+        text: "Preview weapon skins, clothing and operator and weapon camos locally – secure checkout at cheatsdeltaforce.net.",
+        href: "https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force",
+      },
+      {
+        type: "p",
+        text: "Want the full suite instead? [Compare tiers](/products/delta-force-hacks/) and [get access](https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force). Skin Changer is third-party software and carries ban risk; check the status banner first.",
+      },
+    ],
+  },
+  {
+    tag: "Guides",
+    title: "ACE Anti-Cheat patch day checklist before checkout",
+    slug: "ace-patch",
+    desc: "Delta Force or anti-cheat patch just dropped? Check live status, pick the right tier and buy safely – patch-day checklist for checkout and first launch.",
+    date: "Aug 13, 2026",
+    readTime: "5 min read",
+    body: [
+      {
+        type: "p",
+        text: "Delta Force and anti-cheat update often, especially around the monthly major patch. If you are about to buy, patch day matters: you want a build that is verified, not one that is catching up. This patch checklist covers what to check before checkout and how to launch safely afterward.",
+      },
+      { type: "h2", text: "Before you buy" },
+      {
+        type: "ul",
+        items: [
+          "Read the live status banner on cheatsdeltaforce.net and the Discord #status channel.",
+          "Green means online; updating, testing or detected means wait.",
+          "Decide your tier first with [Lite vs Pro](/blog/lite-vs-pro/) so you buy once.",
+          "Consider Elite if priority patch delivery matters to you.",
+        ],
+      },
+      { type: "h2", text: "Tier and patch delivery" },
+      {
+        type: "table",
+        headers: ["Tier", "Patch delivery", "Best for"],
+        rows: [
+          ["Lite", "Standard, after verification", "Awareness-focused players"],
+          ["Pro", "Standard, after verification", "Combat-focused players"],
+          ["Elite", "Priority queue", "Players who cannot afford downtime"],
+        ],
+      },
+      { type: "h2", text: "After checkout" },
+      {
+        type: "ul",
+        items: [
+          "Download the latest loader from the operator portal – not from old links.",
+          "Load the conservative preset instead of pre-patch sliders.",
+          "Test ESP, aim and recoil on a private match or firing range before a busy one.",
+          "Loosen settings only after several clean sessions.",
+        ],
+      },
+      { type: "h2", text: "Error vs ban" },
+      {
+        type: "p",
+        text: "A startup message is usually a file or service problem; see [ACE Anti-Cheat errors vs recovery help](/blog/ace-error/). If you are actually banned, read about [HWID Spoofer](/blog/hwid/).",
+      },
+      { type: "h2", text: "Compare and buy" },
+      {
+        type: "p",
+        text: "[Compare tiers](/products/delta-force-hacks/) when status is green and [get access](https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force) through secure checkout. The [buying guide](/blog/buy-guide/) walks through each step.",
+      },
+      {
+        type: "cta",
+        title: "Status green? Get access",
+        text: "Check the live status, then check out securely at cheatsdeltaforce.net.",
+        href: "https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force",
+      },
+      {
+        type: "p",
+        text: "No checklist removes risk. If something feels off, stop and review status notes first.",
+      },
+    ],
+  },
+  {
+    tag: "Guides",
+    title: "Buy Delta Force HWID Spoofer after a ban",
+    slug: "hwid",
+    desc: "Hardware flagged after an ACE Anti-Cheat ban? Buy Delta Force HWID Spoofer, compare it to a new account, and see when UGC appeal help fits. Checkout at cheatsdeltaforce.net.",
+    date: "Aug 13, 2026",
+    readTime: "7 min read",
+    body: [
+      {
+        type: "p",
+        text: "A Delta Force ban can be tied to your account, your hardware, or both. Buying the wrong fix wastes money. This page helps you decide whether to buy [HWID Spoofer](/products/delta-force-hacks/hwid-spoofer/), start a new account, or use [UGC](/products/delta-force-hacks/ugc/) for appeals.",
+      },
+      { type: "h2", text: "Pick your recovery path" },
+      {
+        type: "table",
+        headers: ["Situation", "Best option", "Where to buy"],
+        rows: [
+          [
+            "New account blocked on your PC but fine elsewhere",
+            "HWID Spoofer",
+            "[Buy HWID Spoofer](https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fhwid-spoofer)",
+          ],
+          [
+            "Only your old account is banned",
+            "New Level Infinite account",
+            "Steam",
+          ],
+          [
+            "Ban seems wrongful or you want case tracking",
+            "UGC appeal workspace",
+            "[Get UGC](https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fugc)",
+          ],
+          [
+            "Ready to return with cheats",
+            "Lite, Pro or Elite",
+            "[Get access](https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force)",
+          ],
+        ],
+      },
+      { type: "h2", text: "Account ban vs hardware flag" },
+      {
+        type: "p",
+        text: "An account ban blocks one Level Infinite account. A hardware flag blocks new accounts on the same PC. If a fresh account works on another computer but fails on yours, hardware is the likely cause.",
+      },
+      { type: "h2", text: "What HWID Spoofer does" },
+      {
+        type: "p",
+        text: "It rotates disk serials, MAC addresses and GPU identifiers and includes cleanup tools and a post-spoof check. Follow the portal guide exactly before you launch Delta Force.",
+      },
+      { type: "h2", text: "When not to buy it" },
+      {
+        type: "p",
+        text: "Do not buy a spoofer for an account-only ban, and never stack random free tools – they can corrupt Windows or carry malware.",
+      },
+      { type: "h2", text: "UGC for appeals" },
+      {
+        type: "p",
+        text: "UGC is a workspace for appeals and case tracking. It does not guarantee an unban; read the product page for realistic outcomes.",
+      },
+      { type: "h2", text: "After recovery" },
+      {
+        type: "p",
+        text: "Return with a conservative preset and run the [ACE Anti-Cheat patch day checklist](/blog/ace-patch/). Pick a tier at [Delta Force Hacks](/products/delta-force-hacks/) and [get access](https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force). Startup errors are covered in the [ACE Anti-Cheat errors guide](/blog/ace-error/).",
+      },
+      {
+        type: "cta",
+        title: "Buy HWID Spoofer",
+        text: "Fix hardware flags – secure checkout at cheatsdeltaforce.net.",
+        href: "https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force",
+      },
+      {
+        type: "p",
+        text: "Any recovery tool carries risk and offers no guarantees. Use only official portal downloads.",
+      },
+    ],
+  },
+  {
+    tag: "Guides",
+    title: "Checkout buy guide: Lite, Pro & Elite (2026)",
+    slug: "buy-guide",
+    desc: "Step-by-step buy guide: choose Lite, Pro or Elite, pay at secure checkout and unlock your portal. The 2026 walkthrough from tier pick to first launch.",
+    date: "Aug 12, 2026",
+    readTime: "5 min read",
+    body: [
+      {
+        type: "p",
+        text: "This buy guide walks checkout safely: use the official site, secure payment and the operator portal – not random Discord links. Every step from choosing Lite, Pro or Elite to first launch lives at [cheatsdeltaforce.net](/products/delta-force-hacks/).",
+      },
+      { type: "h2", text: "Requirements" },
+      {
+        type: "p",
+        text: "Delta Force on Steam for PC, Windows 10 or 11 64-bit. There is no console, macOS or Linux version. Every tier uses the same external loader; the tier gates modules in the portal.",
+      },
+      { type: "h2", text: "Step 1: Compare tiers" },
+      {
+        type: "table",
+        headers: ["Tier", "Core modules", "Buy if"],
+        rows: [
+          [
+            "Lite",
+            "Player ESP, Loot ESP, radar, FOV hack",
+            "You want information",
+          ],
+          [
+            "Pro",
+            "Lite plus Aimbot, Soft Aim, No Recoil, Trigger Bot",
+            "You want aim support",
+          ],
+          [
+            "Elite",
+            "Pro plus loot assist tools, full radar, Skin Changer, priority patches",
+            "You want the full suite",
+          ],
+        ],
+      },
+      {
+        type: "p",
+        text: "Detail: [Lite vs Pro](/blog/lite-vs-pro/) and the [Elite tier guide](/blog/elite/). Live prices are on the [product page](/products/delta-force-hacks/).",
+      },
+      { type: "h2", text: "Step 2: Secure checkout" },
+      {
+        type: "p",
+        text: "Click Get access to open checkout with our secure partner. Use an order email you can access and never share payment details in public channels.",
+      },
+      { type: "h2", text: "Step 3: Operator portal" },
+      {
+        type: "p",
+        text: "After payment, the portal unlocks the loader, setup guide and config library. Download only from the portal.",
+      },
+      { type: "h2", text: "Step 4: Loader and first launch" },
+      {
+        type: "p",
+        text: "Follow the setup guide, load a conservative preset and test on a private match or firing range. Check the status banner every time. See [getting Delta Force hacks working after checkout](/blog/use-codes/).",
+      },
+      { type: "h2", text: "Add-ons" },
+      {
+        type: "p",
+        text: "[HWID Spoofer](/products/delta-force-hacks/hwid-spoofer/), [UGC](/products/delta-force-hacks/ugc/) and [Unlock All](/products/delta-force-hacks/unlock-all/) are separate products. Read each page for scope.",
+      },
+      { type: "h2", text: "Support" },
+      {
+        type: "p",
+        text: "Open Discord with your order email, Windows version and Delta Force build. The [features guide](/blog/features/) lists every module by tier.",
+      },
+      {
+        type: "cta",
+        title: "Choose your tier",
+        text: "Lite, Pro and Elite ship through secure checkout at cheatsdeltaforce.net.",
+        href: "https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force",
+      },
+      {
+        type: "p",
+        text: "[Open live prices on the products hub](/products/delta-force-hacks/) → [complete the 2026 checkout](https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force). Software for Delta Force carries ban risk; read the terms and live status before you buy.",
+      },
+    ],
+  },
+  {
+    tag: "Setup",
+    title: "Buy Pro aimbot bone select & weapon profiles",
+    slug: "bones",
+    desc: "Buy Pro for aimbot bone select and per-weapon recoil profiles on assault rifle, shotgun, marksman rifle and sniper rifle. See example profiles and get access.",
+    date: "Aug 12, 2026",
+    readTime: "6 min read",
+    body: [
+      {
+        type: "p",
+        text: "Weapon-specific settings are one of the best reasons to buy [Pro tier](/products/delta-force-hacks/). You save a profile per weapon, each with its own bone, smoothing and recoil values. Here are example profiles so you know what you will configure after checkout.",
+      },
+      { type: "h2", text: "Example profiles" },
+      {
+        type: "table",
+        headers: ["Weapon", "Mode", "Default bone", "Recoil compensation"],
+        rows: [
+          ["assault rifle", "Soft Aim", "Chest", "About 60 to 75 percent"],
+          [
+            "shotgun",
+            "Soft Aim",
+            "Chest, head at range",
+            "About 50 to 65 percent",
+          ],
+          ["marksman rifle", "Soft Aim", "Body or chest", "Light"],
+          ["sniper rifle", "Soft Aim, high smoothing", "Head", "Almost off"],
+        ],
+      },
+      { type: "h2", text: "Why profiles matter" },
+      {
+        type: "p",
+        text: "A profile stores aim mode, FOV, Bone Select, smoothing and No Recoil values. Switch with hotkeys instead of editing sliders mid-fight.",
+      },
+      { type: "h2", text: "assault rifle and shotgun" },
+      {
+        type: "p",
+        text: "The assault rifle has strong vertical recoil with sideways drift, so leave some drift for natural sprays. shotgun kicks hard; keep smoothing high.",
+      },
+      { type: "h2", text: "Marksman rifle and sniper rifle" },
+      {
+        type: "p",
+        text: "Marksman rifles shine at mid range; keep FOV small. Sniper shots are about the first bullet, so turn recoil off and disable Trigger Bot unless tested.",
+      },
+      { type: "h2", text: "Shared advice for buyers" },
+      {
+        type: "p",
+        text: "Start with a small FOV and high smoothing. General tuning is in [Buy Delta Force aimbot & no recoil](/blog/aimbot/).",
+      },
+      { type: "h2", text: "Pro vs Elite" },
+      {
+        type: "p",
+        text: "Every profile feature is in Pro. Elite adds loot assist tools, Skin Changer and priority patches; see the [Elite tier guide](/blog/elite/). Pro includes all Lite modules, so [ESP and radar](/blog/esp/) work with your profiles.",
+      },
+      {
+        type: "cta",
+        title: "Get Pro weapon profiles",
+        text: "Aimbot, Bone Select and No Recoil profiles – secure checkout at cheatsdeltaforce.net.",
+        href: "https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force",
+      },
+      {
+        type: "p",
+        text: "[Open the Pro product page](/products/delta-force-hacks/) → [pay for weapon profiles](https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force). Treat every value as a starting point; aim assist carries ban risk.",
+      },
+    ],
+  },
+  {
+    tag: "Guides",
+    title: "ACE Anti-Cheat errors vs buying UGC recovery / HWID help",
+    slug: "ace-error",
+    desc: "ACE Anti-Cheat failed to initialize is usually not a ban. Quick checks first, then when to buy UGC appeal workflows or HWID Spoofer. Then get access to Delta Force hacks.",
+    date: "Aug 11, 2026",
+    readTime: "6 min read",
+    body: [
+      {
+        type: "p",
+        text: '"ACE Anti-Cheat failed to initialize" is a common Delta Force startup error and it usually does not mean you are banned. Before you buy anything, rule out the free fixes. If it really is a ban, this page tells you which paid recovery product fits.',
+      },
+      { type: "h2", text: "Error or ban?" },
+      {
+        type: "table",
+        headers: ["Message", "Likely cause", "Action"],
+        rows: [
+          [
+            "Failed to initialize",
+            "Missing file, stalled service, conflict",
+            "Verify files, repair ACE Anti-Cheat",
+          ],
+          ["Banned from this server", "Server-side ban", "Contact the server"],
+          [
+            "Banned from ACE Anti-Cheat protected servers",
+            "Account or hardware ban",
+            "See recovery products below",
+          ],
+        ],
+      },
+      { type: "h2", text: "Free fixes first" },
+      {
+        type: "ul",
+        items: [
+          "Steam: Delta Force, Properties, Installed Files, Verify integrity.",
+          "Run the EasyAntiCheat setup in the Delta Force folder and choose Repair Service.",
+          "Close overlays, RGB tools and virtual machines while testing.",
+          "Update Windows and graphics drivers, then restart.",
+        ],
+      },
+      { type: "h2", text: "If you are banned" },
+      {
+        type: "p",
+        text: "File repairs will not help. Choose a path in [HWID Spoofer vs new account](/blog/hwid/): [HWID Spoofer](/products/delta-force-hacks/hwid-spoofer/) for hardware flags, or [UGC](/products/delta-force-hacks/ugc/) for appeal workflows. Outcomes are never guaranteed.",
+      },
+      { type: "h2", text: "Returning with Delta Force hacks" },
+      {
+        type: "p",
+        text: "Once Delta Force starts with no cheat software running, follow the portal launch order and check the status banner. Read the [ACE Anti-Cheat patch day checklist](/blog/ace-patch/) and the [external cheat guide](/blog/external/).",
+      },
+      { type: "h2", text: "Pick a tier" },
+      {
+        type: "p",
+        text: "[Compare tiers](/products/delta-force-hacks/) and [get access](https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force) when you are ready to return.",
+      },
+      {
+        type: "cta",
+        title: "Need an appeal workspace?",
+        text: "UGC supports appeal workflows for ACE Anti-Cheat and Level Infinite bans – outcomes are not guaranteed.",
+        href: "https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force",
+      },
+      {
+        type: "p",
+        text: "If errors persist, open Discord with your Windows version, Delta Force build and the exact message.",
+      },
+    ],
+  },
+  {
+    tag: "Guides",
+    title: "Buy external Delta Force hacks: safer loader delivery",
+    slug: "external",
+    desc: "Why buyers choose external Delta Force hacks: private loader, portal updates and cloud configs. Compare tiers and get access instead of risky free downloads.",
+    date: "Aug 11, 2026",
+    readTime: "7 min read",
+    body: [
+      {
+        type: "p",
+        text: '"External" means the cheat runs as its own process next to Delta Force rather than inside it. It is the architecture behind [Delta Force Hacks at cheatsdeltaforce.net](/products/delta-force-hacks/). This page explains why that matters when you decide where to buy.',
+      },
+      { type: "h2", text: "External vs free downloads" },
+      {
+        type: "table",
+        headers: ["Factor", "Private external loader", "Free public tools"],
+        rows: [
+          ["Delivery", "Operator portal after checkout", "Random links"],
+          [
+            "Updates",
+            "Maintained against Delta Force and ACE Anti-Cheat patches",
+            "Often stale",
+          ],
+          ["Keys", "Per-user license", "Shared"],
+          ["Malware risk", "Lower, with official downloads only", "High"],
+          ["Support", "Discord with order email", "None"],
+        ],
+      },
+      { type: "h2", text: "How the loader works" },
+      {
+        type: "p",
+        text: "You start the loader from the portal, it checks your license, syncs configs from the cloud and starts the overlay. You download the current build instead of patching files by hand.",
+      },
+      { type: "h2", text: "Why buyers prefer it" },
+      {
+        type: "ul",
+        items: [
+          "It does not write files into the Delta Force folder.",
+          "Updates arrive through the portal after patches.",
+          "Config sync keeps your presets when you reinstall.",
+          "Easier removal than modifications that touch game files.",
+        ],
+      },
+      { type: "h2", text: "Tier choice" },
+      {
+        type: "p",
+        text: "All tiers share the loader. [Lite](/products/delta-force-hacks/) is ESP and radar, Pro adds aim assist, and [Elite](/products/delta-force-hacks/elite/) adds loot assist tools and Skin Changer. Read [Lite vs Pro](/blog/lite-vs-pro/).",
+      },
+      { type: "h2", text: "Launch order and safety" },
+      {
+        type: "p",
+        text: "Follow the portal guide, check the status banner and test on a private match or firing range. After updates run the [ACE Anti-Cheat patch day checklist](/blog/ace-patch/). For startup errors use the [ACE Anti-Cheat errors guide](/blog/ace-error/).",
+      },
+      {
+        type: "cta",
+        title: "Get the external suite",
+        text: "Private external Delta Force hacks with cloud config sync – secure checkout at cheatsdeltaforce.net.",
+        href: "https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force",
+      },
+      {
+        type: "p",
+        text: "See the [features guide](/blog/features/), then [compare tiers](/products/delta-force-hacks/) and [get access](https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force). No architecture eliminates ban risk.",
+      },
+    ],
+  },
+  {
+    tag: "Setup",
+    title: "Buy stream-proof Delta Force hacks for creators",
+    slug: "stream-proof",
+    desc: "Stream Proof hides your ESP and aimbot overlay from OBS and Game Bar. Included on every tier – compare Delta Force hacks for creators and get access.",
+    date: "Aug 10, 2026",
+    readTime: "5 min read",
+    body: [
+      {
+        type: "p",
+        text: "Content creators ask one question before they buy: will viewers see my overlay? Stream Proof is included on every tier of [Delta Force Hacks](/products/delta-force-hacks/), so you do not pay extra for it. This page explains what it does and how to test it after purchase.",
+      },
+      { type: "h2", text: "What you get" },
+      {
+        type: "table",
+        headers: ["Capture method", "Stream Proof behavior", "Recommendation"],
+        rows: [
+          ["OBS Game Capture", "Overlay excluded", "Test locally first"],
+          ["OBS Display Capture", "Overlay excluded", "Test separately"],
+          ["Windows Game Bar", "Own capture path", "Test separately"],
+          [
+            "External capture card",
+            "Records display signal",
+            "Keep overlay off",
+          ],
+        ],
+      },
+      { type: "h2", text: "Enable and test" },
+      {
+        type: "ul",
+        items: [
+          "Open loader settings and switch on Stream Proof.",
+          "Keep it enabled in every preset used for content.",
+          "Record a short local clip with the overlay active.",
+          "Review the clip for boxes, radar and menus before going live.",
+        ],
+      },
+      { type: "h2", text: "What stays visible" },
+      {
+        type: "p",
+        text: "FOV changes and Skin Changer cosmetics are part of the game image and appear in recordings. Read the [FOV guide](/blog/fov/) and [Skin Changer guide](/blog/skins/) first.",
+      },
+      { type: "h2", text: "Which tier for creators" },
+      {
+        type: "p",
+        text: "Lite is the lowest-footprint option; Pro adds aim support; Elite adds Skin Changer. See [Lite vs Pro](/blog/lite-vs-pro/) and the [Elite tier guide](/blog/elite/).",
+      },
+      { type: "h2", text: "Behavior matters too" },
+      {
+        type: "p",
+        text: "Even with a hidden overlay, your play is visible. Smooth movement and modest ESP-based decisions look better than perfect play. See the [ESP and radar guide](/blog/esp/).",
+      },
+      {
+        type: "cta",
+        title: "Stream with confidence",
+        text: "Stream Proof overlay on every tier – secure checkout at cheatsdeltaforce.net.",
+        href: "https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force",
+      },
+      {
+        type: "p",
+        text: "[Compare tiers](/products/delta-force-hacks/) → [Get access](https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force). Streaming with cheats still carries ban risk, since viewers can report what they see.",
+      },
+    ],
+  },
+  {
+    tag: "Guides",
+    title: "Delta Force ESP explained, player, enemy and loot overlays",
+    slug: "delta-force-esp-explained",
+    desc: "What player ESP, loot ESP and loot ESP mean in Delta Force, how they differ on Lite vs Pro, and what our tiers actually include before you checkout.",
+    date: "Nov 16, 2026",
+    readTime: "8 min read",
+    body: [
+      {
+        type: "p",
+        text: "Players search for “Delta Force esp” or wallhack Delta Force when they want more information than raw firefights provide. Player ESP boxes are the practical wallhack layer – ESP is not one switch but a family of overlays. This guide separates player, enemy and loot modules, maps each to [Lite, Pro and Elite](/products/delta-force-hacks/), and links to [cheats setup](/blog/use-codes/) and [cheat status](/blog/ace-patch/) so you are not buying blind.",
+      },
+      { type: "h2", text: "Player ESP (squads and threats)" },
+      {
+        type: "p",
+        text: "Player ESP shows nearby survivors: distance, name or tag, health state and sometimes skeleton or box outlines. On PvP and Ranked Play this is the core awareness tool. Lite includes player ESP plus a 2D radar; Pro and Elite keep the same awareness layer while adding combat modules. For default distances and layout tips, see the [ESP and radar setup guide](/blog/esp/).",
+      },
+      { type: "h2", text: "Loot ESP (weapons, streaks and objectives)" },
+      {
+        type: "p",
+        text: "Loot ESP answers different questions: which loadout is ahead, approximate range, whether the player is prone or sprinting, and equipment or vehicle callouts depending on preset. Delta Force maps are fast-paced – spotting a sniper lane or a flanking route before you commit is why buyers pair loot ESP with player ESP. We group enemy tags with loot markers on every combat tier; tune filters in the portal so your overlay stays readable in long sightlines and close quarters.",
+      },
+      { type: "h2", text: "Loot and resource ESP" },
+      {
+        type: "p",
+        text: "Loot ESP highlights care packages, streaks, downed operators and high-value pickups. Resource markers flag ammo, plates and similar fight resources. Neither replaces map knowledge – they reduce time spent guessing. Elite adds route-style assist on top of the same markers; if you only need awareness, Lite is enough. More detail on presets is in [Enemy and loot ESP for Delta Force](/blog/delta-force-loot-esp/).",
+      },
+      {
+        type: "table",
+        headers: ["Question", "Module", "Typical tier"],
+        rows: [
+          ["Who is pushing the objective?", "Player ESP + radar", "Lite+"],
+          ["What is around this corner?", "Loot ESP + player ESP", "Lite+"],
+          ["Where is the drop or node run?", "Loot / resource ESP", "Lite+"],
+          ["I also want aim assist", "Pro", "Pro"],
+          ["Full suite + cosmetics", "Elite", "Elite"],
+        ],
+      },
+      {
+        type: "p",
+        text: "Third-party overlays violate Level Infinite rules on the Ranked Play and can trigger ACE Anti-Cheat action. Read [ban risk in Ranked Play](/blog/ban-risk-official/) and the live status banner before launch. After patches, run the [ACE Anti-Cheat patch day checklist](/blog/ace-patch/).",
+      },
+      {
+        type: "cta",
+        title: "Compare ESP tiers",
+        text: "Lite, Pro and Elite at cheatsdeltaforce.net, external loader, portal presets, Discord support.",
+        href: "https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force",
+      },
+    ],
+  },
+  {
+    tag: "Guides",
+    title:
+      "Delta Force loot ESP and loot ESP, Zombies and multiplayer use cases",
+    slug: "delta-force-loot-esp",
+    desc: "How loot ESP and resource ESP help on Delta Force maps – loadout checks, streak awareness, care packages and ammo runs – without overloading your overlay.",
+    date: "Nov 16, 2026",
+    readTime: "7 min read",
+    body: [
+      {
+        type: "p",
+        text: "“Delta Force enemy esp” and “loot esp” searches usually come from two play styles: resource farmers who want efficient routes, and PvP squads who want threat warning. Both use the same Lite ESP stack but different filters. This page explains practical presets and when to upgrade.",
+      },
+      { type: "h2", text: "Loot ESP: what to filter first" },
+      {
+        type: "ul",
+        items: [
+          "Set a sane distance cap – longer is not always better in forests.",
+          "Separate wild, squad-owned and streak tags with colors.",
+          "Hide low-level clutter on farm profiles; widen filters for Zombies or Ranked runs.",
+          "Pair with audio cues; ESP is information, not autopilot.",
+        ],
+      },
+      { type: "h2", text: "Loot and resource ESP" },
+      {
+        type: "p",
+        text: "Supply drops, high-tier loot drops and objective captures have different risk profiles. Mark supply crates and downed operators when you are hunting PvP; mark plate caches and streak drops when you are max-level loadouts. Elite’s loot-route assist sits on top of these markers – see [features by tier](/blog/features/) before you pay for Elite only for Zombies grinding.",
+      },
+      {
+        type: "h2",
+        text: "Scorestreak and equipment ESP for objective pushes",
+      },
+      {
+        type: "p",
+        text: "Equipment ESP and structure ESP searches spike before squad fights: seeing defense units, storage and chokepoints without walking every wall. Use a dedicated push color profile – hide distant enemy players, keep equipment and player tags inside your push range. Pair with player ESP from [Delta Force ESP](/blog/delta-force-esp-explained/) and check [ACE Anti-Cheat status](/blog/ace-patch/) match day.",
+      },
+      { type: "h2", text: "Link to combat tiers" },
+      {
+        type: "p",
+        text: "If your problem is losing fights after you find loot, step up to [Pro aimbot and recoil](/blog/aimbot/). If you need the full radar suite and Skin Changer, read [Elite](/blog/elite/). Compare modules on the [products hub](/products/delta-force-hacks/).",
+      },
+      {
+        type: "cta",
+        title: "Get ESP and radar",
+        text: "Player, enemy and loot ESP from Lite, check status, then checkout.",
+        href: "https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force",
+      },
+    ],
+  },
+  {
+    tag: "Guides",
+    title: "Delta Force vs prior Delta Force titles cheats, compatibility",
+    slug: "delta-force-modes-guide",
+    desc: "Delta Force and Warfare are separate clients. Why loaders, offsets and store pages are not interchangeable, and what to verify before you buy for Delta Force.",
+    date: "Nov 15, 2026",
+    readTime: "6 min read",
+    body: [
+      {
+        type: "p",
+        text: "Delta Force is its own live-service title – not a reskin of older Delta Force editions. Tools marketed for prior titles or Warfare often fail on Delta Force even when the box says “Delta Force.” cheatsdeltaforce.net sells for Delta Force on PC (Steam and Battle.net) through our external loader only; do not assume cross-edition compatibility.",
+      },
+      { type: "h2", text: "What actually changes between editions" },
+      {
+        type: "ul",
+        items: [
+          "Different executable, memory layout and update cadence.",
+          "ACE Anti-Cheat and Level Infinite patches target Delta Force builds separately.",
+          "ESP anchors, bone lists and world actors differ – presets do not port 1:1.",
+        ],
+      },
+      { type: "h2", text: "Before checkout" },
+      {
+        type: "p",
+        text: "Confirm your game client says Delta Force, not prior titles-only builds. Match Windows version and anti-cheat status on our [status routine](/blog/ace-patch/). Setup steps for first launch live in [post-checkout loader guide](/blog/use-codes/) and the [buy guide](/blog/buy-guide/).",
+      },
+      {
+        type: "p",
+        text: "If a seller lists “Delta Force hacks” without naming Delta Force, treat it as a red flag. Compare verifiable features on our [tier comparison](/blog/lite-vs-pro/) and [products hub](/products/delta-force-hacks/).",
+      },
+    ],
+  },
+  {
+    tag: "Guides",
+    title: "Can you get banned for cheating in Delta Force?",
+    slug: "ban-risk-official",
+    desc: "Level Infinite Code of Conduct, ACE Anti-Cheat enforcement, official vs unranked playlists, and honest limits of any seller’s “safe” marketing.",
+    date: "Nov 15, 2026",
+    readTime: "9 min read",
+    body: [
+      {
+        type: "p",
+        text: "This is the question behind “Delta Force cheats safe.” Level Infinite’s Code of Conduct lists third-party programs such as ESP and aimbots as examples of hacking and states that hacking or exploiting is not tolerated on its **Ranked Play**. ACE Anti-Cheat can remove players who use disallowed tools. No storefront – including cheatsdeltaforce.net – can promise permanent safety or permission in Ranked Play.",
+      },
+      { type: "h2", text: "Official vs unranked playlists" },
+      {
+        type: "p",
+        text: "Ranked and public matchmaking enforce Level Infinite and ACE Anti-Cheat rules. Custom and private matches may set their own admin policies, but using third-party cheats can still breach ACE Anti-Cheat and platform terms. We do not write copy that implies ESP or aimbot is allowed in Ranked Play or guaranteed undetected.",
+      },
+      { type: "h2", text: "What sellers can honestly offer" },
+      {
+        type: "ul",
+        items: [
+          "A dated status banner when modules are online after a tested build.",
+          "Portal updates when Delta Force or ACE Anti-Cheat patches ship.",
+          "Support channels for loader and configuration issues.",
+          "HWID or appeal utilities that are separate products with their own limits.",
+        ],
+      },
+      { type: "h2", text: "Reduce risk without false promises" },
+      {
+        type: "p",
+        text: "Use conservative presets, check status before every session, and follow the [patch day checklist](/blog/ace-patch/). If ACE Anti-Cheat fails to start, read [ACE Anti-Cheat errors vs recovery](/blog/ace-error/) before buying spoofer or UGC. Returning players should see [HWID guide](/blog/hwid/).",
+      },
+      {
+        type: "p",
+        text: "For feature scope – not safety claims – review [ESP explained](/blog/delta-force-esp-explained/) and the [FAQ](/faq/).",
+      },
+    ],
+  },
+  {
+    tag: "Guides",
+    title: "How to compare Delta Force cheats before you buy",
+    slug: "compare-delta-force-cheats",
+    desc: "A practical comparison framework: features, update history, support, requirements and pricing – without chasing every long-tail keyword.",
+    date: "Nov 14, 2026",
+    readTime: "8 min read",
+    featured: true,
+    body: [
+      {
+        type: "p",
+        text: "Searches for best Delta Force cheats and Delta Force cheats comparison spike after season resets and ACE Anti-Cheat patches. Useful comparisons are dated, specific and testable – not permanent “undetected” badges. Use this framework for cheatsdeltaforce.net or any vendor; always read [anti-cheat risk](/blog/ban-risk-official/) in Ranked Play.",
+      },
+      { type: "h2", text: "Feature proof, not buzzwords" },
+      {
+        type: "p",
+        text: "Ask which modules exist on which tier: player ESP, loot ESP, radar, aimbot, recoil, stream-proof, cosmetics. Our breakdown is public in [features by tier](/blog/features/) and on the [products hub](/products/delta-force-hacks/). If a site cannot map features to tiers, treat claims as marketing only.",
+      },
+      { type: "h2", text: "Update and status behavior" },
+      {
+        type: "p",
+        text: "After Delta Force updates, working builds may pause for hours or days. Look for a visible status process and a changelog habit – not a permanent “undetected” badge. We document patch-day steps in [status after updates](/blog/ace-patch/) and [post-checkout setup](/blog/use-codes/).",
+      },
+      { type: "h2", text: "Support and requirements" },
+      {
+        type: "ul",
+        items: [
+          "Supported Windows builds and Steam/Epic Delta Force client.",
+          "Clear checkout and portal delivery (not random file hosts).",
+          "Ticket or Discord path with order ID and error text.",
+          "Separate pages for HWID, UGC, DMA – not bundled vague “tools”.",
+        ],
+      },
+      { type: "h2", text: "Where cheatsdeltaforce.net fits" },
+      {
+        type: "p",
+        text: "We focus on one Delta Force hub: Lite for ESP and radar, Pro for aim assist, Elite for the full suite, plus utilities on their own URLs. Start with [Lite vs Pro](/blog/lite-vs-pro/), [Delta Force vs Warfare compatibility](/blog/delta-force-modes-guide/), and [ban risk in Ranked Play](/blog/ban-risk-official/) if you are new.",
+      },
+      {
+        type: "cta",
+        title: "Compare tiers on-site",
+        text: "See live module lists and checkout when status is green.",
+        href: "https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force",
+      },
+    ],
+  },
+  {
+    tag: "Guides",
+    title: "Delta Force aimbot: features, smoothing and limits after purchase",
+    slug: "aimbot-limits",
+    desc: "FOV, smoothing, bone select and prediction – what Pro includes, how to tune without rage settings, and what no aimbot can guarantee.",
+    date: "Nov 14, 2026",
+    readTime: "7 min read",
+    body: [
+      {
+        type: "p",
+        text: "“Delta Force aimbot” queries are commercial, but good guides explain limits. Aim assist on cheatsdeltaforce.net ships with [Pro and Elite](/products/delta-force-hacks/pro/): soft aim, bone select, weapon profiles and recoil control. This page defines terms honestly – no accuracy guarantees and no claim of permanent undetectability.",
+      },
+      { type: "h2", text: "Terms buyers actually configure" },
+      {
+        type: "table",
+        headers: ["Setting", "Purpose", "Starter tip"],
+        rows: [
+          [
+            "FOV circle",
+            "Limit where aim assist engages",
+            "Keep narrow at first",
+          ],
+          [
+            "Smoothing",
+            "Slow pull toward target",
+            "Higher = more human, slower",
+          ],
+          [
+            "Bone select",
+            "Head, chest or dynamic",
+            "Chest for rifles; test per enemy fight",
+          ],
+          ["Recoil / spread", "Compensate kick", "Match each weapon profile"],
+        ],
+      },
+      { type: "h2", text: "Prediction aim, no spread and streamproof" },
+      {
+        type: "p",
+        text: "Prediction aim (leading moving targets) and no spread profiles are combat options on Pro where the portal exposes them – tune gently on flyers and soaked targets. Streamproof keeps overlays off many recordings; it is not invisible to live viewers or reports. Pair with [streamproof guide](/blog/stream-proof/) and [Delta Force aimbot](/blog/aimbot/) module notes.",
+      },
+      { type: "h2", text: "Pair with awareness" },
+      {
+        type: "p",
+        text: "Aimbot does not replace ESP. Most buyers run Pro with the full Lite awareness stack. See [player and loot ESP](/blog/delta-force-esp-explained/) and [bone profiles](/blog/bones/).",
+      },
+      { type: "h2", text: "Risk reminder" },
+      {
+        type: "p",
+        text: "Obvious snapping and inhuman tracking increase reports and ban risk. Use portal conservative presets and the [official-server rules explainer](/blog/ban-risk-official/).",
+      },
+      {
+        type: "cta",
+        title: "Pro tier combat modules",
+        text: "Aimbot, soft aim and recoil – secure checkout when status allows.",
+        href: "https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Fdelta-force",
+      },
+    ],
+  },
+];

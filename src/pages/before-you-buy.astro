@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import FaqSection from '../components/FaqSection.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import { getBeforeYouBuyFaqs, SITE_FAQ_SECTION_COPY } from '../data/faq';
+import { resolvePageSeo } from '../config/seo';
+import { getPageSeoEntry } from '../config/pageSeo';
+import { breadcrumbSchema, faqAnswerPlainText, faqPageSchema, organizationSchema, webPageSchema } from '../utils/schema';
+import { Button } from '@/components/starwind/button';
+import Icon from '../components/icons/Icon.astro';
+import { ROUTES } from '../utils/path';
+import { t } from '../i18n';
+
+const seo = resolvePageSeo('/before-you-buy/');
+const seoEntry = getPageSeoEntry('/before-you-buy/');
+const copy = t.beforeYouBuy;
+const items = getBeforeYouBuyFaqs();
+const breadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Support', path: ROUTES.support },
+  { name: 'Before you buy', path: ROUTES.beforeYouBuy },
+];
+---
+
+<BaseLayout
+  title={seo.title}
+  description={seo.description}
+  jsonLd={[
+    organizationSchema(),
+    webPageSchema({
+      name: seoEntry?.h1 ?? SITE_FAQ_SECTION_COPY.title,
+      description: seo.description,
+      url: ROUTES.beforeYouBuy,
+    }),
+    faqPageSchema(
+      items.map((f, i) => ({
+        num: String(i + 1).padStart(2, '0'),
+        q: f.q,
+        a: faqAnswerPlainText(f.a, f.aHtml),
+      })),
+    ),
+    breadcrumbSchema(breadcrumbs),
+  ]}
+>
+  <section class="border-b border-border bg-muted/10 py-8 md:py-12">
+    <div class="mx-auto max-w-6xl px-5">
+      <Breadcrumbs items={breadcrumbs} />
+      <div class="mt-6">
+        <SectionHeader
+          eyebrow={SITE_FAQ_SECTION_COPY.eyebrow}
+          title={seoEntry?.h1 ?? SITE_FAQ_SECTION_COPY.title}
+          desc="Straight answers on tiers, checkout delivery, ACE status, and Steam on Windows—so you pick Lite, Pro, or Elite before you pay."
+          titleId="before-you-buy-title"
+          headingLevel="h1"
+        />
+        <div class="mt-6 flex flex-wrap gap-3">
+          <Button as="a" href="/blog/lite-vs-pro/" variant="outline" class="rounded-xl">
+            Lite vs Pro guide
+            <Icon name="arrowRight" size={17} />
+          </Button>
+          <Button as="a" href="/blog/buy-guide/" variant="outline" class="rounded-xl">
+            How to buy
+            <Icon name="arrowRight" size={17} />
+          </Button>
+          <Button as="a" href={ROUTES.products} variant="outline" class="rounded-xl">
+            Compare tiers
+            <Icon name="arrowRight" size={17} />
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-b border-border bg-muted/10 py-10 md:py-12" aria-labelledby="before-you-buy-checklist">
+    <div class="mx-auto max-w-6xl px-5">
+      <h2 id="before-you-buy-checklist" class="text-lg font-semibold normal-case text-foreground">
+        {copy.checklistTitle}
+      </h2>
+      <ol class="mt-6 grid gap-6 sm:grid-cols-3">
+        {
+          copy.checklist.map((step) => (
+            <li class="rounded-xl border border-border bg-card p-5">
+              <p class="text-xs font-semibold tracking-wide text-primary">{step.num}</p>
+              <p class="mt-2 text-base font-semibold text-foreground">{step.title}</p>
+              <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{step.desc}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <FaqSection
+    items={items}
+    eyebrow=""
+    title={copy.faqTitle}
+    subtitle={copy.faqDesc}
+    titleId="before-you-buy-list"
+    showFilters={false}
+    contentAlign="left"
+    class="py-10 md:py-14"
+  />
+
+  <section class="border-t border-border py-10">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5">
+      <p class="text-sm text-muted-foreground">
+        Need every topic (ESP, scripts, blog links)? That lives on the full FAQ—not this page.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <Button as="a" href={ROUTES.faq} variant="outline" class="rounded-xl">
+          {copy.fullFaqLabel}
+          <Icon name="arrowRight" size={17} />
+        </Button>
+        <Button as="a" href={ROUTES.support} variant="ghost" class="rounded-xl">
+          Back to support
+        </Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
