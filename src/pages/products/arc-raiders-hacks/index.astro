@@ -64,7 +64,7 @@ const viewLabelBySlug: Record<string, string> = {
   'cloud-dma': 'View Cloud DMA listing',
 };
 
-const tierPages = cheatPages.filter((p) => p.slug !== 'elite');
+const tierPages = cheatPages;
 const utilityPages = productPages.filter((p) => p.kind === 'utility');
 const cheatsCopy = t.cheats;
 const utilitiesCopy = t.products;
@@ -124,6 +124,35 @@ const utilitiesCopy = t.products;
                 icon={cardIcon(product)}
                 badge={product.badge}
                 variant={product.variant}
+                buyLabel={buyLabelBySlug[product.slug] ?? 'Get access'}
+                viewLabel={viewLabelBySlug[product.slug] ?? 'View product listing'}
+                maxFeatures={5}
+              />
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="products-hub__block mt-16" aria-labelledby="hub-utilities-title">
+        <p class="products-hub__eyebrow">Utilities</p>
+        <h2 id="hub-utilities-title" class="products-hub__subtitle">HWID, UGC, Cloud DMA &amp; Camouflage</h2>
+        <p class="products-hub__lede">
+          Each utility uses its own secure checkout link. Combat tiers (Lite, Pro and Elite) share the main Arc Raiders product URL.
+        </p>
+        <div class="products-hub__grid products-hub__grid--utilities mt-8">
+          {
+            utilityPages.map((product) => (
+              <CatalogCard
+                class="catalog-card--carousel catalog-card--hub h-full"
+                label={cardLabel(product)}
+                title={product.title}
+                href={productPath(product.slug)}
+                buyUrl={product.buyUrl}
+                features={product.features}
+                more={product.more}
+                icon={cardIcon(product)}
+                badge={product.badge}
+                variant="essential"
                 buyLabel={buyLabelBySlug[product.slug] ?? 'Get access'}
                 viewLabel={viewLabelBySlug[product.slug] ?? 'View product listing'}
                 maxFeatures={5}
@@ -215,7 +244,7 @@ const utilitiesCopy = t.products;
       </section>
 
       <section class="products-hub__block mt-16">
-        <CompareTable rows={compareRows} />
+        <CompareTable rows={compareRows} excludeTiers={['elite']} />
       </section>
 
       <section class="products-hub__block mt-16" aria-labelledby="hub-external-dma-title">
@@ -227,35 +256,6 @@ const utilitiesCopy = t.products;
         <p class="mt-3 text-sm text-muted-foreground md:text-base">
           Read the <a class="text-primary hover:underline" href={productPath('cloud-dma')}>Cloud DMA product page</a> and <a class="text-primary hover:underline" href="/blog/external/">external loader guide</a> before you pick a path.
         </p>
-      </section>
-
-      <section class="products-hub__block mt-16" aria-labelledby="hub-utilities-title">
-        <p class="products-hub__eyebrow">Utilities</p>
-        <h2 id="hub-utilities-title" class="products-hub__subtitle">HWID, UGC, Cloud DMA &amp; Camouflage</h2>
-        <p class="products-hub__lede">
-          Each utility uses its own secure checkout link. Combat tiers (Lite and Pro) share the main Arc Raiders product URL.
-        </p>
-        <div class="products-hub__grid products-hub__grid--utilities mt-8">
-          {
-            utilityPages.map((product) => (
-              <CatalogCard
-                class="catalog-card--carousel catalog-card--hub h-full"
-                label={cardLabel(product)}
-                title={product.title}
-                href={productPath(product.slug)}
-                buyUrl={product.buyUrl}
-                features={product.features}
-                more={product.more}
-                icon={cardIcon(product)}
-                badge={product.badge}
-                variant="essential"
-                buyLabel={buyLabelBySlug[product.slug] ?? 'Get access'}
-                viewLabel={viewLabelBySlug[product.slug] ?? 'View product listing'}
-                maxFeatures={5}
-              />
-            ))
-          }
-        </div>
       </section>
 
       <div class="mt-12 flex flex-wrap gap-3">

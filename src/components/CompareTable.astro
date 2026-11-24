@@ -25,11 +25,15 @@ interface CompareRow {
 interface Props {
   rows: CompareRow[];
   highlightSlug?: string;
+  /** Hide tier columns on this table (e.g. hub compare Lite vs Pro only). */
+  excludeTiers?: string[];
 }
 
-const { rows, highlightSlug } = Astro.props;
+const { rows, highlightSlug, excludeTiers = [] } = Astro.props;
 
-const tiers = cheatPages.map((c) => ({
+const tiers = cheatPages
+  .filter((c) => !excludeTiers.includes(c.slug))
+  .map((c) => ({
   slug: c.slug,
   name: c.name,
   icon: cheatTierIcons[c.name] ?? 'crosshair',
