@@ -6,8 +6,8 @@ export const CANONICAL_SITE_ORIGIN = SITE_URL;
 export const SITE_LOGO = '/logo.svg';
 /** Navbar corner mark (BrandGun). Regenerate: npm run brand:gun */
 export const SITE_GUN_IMAGE = '/images/brand/arc-raiders-gun.webp';
-/** Forum header / sidebar wordmark (transparent). Regenerate: npm run brand:icons */
-export const FORUM_LOGO = '/brand/forum-mark.png';
+/** Forum sidebar wordmark (transparent, black type). Regenerate: npm run brand:icons */
+export const FORUM_LOGO = '/brand/arc-raiders-wordmark.png';
 export const PRODUCT_BASE = '/products/arc-raiders-hacks/';
 export const TITLE_PREFIX = 'Arc Raiders Hacks';
 export const SUPPORT_EMAIL = `support@${SITE_DOMAIN}`;

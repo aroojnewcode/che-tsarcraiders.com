@@ -15,7 +15,9 @@ import {
 } from '@/components/starwind/carousel';
 
 const s = t.products;
-const storefrontPages = productPages.filter((p) => p.slug !== 'elite');
+const cheatsCopy = t.cheats;
+const combatPages = productPages.filter((p) => p.kind === 'tier' && p.slug !== 'elite');
+const utilityPages = productPages.filter((p) => p.kind === 'utility');
 
 function cardIcon(product: (typeof productPages)[number]) {
   if (product.kind === 'tier') {
@@ -56,7 +58,10 @@ const viewLabelBySlug: Record<string, string> = {
   <div class="mx-auto max-w-6xl px-5">
     <SectionHeader eyebrow={s.eyebrow} title={s.title} desc={s.subtitle} titleId="products-title" headingLevel="h2" />
 
-    <div class="products-carousel" data-products-carousel>
+    <p class="products-hub__eyebrow mt-10">{cheatsCopy.eyebrow}</p>
+    <h3 class="products-hub__subtitle mt-1">{cheatsCopy.title}</h3>
+
+    <div class="products-carousel mt-6" data-products-carousel>
       <Carousel
         autoInit
         opts={{ align: 'start', containScroll: 'trimSnaps', dragFree: false }}
@@ -68,7 +73,48 @@ const viewLabelBySlug: Record<string, string> = {
           <div class="products-carousel__viewport">
             <CarouselContent class="products-carousel__track">
               {
-                storefrontPages.map((product) => (
+                combatPages.map((product) => (
+                  <CarouselItem class="products-carousel__slide">
+                    <CatalogCard
+                      class="catalog-card--carousel"
+                      label={cardLabel(product)}
+                      title={product.title}
+                      href={productPath(product.slug)}
+                      buyUrl={product.buyUrl}
+                      features={product.features}
+                      more={product.more}
+                      icon={cardIcon(product)}
+                      badge={product.badge}
+                      variant={product.variant ?? 'essential'}
+                      buyLabel={buyLabelBySlug[product.slug] ?? 'Get portal access via checkout'}
+                      viewLabel={viewLabelBySlug[product.slug] ?? 'View product listing'}
+                      maxFeatures={5}
+                    />
+                  </CarouselItem>
+                ))
+              }
+            </CarouselContent>
+          </div>
+        </div>
+      </Carousel>
+    </div>
+
+    <p class="products-hub__eyebrow mt-14">Utilities</p>
+    <h3 class="products-hub__subtitle mt-1">HWID, UGC, Cloud DMA &amp; Camouflage</h3>
+
+    <div class="products-carousel mt-6" data-products-carousel>
+      <Carousel
+        autoInit
+        opts={{ align: 'start', containScroll: 'trimSnaps', dragFree: false }}
+        class="products-carousel__root"
+      >
+        <div class="products-carousel__stage">
+          <CarouselPrevious class="products-carousel__arrow products-carousel__arrow--prev" hidden />
+          <CarouselNext class="products-carousel__arrow products-carousel__arrow--next is-visible" />
+          <div class="products-carousel__viewport">
+            <CarouselContent class="products-carousel__track">
+              {
+                utilityPages.map((product) => (
                   <CarouselItem class="products-carousel__slide">
                     <CatalogCard
                       class="catalog-card--carousel"

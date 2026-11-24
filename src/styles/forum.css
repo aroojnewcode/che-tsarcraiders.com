@@ -31,15 +31,17 @@
   border-radius:0;
 }
 .forum-brand-logo--hero { width:auto; height:48px; max-width:min(200px, 70vw); object-fit:contain; border-radius:0; }
-.forum-brand-logo--sidebar { width:auto; height:28px; max-width:5.5rem; object-fit:contain; border-radius:0; }
+.forum-brand-logo--sidebar { width:auto; height:32px; max-width:9.5rem; object-fit:contain; object-position:left center; border-radius:0; }
+html.dark .forum-brand-logo--sidebar { filter:brightness(0) invert(1); }
 .forum-community-avatar--brand { overflow:hidden; padding:0; background:var(--card); }
 .forum-intro { margin:.85rem 0 0; max-width:46rem; }
 .forum-intro p { margin:0 0 .7rem; color:var(--muted-foreground); font-size:.86rem; line-height:1.65; }
 .forum-intro p:last-child { margin-bottom:0; }
 .forum-intro__tagline { font-weight:600; color:var(--foreground); }
-.forum-hero { display:flex; align-items:end; justify-content:space-between; gap:2rem; padding:1.3rem 0 2.6rem; }
-.forum-hero h1 { margin:0; font-size:clamp(2.2rem,5vw,3.7rem); line-height:.98; font-weight:700; letter-spacing:-.025em; }
-.forum-hero h1 span { color:var(--primary); }
+.forum-hero { display:block; padding:1.3rem 0 2.6rem; }
+.forum-hero .page-title-split__primary { font-size:clamp(1.55rem,3.5vw,2.75rem); }
+.forum-hero .page-title-split__accent { color:var(--primary-accent); }
+.forum-sidebar__guides { width:100%; margin-bottom:.15rem; }
 .forum-hero__copy { margin:.9rem 0 0; color:var(--muted-foreground); font-size:.95rem; }
 .forum-create,.forum-join { display:inline-flex; align-items:center; justify-content:center; gap:.55rem; border:1px solid var(--primary); border-radius:999px; padding:.75rem 1.15rem; color:#fff; background:var(--primary); font-size:.84rem; font-weight:700; white-space:nowrap; transition:background .2s,transform .2s; }
 .forum-create:hover,.forum-join:hover { background:var(--primary-accent); transform:translateY(-1px); }
@@ -238,7 +240,6 @@
 .forum-side-card__banner { background:color-mix(in oklch,var(--primary) 76%,var(--card)); }
 .forum-category-filters button { background:transparent; }
 .forum-category-filters button.is-active { background:color-mix(in oklch,var(--primary) 12%,var(--card)); }
-
 /* Neutral headings and labels keep purple reserved for interactive emphasis. */
 .forum-hero h1 span,
 .forum-post-title,

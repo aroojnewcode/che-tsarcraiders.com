@@ -25,6 +25,12 @@ async function loadBrandRaster(inputPath) {
       px[i + 3] = 0;
     } else if (saturation < 0.22 && max < 220) {
       px[i + 3] = 0;
+    } else if (saturation < 0.28 && max > 130) {
+      /* Off-white wordmark → black on transparent (favicon legibility). */
+      px[i] = 0;
+      px[i + 1] = 0;
+      px[i + 2] = 0;
+      px[i + 3] = Math.max(px[i + 3], 235);
     }
   }
   return sharp(px, { raw: { width: info.width, height: info.height, channels: 4 } }).png();

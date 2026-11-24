@@ -29,7 +29,7 @@ interface Props {
   excludeTiers?: string[];
 }
 
-const { rows, highlightSlug, excludeTiers = [] } = Astro.props;
+const { rows, highlightSlug, excludeTiers = ['elite'] } = Astro.props;
 
 const tiers = cheatPages
   .filter((c) => !excludeTiers.includes(c.slug))

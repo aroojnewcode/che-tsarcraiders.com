@@ -2,8 +2,12 @@ export type { BlogBlock, BlogPostFull } from './blog/types';
 import { blogPosts as rawBlogPosts } from './blog/posts';
 import { arcRaidersBlogImageForSlug } from '../config/media';
 
+const HIDDEN_BLOG_SLUGS = new Set(['elite']);
+
 /** Blog cards and articles use Arc Raiders screenshots. */
-export const blogPosts = rawBlogPosts.map((post) => ({
+export const blogPosts = rawBlogPosts
+  .filter((post) => !HIDDEN_BLOG_SLUGS.has(post.slug))
+  .map((post) => ({
   ...post,
   image: arcRaidersBlogImageForSlug(post.slug),
 }));

@@ -443,6 +443,14 @@ export const SITE_FAQ_SECTION_COPY = {
     "Pick a topic below. If your question is loader-specific, check support after you read the matching guide.",
 } as const;
 
+/** Centered block above /faq/ topic filters (matches category browse layout). */
+export const FAQ_CATEGORY_HEADER_COPY = {
+  eyebrow: "Arc Raiders topics",
+  title: "Browse Arc Raiders cheat answers by category",
+  subtitle:
+    "Filter plans, ESP, aimbot, products, setup and buy-guide answers.",
+} as const;
+
 export const SITE_FAQ_FILTER_TOPICS: FaqTopic[] = [
   "all",
   "plans",

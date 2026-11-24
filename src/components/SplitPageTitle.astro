@@ -1,0 +1,26 @@
+---
+import { splitPageHeading } from '../utils/splitPageHeading';
+
+interface Props {
+  title: string;
+  titleId?: string;
+  class?: string;
+  primaryClass?: string;
+  accentClass?: string;
+}
+
+const {
+  title,
+  titleId,
+  class: className,
+  primaryClass = 'page-title-split__primary',
+  accentClass = 'page-title-split__accent',
+} = Astro.props;
+
+const { primary, secondary } = splitPageHeading(title);
+---
+
+<div class:list={['page-title-split', className]}>
+  <h1 id={titleId} class={primaryClass}>{primary}</h1>
+  {secondary ? <h2 class={accentClass}>{secondary}</h2> : null}
+</div>

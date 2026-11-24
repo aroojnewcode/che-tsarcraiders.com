@@ -37,6 +37,23 @@
   color: var(--primary);
 }
 
+h1 {
+  font-size: clamp(1.875rem, 3.2vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+h2 {
+  color: var(--primary);
+  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-tagline {
+  color: var(--primary);
+}
+
 .section-header__title {
   margin: 0;
   font-family: var(--font-heading, ui-sans-serif, system-ui, sans-serif);
@@ -45,6 +62,94 @@
   line-height: 1.15;
   letter-spacing: -0.02em;
   color: var(--foreground);
+}
+
+/* Page hero: line 1 = h1, line 2 = smaller purple h2 */
+.page-title-split {
+  display: flex;
+  flex-direction: column;
+  align-items: inherit;
+  gap: 0.15rem;
+}
+
+.page-title-split__primary {
+  margin: 0;
+  font-family: var(--font-heading, ui-sans-serif, system-ui, sans-serif);
+  font-size: clamp(1.875rem, 3.2vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+}
+
+.page-title-split__accent {
+  margin: 0;
+  font-family: var(--font-heading, ui-sans-serif, system-ui, sans-serif);
+  font-size: clamp(1.125rem, 1.85vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: var(--primary);
+}
+
+@media (min-width: 768px) {
+  .page-title-split__primary {
+    white-space: nowrap;
+  }
+}
+
+/* FAQ hero — keep two-line title left-aligned (override centered section-header) */
+.faq-page__header {
+  text-align: left;
+  margin-inline: 0;
+}
+
+@media (min-width: 1024px) {
+  .faq-page__header {
+    margin-inline: 0;
+    text-align: left;
+  }
+
+  .faq-page__header .section-header__subtitle {
+    margin-inline: 0;
+  }
+}
+
+.faq-category-intro {
+  margin-bottom: 0.5rem;
+  padding-top: 0.25rem;
+  text-align: center;
+}
+
+.faq-category-intro__title {
+  margin: 0;
+  font-family: var(--font-heading, ui-sans-serif, system-ui, sans-serif);
+  font-size: clamp(1.75rem, 3.8vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+}
+
+.faq-category-intro .section-header__eyebrow {
+  text-transform: uppercase;
+}
+
+.faq-category-intro .section-header__subtitle {
+  margin-inline: auto;
+  max-width: 36rem;
+}
+
+@media (min-width: 1024px) {
+  .faq-category-intro {
+    margin-inline: auto;
+    text-align: center;
+  }
+}
+
+h2.section-header__title {
+  color: var(--primary);
+  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
 }
 
 .section-header__subtitle {

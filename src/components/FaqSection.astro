@@ -23,6 +23,12 @@ interface Props {
   id?: string;
   class?: string;
   hideSectionHeader?: boolean;
+  /** /faq/ — centered “browse by category” block above filters */
+  showCategoryIntro?: boolean;
+  categoryEyebrow?: string;
+  categoryTitle?: string;
+  categorySubtitle?: string;
+  categoryTitleId?: string;
 }
 
 const {
@@ -38,6 +44,11 @@ const {
   id: sectionId,
   class: className,
   hideSectionHeader = false,
+  showCategoryIntro = false,
+  categoryEyebrow = '',
+  categoryTitle = '',
+  categorySubtitle = '',
+  categoryTitleId = 'faq-questions-title',
 } = Astro.props;
 
 const showSectionHeader = !hideSectionHeader && Boolean(eyebrow || title || subtitle);
@@ -59,11 +70,20 @@ const filters = filterTopics ?? (['all', 'plans', 'esp', 'scripts', 'safety', 'p
 <section
   id={sectionId}
   class:list={['py-16 md:py-24', className]}
-  aria-labelledby={titleId}
+  aria-labelledby={showCategoryIntro && categoryTitle ? categoryTitleId : titleId}
   data-faq-section={showFilters ? '': undefined}
 >
   <div class="mx-auto max-w-6xl px-5">
     <div class:list={[contentAlign === 'center' && 'mx-auto max-w-3xl', contentAlign === 'left' && 'product-detail__narrow max-w-3xl']}>
+    {
+      showCategoryIntro && categoryTitle ? (
+        <header class="faq-category-intro section-header mx-auto max-w-3xl text-center">
+          {categoryEyebrow ? <p class="section-header__eyebrow">{categoryEyebrow}</p> : null}
+          <h1 id={categoryTitleId} class="faq-category-intro__title">{categoryTitle}</h1>
+          {categorySubtitle ? <p class="section-header__subtitle">{categorySubtitle}</p> : null}
+        </header>
+      ) : null
+    }
     {
       showSectionHeader ? (
         <SectionHeader

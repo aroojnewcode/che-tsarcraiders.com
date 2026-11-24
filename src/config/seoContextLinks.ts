@@ -103,7 +103,7 @@ const LINK_SETS: Record<string, SeoContextLink[]> = {
   ],
   '/blog/buy-guide/': [
     { href: '/blog/use-codes/', label: 'Portal unlock after payment guide' },
-    { href: '/blog/elite/', label: 'Elite upgrade modules explainer' },
+    { href: '/products/arc-raiders-hacks/elite/', label: 'Elite tier product listing' },
     { href: '/before-you-buy/', label: 'Pre-purchase tier and anti-cheat checklist' },
     { href: '/faq/', label: 'Full FAQ , all topics' },
     { href: '/forum/choose-tier/', label: 'Forum thread: tier selection advice' },

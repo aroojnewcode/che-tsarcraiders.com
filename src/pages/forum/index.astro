@@ -9,6 +9,7 @@ import { blogPosts, getBlogPostTimestamp } from '../../data/blog';
 import { resolvePageSeo } from '../../config/seo';
 import { getPageSeoEntry } from '../../config/pageSeo';
 import { breadcrumbSchema, collectionPageSchema, organizationSchema } from '../../utils/schema';
+import SplitPageTitle from '../../components/SplitPageTitle.astro';
 
 const seo = resolvePageSeo('/forum/');
 const seoEntry = getPageSeoEntry('/forum/');
@@ -31,11 +32,12 @@ const sourceTimestamp = (path?: string) => {
  <Breadcrumbs items={breadcrumbs} />
  <header class="forum-hero">
  <div>
- <div class="forum-brand-block forum-brand-block--compact mb-4 inline-flex" aria-hidden="true">
- <img src={FORUM_LOGO} alt="" width={48} height={48} class="forum-brand-logo forum-brand-logo--hero" loading="eager" decoding="async" />
- </div>
  <p class="section-header__eyebrow">Community forum</p>
- <h1>{seoEntry?.h1 ?? 'Arc Raiders Cheats Forum: ESP, Aimbot & Gameplay Questions'}</h1>
+ <SplitPageTitle
+   title={seoEntry?.h1 ?? 'Arc Raiders Cheats Forum: ESP, Aimbot & Extraction Questions'}
+   primaryClass="page-title-split__primary"
+   accentClass="page-title-split__accent"
+ />
           <p class="forum-hero__copy">
             Short threads pulled from buyer guides and patch notes. Use them to sanity-check ESP layouts, tier picks, and what to do when anti-cheat pushes an update before you log in.
           </p>
@@ -46,7 +48,6 @@ const sourceTimestamp = (path?: string) => {
             <p class="forum-intro__tagline">Check #status on Discord before you treat any preset as live-ready.</p>
           </div>
  </div>
- <a class="forum-create" href="/blog/"><Icon name="messageCircle" size={17} /> Explore the guides</a>
  </header>
 
  <div class="forum-layout">
@@ -109,18 +110,18 @@ const sourceTimestamp = (path?: string) => {
  </main>
 
  <aside class="forum-sidebar">
+ <a class="forum-create forum-sidebar__guides" href="/blog/"><Icon name="messageCircle" size={17} /> Explore the guides</a>
  <section class="forum-side-card forum-about" id="community-guidelines">
  <div class="forum-side-card__banner"></div>
  <div class="forum-about__content">
  <div class="forum-about__title">
  <div class="forum-brand-block forum-brand-block--discussions" aria-hidden="true">
- <img src={FORUM_LOGO} alt="" width={120} height={36} class="forum-brand-logo forum-brand-logo--sidebar" loading="lazy" decoding="async" />
+ <img src={FORUM_LOGO} alt="" width={180} height={32} class="forum-brand-logo forum-brand-logo--sidebar" loading="lazy" decoding="async" />
  </div>
  <h2>Player discussions</h2>
  </div>
  <p>Maps, loadouts, ESP vs radar, patches, and account safety: plus setup Q&amp;A linked from the guides.</p>
  <div class="forum-stats"><span><b>{forumPosts.length}</b> discussions</span><span><b>{forumCategories.length}</b> topics</span></div>
- <a class="forum-join" href="/blog/">Explore all guides</a>
  </div>
  </section>
  <section class="forum-side-card" id="communities">

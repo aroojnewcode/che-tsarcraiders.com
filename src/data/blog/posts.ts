@@ -153,7 +153,7 @@ export const blogPosts: BlogPostFull[] = [
       { type: "h2", text: "Compare tiers, then buy" },
       {
         type: "p",
-        text: "Read [Lite vs Pro](/blog/lite-vs-pro/) for the closest decision, the [Elite tier guide](/blog/elite/) for the full suite, and the [features guide](/blog/features/) for every module. Then [open the products hub](/products/arc-raiders-hacks/) and [pay for a live ESP license](https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Farc-raiders).",
+        text: "Read [Lite vs Pro](/blog/lite-vs-pro/) for the closest decision, the [Elite tier guide](/products/arc-raiders-hacks/elite/) for the full suite, and the [features guide](/blog/features/) for every module. Then [open the products hub](/products/arc-raiders-hacks/) and [pay for a live ESP license](https://zadeyo.com/go/UROOJ?to=%2Fproducts%2Farc-raiders).",
       },
       {
         type: "cta",
@@ -316,7 +316,7 @@ export const blogPosts: BlogPostFull[] = [
       { type: "h2", text: "Elite extras" },
       {
         type: "p",
-        text: "Objective Route Assist, the full radar suite, Skin Changer, cloud config bundles and priority patches. See the [Elite tier guide](/blog/elite/).",
+        text: "Objective Route Assist, the full radar suite, Skin Changer, cloud config bundles and priority patches. See the [Elite tier guide](/products/arc-raiders-hacks/elite/).",
       },
       { type: "h2", text: "Buy steps" },
       {
@@ -465,7 +465,7 @@ export const blogPosts: BlogPostFull[] = [
       { type: "h2", text: "Price and upgrade path" },
       {
         type: "p",
-        text: "Live pricing is shown on the [Arc Raiders Hacks](/products/arc-raiders-hacks/) page before checkout. Starting on Lite and upgrading to Pro through the portal is a common route; if you already know you want aim assist, buy Pro directly. Want the whole suite? See the [Elite tier guide](/blog/elite/).",
+        text: "Live pricing is shown on the [Arc Raiders Hacks](/products/arc-raiders-hacks/) page before checkout. Starting on Lite and upgrading to Pro through the portal is a common route; if you already know you want aim assist, buy Pro directly. Want the whole suite? See the [Elite tier guide](/products/arc-raiders-hacks/elite/).",
       },
       { type: "h2", text: "Risk" },
       {
@@ -617,7 +617,7 @@ export const blogPosts: BlogPostFull[] = [
       { type: "h2", text: "Is Pro or Elite right for you?" },
       {
         type: "p",
-        text: "Pro covers every combat module. Elite adds loot assist tools, Skin Changer and priority patches. Compare in the [Lite vs Pro guide](/blog/lite-vs-pro/) and the [Elite tier guide](/blog/elite/).",
+        text: "Pro covers every combat module. Elite adds loot assist tools, Skin Changer and priority patches. Compare in the [Lite vs Pro guide](/blog/lite-vs-pro/) and the [Elite tier guide](/products/arc-raiders-hacks/elite/).",
       },
       { type: "h2", text: "After you buy" },
       {
@@ -683,7 +683,7 @@ export const blogPosts: BlogPostFull[] = [
       { type: "h2", text: "When to upgrade" },
       {
         type: "p",
-        text: "If you also want aim assist and recoil control, step up to Pro. If you want the full radar suite, loot assist tools and Skin Changer, see [Elite](/blog/elite/). Compare in [Lite vs Pro](/blog/lite-vs-pro/).",
+        text: "If you also want aim assist and recoil control, step up to Pro. If you want the full radar suite, loot assist tools and Skin Changer, see [Elite](/products/arc-raiders-hacks/elite/). Compare in [Lite vs Pro](/blog/lite-vs-pro/).",
       },
       { type: "h2", text: "Pair with FOV hack" },
       {
@@ -816,7 +816,7 @@ export const blogPosts: BlogPostFull[] = [
       { type: "h2", text: "Which one to buy" },
       {
         type: "p",
-        text: "Buy Unlock All if visuals are all you want. Buy Elite if you also want combat modules; see the [Elite tier guide](/blog/elite/) and the [features guide](/blog/features/).",
+        text: "Buy Unlock All if visuals are all you want. Buy Elite if you also want combat modules; see the [Elite tier guide](/products/arc-raiders-hacks/elite/) and the [features guide](/blog/features/).",
       },
       {
         type: "cta",
@@ -1011,7 +1011,7 @@ export const blogPosts: BlogPostFull[] = [
       },
       {
         type: "p",
-        text: "Detail: [Lite vs Pro](/blog/lite-vs-pro/) and the [Elite tier guide](/blog/elite/). Live prices are on the [product page](/products/arc-raiders-hacks/).",
+        text: "Detail: [Lite vs Pro](/blog/lite-vs-pro/) and the [Elite tier guide](/products/arc-raiders-hacks/elite/). Live prices are on the [product page](/products/arc-raiders-hacks/).",
       },
       { type: "h2", text: "Step 2: Secure checkout" },
       {
@@ -1101,7 +1101,7 @@ export const blogPosts: BlogPostFull[] = [
       { type: "h2", text: "Pro vs Elite" },
       {
         type: "p",
-        text: "Every profile feature is in Pro. Elite adds loot assist tools, Skin Changer and priority patches; see the [Elite tier guide](/blog/elite/). Pro includes all Lite modules, so [ESP and radar](/blog/esp/) work with your profiles.",
+        text: "Every profile feature is in Pro. Elite adds loot assist tools, Skin Changer and priority patches; see the [Elite tier guide](/products/arc-raiders-hacks/elite/). Pro includes all Lite modules, so [ESP and radar](/blog/esp/) work with your profiles.",
       },
       {
         type: "cta",
@@ -1292,7 +1292,7 @@ export const blogPosts: BlogPostFull[] = [
       { type: "h2", text: "Which tier for creators" },
       {
         type: "p",
-        text: "Lite is the lowest-footprint option; Pro adds aim support; Elite adds Skin Changer. See [Lite vs Pro](/blog/lite-vs-pro/) and the [Elite tier guide](/blog/elite/).",
+        text: "Lite is the lowest-footprint option; Pro adds aim support; Elite adds Skin Changer. See [Lite vs Pro](/blog/lite-vs-pro/) and the [Elite tier guide](/products/arc-raiders-hacks/elite/).",
       },
       { type: "h2", text: "Behavior matters too" },
       {
@@ -1415,7 +1415,7 @@ export const blogPosts: BlogPostFull[] = [
       { type: "h2", text: "Link to combat tiers" },
       {
         type: "p",
-        text: "If your problem is losing fights after you find loot, step up to [Pro aimbot and recoil](/blog/aimbot/). If you need the full radar suite and Skin Changer, read [Elite](/blog/elite/). Compare modules on the [products hub](/products/arc-raiders-hacks/).",
+        text: "If your problem is losing fights after you find loot, step up to [Pro aimbot and recoil](/blog/aimbot/). If you need the full radar suite and Skin Changer, read [Elite](/products/arc-raiders-hacks/elite/). Compare modules on the [products hub](/products/arc-raiders-hacks/).",
       },
       {
         type: "cta",

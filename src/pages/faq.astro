@@ -1,13 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getAllFaqs } from '../data/faq';
+import { splitPageHeading } from '../utils/splitPageHeading';
 import { resolvePageSeo } from '../config/seo';
 import { getPageSeoEntry } from '../config/pageSeo';
 import { breadcrumbSchema, faqAnswerPlainText, faqPageSchema, organizationSchema, webPageSchema } from '../utils/schema';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import SiteFaqSection from '../components/SiteFaqSection.astro';
-import SectionHeader from '../components/SectionHeader.astro';
-
 const seo = resolvePageSeo('/faq/');
 const seoEntry = getPageSeoEntry('/faq/');
 const breadcrumbs = [
@@ -16,6 +15,9 @@ const breadcrumbs = [
 ];
 
 const faqs = getAllFaqs();
+const faqHeroTitle =
+  seoEntry?.h1 ?? 'Arc Raiders Cheats FAQ: Loader Status, Prices & Ban Risk';
+const { primary: faqTitlePrimary } = splitPageHeading(faqHeroTitle);
 ---
 
 <BaseLayout
@@ -41,23 +43,30 @@ const faqs = getAllFaqs();
  <section class="border-b border-border bg-muted/10 py-8 md:py-12">
  <div class="mx-auto max-w-6xl px-5">
  <Breadcrumbs items={breadcrumbs} />
- <div class="mt-6">
- <SectionHeader
- eyebrow="Pre-purchase help"
- title={seoEntry?.h1 ?? 'Arc Raiders Cheats FAQ: Loader Status, Prices & Ban Risk'}
-          desc="Easy Anti-Cheat (EAC), Embark policy, loader status, tiers, checkout, Windows/Steam setup, and HWID or UGC utilities."
- titleId="faq-page-title"
- headingLevel="h1"
- />
- </div>
+ <header class="section-header faq-page__header mt-6 max-w-2xl space-y-0">
+ <p class="section-header__eyebrow">Pre-purchase help</p>
+ <h1 id="faq-page-title" class="page-title-split__primary section-header__title">
+ {faqTitlePrimary}
+ </h1>
+ <p class="section-header__subtitle">
+ Easy Anti-Cheat (EAC), Embark policy, loader status, tiers, checkout, Windows/Steam setup, and HWID or UGC utilities.
+ </p>
+ </header>
  </div>
  </section>
 
- <div class="mx-auto max-w-3xl px-5 pb-4">
+ <div class="mx-auto max-w-3xl px-5 pb-2">
  <p class="text-sm leading-relaxed text-muted-foreground">
  Use this FAQ before checkout: each answer covers delivery, supported platforms, tier differences, Easy Anti-Cheat (EAC), and Embark ban risk in plain language.
  </p>
  </div>
 
- <SiteFaqSection items={faqs} variant="full" titleId="faq-page-list" hideSectionHeader />
+ <SiteFaqSection
+ items={faqs}
+ variant="full"
+ titleId="faq-questions-title"
+ hideSectionHeader
+ showCategoryIntro
+ class="!pt-10 md:!pt-12"
+ />
 </BaseLayout>

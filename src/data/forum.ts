@@ -165,7 +165,7 @@ const additionalGuidePosts: ForumPost[] = [
     category: "General",
     categoryTone: "purple",
     sourceTitle: "Elite tier guide: when to upgrade your cheat tools",
-    sourcePath: "/blog/elite/",
+    sourcePath: "/products/arc-raiders-hacks/elite/",
     answer:
       "The guide describes Elite as including the Lite and Pro feature sets plus additional utilities such as Objective Route Assist, the full radar suite, priority patch delivery and Skin Changer.",
     detail:

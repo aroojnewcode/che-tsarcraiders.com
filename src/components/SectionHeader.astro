@@ -1,4 +1,6 @@
 ---
+import SplitPageTitle from './SplitPageTitle.astro';
+
 interface Props {
   eyebrow: string;
   title: string;
@@ -20,6 +22,7 @@ const {
   headingLevel = 'h1',
 } = Astro.props;
 const HeadingTag = headingLevel;
+const splitHeroTitle = headingLevel === 'h1';
 ---
 
 <header

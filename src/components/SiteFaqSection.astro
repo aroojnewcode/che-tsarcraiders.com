@@ -4,6 +4,7 @@ import FaqSection from './FaqSection.astro';
 import {
   SITE_FAQ_FILTER_TOPICS,
   SITE_FAQ_SECTION_COPY,
+  FAQ_CATEGORY_HEADER_COPY,
   CONTEXTUAL_FAQ_SECTION_COPY,
   faqFilterTopicsForItems,
 } from '../data/faq';
@@ -18,6 +19,8 @@ interface Props {
   filterTopics?: FaqTopic[];
   /** On /faq/ , only one page H1; keep filter chips without a second section title. */
   hideSectionHeader?: boolean;
+  /** Centered category browse block above filters on /faq/ */
+  showCategoryIntro?: boolean;
 }
 
 const {
@@ -28,9 +31,11 @@ const {
   variant = 'contextual',
   filterTopics: filterTopicsProp,
   hideSectionHeader = false,
+  showCategoryIntro,
 } = Astro.props;
 
 const copy = variant === 'full' ? SITE_FAQ_SECTION_COPY: CONTEXTUAL_FAQ_SECTION_COPY;
+const categoryIntro = showCategoryIntro ?? variant === 'full';
 const filterTopics =
   filterTopicsProp ?? (variant === 'full' ? SITE_FAQ_FILTER_TOPICS: faqFilterTopicsForItems(items));
 const showFilters = filterTopics.length > 1;
@@ -46,5 +51,10 @@ const showFilters = filterTopics.length > 1;
   showFilters={showFilters}
   filterTopics={filterTopics}
   hideSectionHeader={hideSectionHeader}
+  showCategoryIntro={categoryIntro}
+  categoryEyebrow={FAQ_CATEGORY_HEADER_COPY.eyebrow}
+  categoryTitle={FAQ_CATEGORY_HEADER_COPY.title}
+  categorySubtitle={FAQ_CATEGORY_HEADER_COPY.subtitle}
+  categoryTitleId={titleId}
   class={className}
 />

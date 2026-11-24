@@ -50,12 +50,6 @@ export const BLOG_PAGE_SEO: Record<string, PageSeoEntry> = {
       "Check loader status after patches before you buy. Refresh steps, status banner, and test checklist for Arc Raiders builds.",
     h1: "Arc Raiders Loader Status After Game Updates",
   },
-  "/blog/elite/": {
-    title: "Elite Tier Guide | Full Cheat Suite",
-    description:
-      "Buy Elite: full ESP, aimbot, loot route assist, Skin Changer, and priority patches. Who should upgrade and how to checkout.",
-    h1: "Elite Hacks 2026: Full ESP, Aimbot & Route Assist",
-  },
   "/blog/esp/": {
     title: "ESP & Wallhack | Radar Setup Guide",
     description:

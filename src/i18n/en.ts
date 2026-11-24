@@ -26,9 +26,9 @@ export const en: Translations = {
     status:
       "Loader online for the current Arc Raiders client (check status before you queue)",
     eyebrow: "",
-    title: "Arc Raiders Hacks & Cheats",
+    title: "Arc Raiders Cheats",
     subtitle:
-      "ESP, container loot highlights, and a 2D radar built for Topside runs. Compare Lite and Pro, checkout on cheatsarcraiders.com, then unlock the loader in your portal. Windows 10 and 11, Steam.",
+      "Get ARC Raiders ESP, loot highlights, and 2D radar for better runs. Compare Lite and Pro, choose your plan, and unlock your loader after checkout.",
     ctaPrimary: "Buy Arc Raiders cheats",
     ctaPrimaryHref: PRIMARY_CHECKOUT_PATH,
     ctaDiscord: "Shop products",
@@ -490,16 +490,6 @@ export const en: Translations = {
         desc: "Lite for ESP and radar, Pro for aimbot and no recoil. Compare tiers side by side and buy the Arc Raiders hack tier that fits your server and playstyle.",
         date: "Aug 16, 2026",
         readTime: "5 min read",
-      },
-      {
-        tag: "Guides",
-        title:
-          "Buy Arc Raiders Elite hacks: full suite pricing & who should upgrade",
-        slug: "elite",
-        image: "/images/blog/elite.png",
-        desc: "Elite is the full Arc Raiders hacks suite: aimbot, ESP, Objective Route Assist, Skin Changer and priority patches. See who should buy Elite and how to check out.",
-        date: "Aug 16, 2026",
-        readTime: "7 min read",
       },
       {
         tag: "Setup",

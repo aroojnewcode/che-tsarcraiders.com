@@ -14,13 +14,13 @@ const CORE_PAGE_SEO: Record<string, PageSeoEntry> = {
     title: "Arc Raiders Cheats 2026 | ESP, Aimbot & Extraction Hacks",
     description:
       "Buy Arc Raiders cheats. Compare Lite and Pro tiers, secure checkout, and a portal loader. Player ESP, container loot ESP, aimbot and 2D radar on Windows PC.",
-    h1: "Arc Raiders Cheats & Hacks: ESP, Aimbot & Radar",
+    h1: "Arc Raiders Cheats: ESP, Aimbot & Radar",
   },
   "/products/arc-raiders-hacks/": {
     title: "Buy Arc Raiders Cheats | Compare Lite vs Pro Hacks",
     description:
-      "Buy Arc Raiders cheats on one hub. Compare Lite vs Pro vs Elite, live loader status, monthly pricing, ARC and container ESP, private external vs Cloud DMA, and checkout.",
-    h1: "Arc Raiders Hacks 2026: Lite, Pro & Elite Cheats",
+      "Buy Arc Raiders cheats on one hub. Compare Lite vs Pro, live loader status, monthly pricing, ARC and container ESP, private external vs Cloud DMA, and checkout.",
+    h1: "Arc Raiders Hacks 2026: Lite & Pro Cheats",
   },
   "/products/arc-raiders-hacks/lite/": {
     title: "Arc Raiders ESP & Wallhack | Skeleton ESP & 2D Radar",

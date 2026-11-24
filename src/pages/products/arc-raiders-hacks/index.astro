@@ -17,10 +17,11 @@ import { cheatTierIcons, productCategoryIcons } from '../../../data/sectionIcons
 import { Button } from '@/components/starwind/button';
 import { checkoutPath } from '../../../config/checkout';
 import { externalLinkProps } from '../../../utils/externalLink';
+import SplitPageTitle from '../../../components/SplitPageTitle.astro';
 
 const seo = resolvePageSeo('/products/arc-raiders-hacks/');
 const seoEntry = getPageSeoEntry('/products/arc-raiders-hacks/');
-const hubH1 = seoEntry?.h1 ?? 'Arc Raiders Hacks 2026: Lite, Pro & Elite Cheats';
+const hubH1 = seoEntry?.h1 ?? 'Arc Raiders Hacks 2026: Lite & Pro Cheats';
 
 const breadcrumbs = [
   { name: 'Home', path: '/' },
@@ -64,8 +65,12 @@ const viewLabelBySlug: Record<string, string> = {
   'cloud-dma': 'View Cloud DMA listing',
 };
 
-const tierPages = cheatPages;
+const tierPages = cheatPages.filter((p) => p.slug === 'lite' || p.slug === 'pro');
 const utilityPages = productPages.filter((p) => p.kind === 'utility');
+const utilityOrder = ['hwid-spoofer', 'ugc', 'unlock-all', 'cloud-dma'] as const;
+const orderedUtilityPages = utilityOrder
+  .map((slug) => utilityPages.find((p) => p.slug === slug))
+  .filter((p): p is (typeof utilityPages)[number] => Boolean(p));
 const cheatsCopy = t.cheats;
 const utilitiesCopy = t.products;
 ---
@@ -110,7 +115,7 @@ const utilitiesCopy = t.products;
         <p class="products-hub__eyebrow">{cheatsCopy.eyebrow}</p>
         <h2 id="hub-tiers-title" class="products-hub__subtitle">{cheatsCopy.title}</h2>
         <p class="products-hub__lede">{cheatsCopy.subtitle}</p>
-        <div class="products-hub__grid mt-8">
+        <div class="products-hub__grid products-hub__grid--combat mt-8">
           {
             tierPages.map((product) => (
               <CatalogCard
@@ -131,34 +136,36 @@ const utilitiesCopy = t.products;
             ))
           }
         </div>
-      </section>
 
-      <section class="products-hub__block mt-16" aria-labelledby="hub-utilities-title">
-        <p class="products-hub__eyebrow">Utilities</p>
-        <h2 id="hub-utilities-title" class="products-hub__subtitle">HWID, UGC, Cloud DMA &amp; Camouflage</h2>
-        <p class="products-hub__lede">
-          Each utility uses its own secure checkout link. Combat tiers (Lite, Pro and Elite) share the main Arc Raiders product URL.
-        </p>
-        <div class="products-hub__grid products-hub__grid--utilities mt-8">
-          {
-            utilityPages.map((product) => (
-              <CatalogCard
-                class="catalog-card--carousel catalog-card--hub h-full"
-                label={cardLabel(product)}
-                title={product.title}
-                href={productPath(product.slug)}
-                buyUrl={product.buyUrl}
-                features={product.features}
-                more={product.more}
-                icon={cardIcon(product)}
-                badge={product.badge}
-                variant="essential"
-                buyLabel={buyLabelBySlug[product.slug] ?? 'Get access'}
-                viewLabel={viewLabelBySlug[product.slug] ?? 'View product listing'}
-                maxFeatures={5}
-              />
-            ))
-          }
+        <div class="mt-12" aria-labelledby="hub-utilities-title">
+          <p class="products-hub__eyebrow">Utilities</p>
+          <h3 id="hub-utilities-title" class="products-hub__subtitle text-2xl md:text-3xl">
+            HWID, UGC, Cloud DMA &amp; Camouflage
+          </h3>
+          <p class="products-hub__lede">
+            Each utility uses its own secure checkout link. Combat tiers (Lite and Pro) share the main Arc Raiders product URL.
+          </p>
+          <div class="products-hub__grid products-hub__grid--utilities mt-8">
+            {
+              orderedUtilityPages.map((product) => (
+                <CatalogCard
+                  class="catalog-card--carousel catalog-card--hub h-full"
+                  label={cardLabel(product)}
+                  title={product.title}
+                  href={productPath(product.slug)}
+                  buyUrl={product.buyUrl}
+                  features={product.features}
+                  more={product.more}
+                  icon={cardIcon(product)}
+                  badge={product.badge}
+                  variant="essential"
+                  buyLabel={buyLabelBySlug[product.slug] ?? 'Get access'}
+                  viewLabel={viewLabelBySlug[product.slug] ?? 'View product listing'}
+                  maxFeatures={5}
+                />
+              ))
+            }
+          </div>
         </div>
       </section>
 
@@ -183,7 +190,7 @@ const utilitiesCopy = t.products;
         </p>
         <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-muted-foreground md:text-base">
           <li>Review patch-day notes on the <a class="text-primary hover:underline" href="/blog/patch-day/">loader status after game updates</a> guide.</li>
-          <li>Compare tiers only when Lite, Pro and Elite show online for your Windows build.</li>
+          <li>Compare tiers only when Lite and Pro show online for your Windows build.</li>
           <li>Never queue Topside with a loader marked testing or detected.</li>
         </ul>
       </section>
@@ -192,7 +199,7 @@ const utilitiesCopy = t.products;
         <p class="products-hub__eyebrow">Pricing</p>
         <h2 id="hub-pricing-title" class="products-hub__subtitle">Arc Raiders cheats price per month and per day</h2>
         <p class="products-hub__lede">
-          Starting checkout prices for Lite, Pro and Elite on PC (monthly plans shown with approximate price per day). Utilities use separate checkout links on their product pages.
+          Starting checkout prices for Lite and Pro on PC (monthly plans shown with approximate price per day). Utilities use separate checkout links on their product pages.
         </p>
         <div class="mt-6 overflow-x-auto rounded-lg border border-border">
           <table class="w-full min-w-[24rem] text-left text-sm">
@@ -206,7 +213,7 @@ const utilitiesCopy = t.products;
             </thead>
             <tbody class="divide-y divide-border">
               {
-                ['lite', 'pro', 'elite'].map((slug) => {
+                ['lite', 'pro'].map((slug) => {
                   const monthly = getProductPlans(slug).find((p) => p.id === 'monthly');
                   const perDayUsd =
                     monthly && monthly.priceUsd > 0

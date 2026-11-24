@@ -14,7 +14,11 @@ interface Props {
 const { heroTitle } = Astro.props;
 
 const h = t.hero;
-const heroHeading = heroTitle ?? h.title;
+const fullHeading = (heroTitle ?? h.title).replace(/\s*&\s*Hacks\b/gi, '').trim();
+const colonIdx = fullHeading.indexOf(':');
+const heroLine1 =
+  colonIdx >= 0 ? fullHeading.slice(0, colonIdx).trim() : fullHeading;
+const heroLine2 = colonIdx >= 0 ? fullHeading.slice(colonIdx + 1).trim() : '';
 
 const heroMetrics = h.metrics.map((m, i) => ({ metric: m, icon: heroStatIcons[i] ?? 'check' }));
 
@@ -41,9 +45,19 @@ const heroMarqueePills = [
           <Badge variant="secondary" class="uppercase tracking-wider">{h.eyebrow}</Badge>
         ): null}
 
-        <h1 id="hero-title" class="text-3xl font-bold uppercase leading-tight tracking-tight md:text-4xl lg:text-5xl">
-          {heroHeading}
-        </h1>
+        <div class="space-y-2">
+          <h1
+            id="hero-title"
+            class="text-3xl font-bold uppercase leading-tight tracking-tight text-foreground md:text-4xl lg:text-5xl"
+          >
+            {heroLine1}
+          </h1>
+          {heroLine2 ? (
+            <h2 class="hero-tagline text-2xl font-bold uppercase leading-tight tracking-tight md:text-3xl">
+              {heroLine2}
+            </h2>
+          ) : null}
+        </div>
 
         <p class="max-w-xl text-sm leading-relaxed text-neutral-900 dark:text-neutral-300 md:text-base">
           {h.subtitle}
