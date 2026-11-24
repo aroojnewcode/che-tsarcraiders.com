@@ -3,7 +3,7 @@ import { blogPosts } from '../data/blog';
 import { forumPosts } from '../data/forum';
 import { parseBlogDate } from '../utils/schema';
 import { lastmodForPath, STATIC_PAGE_LASTMOD } from './contentLastmod';
-import { FORUM_INDEX_ALLOWLIST } from './forumIndexing';
+import { FORUM_INDEX_ALLOWLIST, isForumThinThread } from './forumIndexing';
 
 const buildDate = new Date().toISOString().slice(0, 10);
 
@@ -14,8 +14,8 @@ const blogLastmod = new Map(
 const forumLastmod = new Map(
   forumPosts.map((post) => {
     const sourceSlug = post.sourcePath?.split('/').filter(Boolean).at(-1);
-    const sourceArticle = sourceSlug ? blogPosts.find((item) => item.slug === sourceSlug) : undefined;
-    const lastmod = sourceArticle ? parseBlogDate(sourceArticle.date) : buildDate;
+    const sourceArticle = sourceSlug ? blogPosts.find((item) => item.slug === sourceSlug): undefined;
+    const lastmod = sourceArticle ? parseBlogDate(sourceArticle.date): buildDate;
     return [`/forum/${post.slug}/`, lastmod] as const;
   }),
 );
@@ -29,9 +29,13 @@ const forumMirrorPaths = new Set(
     .map((post) => `/forum/${post.slug}/`),
 );
 
+const forumThinPaths = new Set(
+  forumPosts.filter((post) => isForumThinThread(post.body)).map((post) => `/forum/${post.slug}/`),
+);
+
 function pathnameFromUrl(url: string): string {
   const path = new URL(url).pathname;
-  return path.endsWith('/') ? path : `${path}/`;
+  return path.endsWith('/') ? path: `${path}/`;
 }
 
 export function sitemapSerialize(item: SitemapItem): SitemapItem | undefined {
@@ -41,7 +45,7 @@ export function sitemapSerialize(item: SitemapItem): SitemapItem | undefined {
     return undefined;
   }
 
-  if (forumMirrorPaths.has(path)) {
+  if (forumMirrorPaths.has(path) || forumThinPaths.has(path)) {
     return undefined;
   }
 
@@ -96,8 +100,8 @@ export function sitemapSerialize(item: SitemapItem): SitemapItem | undefined {
   }
 
   if (path in STATIC_PAGE_LASTMOD || path === '/before-you-buy/' || path === '/reviews/') {
-    item.priority = path === '/before-you-buy/' || path === '/reviews/' ? 0.6 : 0.5;
-    item.changefreq = path === '/before-you-buy/' || path === '/reviews/' ? 'monthly' : 'yearly';
+    item.priority = path === '/before-you-buy/' || path === '/reviews/' ? 0.6: 0.5;
+    item.changefreq = path === '/before-you-buy/' || path === '/reviews/' ? 'monthly': 'yearly';
     item.lastmod = STATIC_PAGE_LASTMOD[path] ?? lastmodForPath(path, buildDate);
     return item;
   }
@@ -109,5 +113,5 @@ export function sitemapSerialize(item: SitemapItem): SitemapItem | undefined {
 }
 
 function PRODUCT_OR_HOME_LASTMOD(): string {
-  return lastmodForPath('/products/delta-force-hacks/', buildDate);
+  return lastmodForPath('/products/arc-raiders-hacks/', buildDate);
 }

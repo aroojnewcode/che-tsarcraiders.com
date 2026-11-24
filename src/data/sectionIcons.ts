@@ -87,7 +87,7 @@ export const productCategoryIcons: Record<string, IconName> = {
 
 export const acquisitionStepIcons: IconName[] = ['acqPackage', 'acqSettings', 'acqZap', 'acqCheck'];
 
-/** After-purchase timeline on product detail — one distinct icon per step */
+/** After-purchase timeline on product detail , one distinct icon per step */
 export const productAcquisitionStepIcons: IconName[] = [
   'liveStatus',
   'acqPackage',
@@ -95,7 +95,7 @@ export const productAcquisitionStepIcons: IconName[] = [
   'acqCheck',
 ];
 
-/** Product detail requirement tiles — prefer compat-style icons where mapped */
+/** Product detail requirement tiles , prefer compat-style icons where mapped */
 export const productRequirementIcons: Partial<Record<IconName, IconName>> = {
   reqWindows: 'compatWindows',
   reqSteam: 'compatSteam',

@@ -33,7 +33,7 @@ function bindHeroDots(wrapper: HTMLElement, api: EmblaApi, autoplay: AutoplayPlu
       if (!progress) return;
 
       progress.style.animation = 'none';
-      progress.style.width = i === index && reducedMotion ? '100%' : '0%';
+      progress.style.width = i === index && reducedMotion ? '100%': '0%';
 
       if (i === index && !reducedMotion) {
         restartProgress(progress);
@@ -45,9 +45,9 @@ function bindHeroDots(wrapper: HTMLElement, api: EmblaApi, autoplay: AutoplayPlu
     const index = api.selectedScrollSnap();
     dots.forEach((dot, i) => {
       const active = i === index;
-      dot.dataset.active = active ? 'true' : 'false';
-      dot.setAttribute('aria-selected', active ? 'true' : 'false');
-      dot.tabIndex = active ? 0 : -1;
+      dot.dataset.active = active ? 'true': 'false';
+      dot.setAttribute('aria-selected', active ? 'true': 'false');
+      dot.tabIndex = active ? 0: -1;
     });
     syncProgress();
   };

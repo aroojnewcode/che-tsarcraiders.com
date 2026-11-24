@@ -17,13 +17,13 @@ const categoryKey = (name: string) => name.toLowerCase().replace(/[^a-z0-9]/g, '
 const sourceTimestamp = (path?: string) => {
  const slug = path?.split('/').filter(Boolean).at(-1);
  const article = blogPosts.find((item) => item.slug === slug);
- return article ? getBlogPostTimestamp(article.date) : 0;
+ return article ? getBlogPostTimestamp(article.date): 0;
 };
 ---
 
 <BaseLayout title={seo.title} description={seo.description} jsonLd={[
  organizationSchema(),
- collectionPageSchema({ name: 'Delta Force Player Discussions', description: seo.description, url: '/forum/' }),
+ collectionPageSchema({ name: 'Arc Raiders Player Discussions', description: seo.description, url: '/forum/' }),
  breadcrumbSchema(breadcrumbs),
 ]}>
  <section class="forum-page py-8 md:py-12">
@@ -35,9 +35,9 @@ const sourceTimestamp = (path?: string) => {
  <img src={FORUM_LOGO} alt="" width={48} height={48} class="forum-brand-logo forum-brand-logo--hero" loading="eager" decoding="async" />
  </div>
  <p class="section-header__eyebrow">Community forum</p>
- <h1>{seoEntry?.h1 ?? 'Delta Force Cheats Forum – ESP, Aimbot & Gameplay Questions'}</h1>
+ <h1>{seoEntry?.h1 ?? 'Arc Raiders Cheats Forum: ESP, Aimbot & Gameplay Questions'}</h1>
           <p class="forum-hero__copy">
-            Short threads pulled from buyer guides and patch notes. Use them to sanity-check ESP layouts, tier picks, and what to do when ACE pushes an update before you log in.
+            Short threads pulled from buyer guides and patch notes. Use them to sanity-check ESP layouts, tier picks, and what to do when anti-cheat pushes an update before you log in.
           </p>
           <div class="forum-intro">
             <p>
@@ -85,14 +85,14 @@ const sourceTimestamp = (path?: string) => {
  <span class={`forum-community-avatar tone-${post.categoryTone}`}><Icon name="users" size={15} /></span>
  <a href="#communities" class="forum-community-name">d/{post.category.toLowerCase().replaceAll(' ', '')}</a>
  <span>·</span><span><Icon name="userRound" size={13} /> u/{post.author}</span><span>{post.age}</span>
- <span>{post.sourcePath ? 'Guide Q&A' : 'Discussion'}</span>
+ <span>{post.sourcePath ? 'Guide Q&A': 'Discussion'}</span>
  </div>
  <a class="forum-post-title" href={`/forum/${post.slug}/`}>{post.title}</a>
  <p class="forum-post-excerpt">{post.excerpt}</p>
  {post.sourceTitle && <p class="forum-source">From the guide: <a href={post.sourcePath}>{post.sourceTitle}</a></p>}
  <div class="forum-post-actions">
  {post.flair && <span class={`forum-flair tone-${post.categoryTone}`}>{post.flair}</span>}
- <a href={`/forum/${post.slug}/`}><Icon name="messageCircle" size={15} /> {post.commentsCount} {post.commentsCount === 1 ? 'reply' : 'replies'}</a>
+ <a href={`/forum/${post.slug}/`}><Icon name="messageCircle" size={15} /> {post.commentsCount} {post.commentsCount === 1 ? 'reply': 'replies'}</a>
  <a href={`/forum/${post.slug}/`}><Icon name="arrowRight" size={15} /> Read discussion</a>
  </div>
  </div>
@@ -118,7 +118,7 @@ const sourceTimestamp = (path?: string) => {
  </div>
  <h2>Player discussions</h2>
  </div>
- <p>Maps, loadouts, ESP vs radar, patches, and account safety – plus setup Q&amp;A linked from the guides.</p>
+ <p>Maps, loadouts, ESP vs radar, patches, and account safety: plus setup Q&amp;A linked from the guides.</p>
  <div class="forum-stats"><span><b>{forumPosts.length}</b> discussions</span><span><b>{forumCategories.length}</b> topics</span></div>
  <a class="forum-join" href="/blog/">Explore all guides</a>
  </div>
@@ -137,7 +137,7 @@ const sourceTimestamp = (path?: string) => {
  <ol><li>Keep it friendly and constructive</li><li>Stay on topic and add context</li><li>Mark spoilers and sensitive content</li></ol>
  <a href="#community-guidelines">Read the full guidelines <Icon name="arrowRight" size={14} /></a>
  </section>
- <p class="forum-sidebar-foot">About · Guidelines · Privacy · Terms<br />© {new Date().getFullYear()} cheatsdeltaforce.net</p>
+ <p class="forum-sidebar-foot">About · Guidelines · Privacy · Terms<br />© {new Date().getFullYear()} cheatsarcraiders.com</p>
  </aside>
  </div>
  </div>
@@ -182,13 +182,13 @@ const sourceTimestamp = (path?: string) => {
  list?.append(card);
  });
 
- if (countStatus) countStatus.textContent = `${matching.length} ${matching.length === 1 ? 'discussion' : 'discussions'}`;
- if (visibleCount) visibleCount.textContent = `${matching.length} ${matching.length === 1 ? 'discussion' : 'discussions'}`;
+ if (countStatus) countStatus.textContent = `${matching.length} ${matching.length === 1 ? 'discussion': 'discussions'}`;
+ if (visibleCount) visibleCount.textContent = `${matching.length} ${matching.length === 1 ? 'discussion': 'discussions'}`;
  if (emptyState) emptyState.hidden = matching.length > 0;
  if (pagination) pagination.hidden = matching.length <= pageSize;
  if (pageStatus) pageStatus.textContent = matching.length
- ? `Showing ${firstVisible + 1}–${Math.min(firstVisible + pageSize, matching.length)} of ${matching.length}`
- : '0 discussions';
+ ? `Showing ${firstVisible + 1}:${Math.min(firstVisible + pageSize, matching.length)} of ${matching.length}`
+: '0 discussions';
  if (previousButton) previousButton.disabled = currentPage <= 1;
  if (nextButton) nextButton.disabled = currentPage >= pageCount;
  if (pageButtons) {

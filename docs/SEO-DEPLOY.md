@@ -2,14 +2,14 @@
 
 ## Canonical domain
 
-Production canonical origin is **`https://cheatsdeltaforce.net`** (`src/config/site.ts`, `scripts/cf-build.mjs`, sitemap finalize).
+Production canonical origin is **`https://cheatsarcraiders.com`** (`src/config/site.ts`, `scripts/cf-build.mjs`, sitemap finalize).
 
-1. Add **cheatsdeltaforce.net** (and `www` if used) as a **Custom Domain** on the Cloudflare Worker `cheatsdeltaforce-net` in the same account as the zone. Enable **Always Use HTTPS** and a **www → apex** redirect in the zone (Workers `_redirects` must use relative paths only).
+1. Add **cheatsarcraiders.com** (and `www` if used) as a **Custom Domain** on the Cloudflare Worker `cheatsarcraiders-net` in the same account as the zone. Enable **Always Use HTTPS** and a **www → apex** redirect in the zone (Workers `_redirects` must use relative paths only).
 2. When the zone is available, uncomment and set `[[routes]]` in `wrangler.toml` (see file comments).
-3. In **Google Search Console**, use one **Domain** or **URL-prefix** property for `https://cheatsdeltaforce.net/` only.
-4. Submit `https://cheatsdeltaforce.net/sitemap-index.xml` (also linked from `/robots.txt` on the live host).
+3. In **Google Search Console**, use one **Domain** or **URL-prefix** property for `https://cheatsarcraiders.com/` only.
+4. Submit `https://cheatsarcraiders.com/sitemap-index.xml` (also linked from `/robots.txt` on the live host).
 
-Builds set `SITE_ORIGIN` and `SITEMAP_ORIGIN` to cheatsdeltaforce.net so sitemap `<loc>` values match HTML `<link rel="canonical">` on the custom domain.
+Builds set `SITE_ORIGIN` and `SITEMAP_ORIGIN` to cheatsarcraiders.com so sitemap `<loc>` values match HTML `<link rel="canonical">` on the custom domain.
 
 `npm run build` runs `scripts/emit-redirects.mjs`, which generates **`public/_redirects`** from `PATH_REDIRECTS` in `scripts/redirects.mjs` (301 + slash variants). Legacy Astro HTML redirect stubs are not used in production—edge 301s only.
 
@@ -21,13 +21,13 @@ Set these in **Cloudflare Workers Builds → Variables** (or local `.env` via `n
 
 | Variable | Purpose |
 |----------|---------|
-| `SITE_ORIGIN` | `https://cheatsdeltaforce.net` |
-| `SITEMAP_ORIGIN` | `https://cheatsdeltaforce.net` |
-| `INDEXNOW_KEY` | 32-char hex; served at `https://cheatsdeltaforce.net/<key>.txt` |
-| `INDEXNOW_HOST` | `cheatsdeltaforce.net` |
+| `SITE_ORIGIN` | `https://cheatsarcraiders.com` |
+| `SITEMAP_ORIGIN` | `https://cheatsarcraiders.com` |
+| `INDEXNOW_KEY` | 32-char hex; served at `https://cheatsarcraiders.com/<key>.txt` |
+| `INDEXNOW_HOST` | `cheatsarcraiders.com` |
 | `PUBLIC_GA_MEASUREMENT_ID` | GA4 `G-XXXXXXXXXX` |
 
-`INDEXNOW_KEY` triggers `scripts/indexnow.mjs` after build. `/go/*` are full HTML gateways (`src/pages/go/[slug].astro`) with self-canonical on cheatsdeltaforce.net — do not re-add Astro middleware or `serve.mjs` 302s to Zadeyo. HSTS is set in `public/_headers` (and echoed by the minimal `src/worker.js` wrapper).
+`INDEXNOW_KEY` triggers `scripts/indexnow.mjs` after build. `/go/*` are full HTML gateways (`src/pages/go/[slug].astro`) with self-canonical on cheatsarcraiders.com — do not re-add Astro middleware or `serve.mjs` 302s to Zadeyo. HSTS is set in `public/_headers` (and echoed by the minimal `src/worker.js` wrapper).
 
 ## Meta & structured data
 

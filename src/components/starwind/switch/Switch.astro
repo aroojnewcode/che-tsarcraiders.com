@@ -38,8 +38,8 @@ const {
   ...rest
 } = Astro.props;
 
-const resolvedPadding = padding ?? (size === "sm" ? 2.5 : size === "lg" ? 4 : 3);
-const sizeMultiplier = size === "sm" ? 4 : size === "lg" ? 6 : 5;
+const resolvedPadding = padding ?? (size === "sm" ? 2.5: size === "lg" ? 4: 3);
+const sizeMultiplier = size === "sm" ? 4: size === "lg" ? 6: 5;
 const ariaLabel = rest["aria-label"] ?? label ?? "switch";
 const switchStyle = { "--padding": `${resolvedPadding}px`, "--height": `calc((var(--spacing) * ${sizeMultiplier}) + (var(--padding) * 2))`, "--width": `calc((var(--spacing) * ${sizeMultiplier} * 2) + (var(--padding) * 3))`, "--border-offset": "1px" };
 const thumbStyle = { "--translation": `calc((var(--spacing) * ${sizeMultiplier}) + (var(--padding) * 2) - var(--border-offset))` };

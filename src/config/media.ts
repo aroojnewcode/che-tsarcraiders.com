@@ -1,15 +1,16 @@
-/** Canonical Delta Force hero & blog imagery (Supabase seo-media-library / delta-force). */
-export const DELTA_FORCE_SUPABASE_IMAGES = [
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/delta-force/a0f5bd09-1a27-4419-abd8-b568665f8a40/1794261715303-153xml-dj-vikash-lakhisarai-delta-force-cheats-the-most-powerful-hack-you-will-ever-use.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/delta-force/b15955c0-41e9-482d-a072-e4e797bccc2c/1793642384017-7e6kyx-dj-vikash-lakhisarai-delta-force-cheats-the-best-delta-force-hack-you-ve-ever-se.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/delta-force/b15955c0-41e9-482d-a072-e4e797bccc2c/1793642355754-jeg31l-dj-vikash-lakhisarai-delta-force-cheats-the-best-delta-force-hack-you-ve-ever-se.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/delta-force/b15955c0-41e9-482d-a072-e4e797bccc2c/1793642240214-6q965x-dj-vikash-lakhisarai-delta-force-cheats-the-best-delta-force-hack-you-ve-ever-se.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/delta-force/c7f7b806-cb3e-4eea-8fa1-eca85c479073/1793194019127-iubf8a-phoenix-df-chams-s2.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/delta-force/c7f7b806-cb3e-4eea-8fa1-eca85c479073/1793194018385-gbjigg-phoenix-df-chams-s1.webp',
+/** Canonical Arc Raiders hero & blog imagery (Supabase seo-media-library / arc-raiders). */
+export const ARC_RAIDERS_SUPABASE_IMAGES = [
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/arc-raiders/a0f5bd09-1a27-4419-abd8-b568665f8a40/1794008121990-ksd4fl-arctic-cheats-how-to-setup-arc-raiders-cheats-full-tutorial-ajh5udvmfaa-873x491-.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/arc-raiders/a0f5bd09-1a27-4419-abd8-b568665f8a40/1794008037484-7fbixf-arctic-cheats-how-to-setup-arc-raiders-cheats-full-tutorial-ajh5udvmfaa-873x491-.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/arc-raiders/a0f5bd09-1a27-4419-abd8-b568665f8a40/1794007894051-jedo40-jiiago-this-arc-raiders-cheat-lets-you-give-teammates-your-esp-uo0gu7hqeva-873x4.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/arc-raiders/ad4c79ec-795c-4c4f-b7f2-4126c15eb0d4/1793866406963-t4fhr9-arcane-arc-s1.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/arc-raiders/ad4c79ec-795c-4c4f-b7f2-4126c15eb0d4/1793866391955-mn4li4-arcane-arc-s2.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/arc-raiders/ad4c79ec-795c-4c4f-b7f2-4126c15eb0d4/1793866372473-d20cm3-arcane-arc-s3.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/arc-raiders/ad4c79ec-795c-4c4f-b7f2-4126c15eb0d4/1793866348754-97lv7p-arcane-arc-s4.webp',
 ] as const;
 
 /** Pool for blog cards, article heroes, and OG fallbacks — hash-stable per slug. */
-export const DELTA_FORCE_MEDIA_URLS: readonly string[] = [...DELTA_FORCE_SUPABASE_IMAGES];
+export const ARC_RAIDERS_MEDIA_URLS: readonly string[] = [...ARC_RAIDERS_SUPABASE_IMAGES];
 
 export interface HeroCarouselSlide {
   src: string;
@@ -18,62 +19,68 @@ export interface HeroCarouselSlide {
   captionDesc: string;
 }
 
-/** Homepage hero carousel — Delta Force Supabase shots. */
+/** Homepage hero carousel — Arc Raiders Supabase shots. */
 export const HERO_CAROUSEL_SLIDES: HeroCarouselSlide[] = [
   {
-    src: DELTA_FORCE_SUPABASE_IMAGES[0]!,
-    alt: 'Delta Force cheat overlay with ESP HUD on live gameplay',
-    caption: 'ESP HUD overview',
-    captionDesc: 'Full combat overlay with readable threat markers and HUD framing.',
+    src: ARC_RAIDERS_SUPABASE_IMAGES[0]!,
+    alt: 'Arc Raiders cheat setup tutorial with loader and portal steps on PC',
+    caption: 'Setup walkthrough',
+    captionDesc: 'From checkout to your first Topside preset without skipping safety checks.',
   },
   {
-    src: DELTA_FORCE_SUPABASE_IMAGES[1]!,
-    alt: 'Delta Force cheats in action — player awareness and combat assist overlay',
-    caption: 'Combat awareness',
-    captionDesc: 'High-visibility ESP stack tuned for fast Warfare rotations.',
+    src: ARC_RAIDERS_SUPABASE_IMAGES[1]!,
+    alt: 'Full Arc Raiders cheats setup guide showing overlay and menu layout',
+    caption: 'Portal and loader',
+    captionDesc: 'Where to download builds, load presets, and confirm status before you queue.',
   },
   {
-    src: DELTA_FORCE_SUPABASE_IMAGES[2]!,
-    alt: 'Delta Force hack gameplay screenshot with enemy and loot ESP enabled',
-    caption: 'Elite tier preview',
-    captionDesc: 'Combined player ESP and loot routing on a contested objective.',
+    src: ARC_RAIDERS_SUPABASE_IMAGES[2]!,
+    alt: 'Arc Raiders ESP shared with squadmates on a third-person extraction run',
+    caption: 'Squad ESP sync',
+    captionDesc: 'Keep your three-player squad aligned before a contested extract elevator.',
   },
   {
-    src: DELTA_FORCE_SUPABASE_IMAGES[3]!,
-    alt: 'Delta Force undetected cheats showing squad and enemy tags through smoke',
-    caption: 'Squad lane intel',
-    captionDesc: 'Team filters and distance readouts before you wide-swing.',
+    src: ARC_RAIDERS_SUPABASE_IMAGES[3]!,
+    alt: 'Arc Raiders player ESP and ARC machine highlights on Topside',
+    caption: 'Player ESP',
+    captionDesc: 'Distance tags and silhouettes for Raiders and patrol routes.',
   },
   {
-    src: DELTA_FORCE_SUPABASE_IMAGES[4]!,
-    alt: 'Delta Force Phoenix chams season 2 — character highlight through cover',
-    caption: 'Phoenix chams S2',
-    captionDesc: 'Chams profile for spotting operators through light cover.',
+    src: ARC_RAIDERS_SUPABASE_IMAGES[4]!,
+    alt: 'Arc Raiders loot and container ESP on an urban extraction map',
+    caption: 'Loot routing',
+    captionDesc: 'Filter desk crates and field containers before the timer runs down.',
   },
   {
-    src: DELTA_FORCE_SUPABASE_IMAGES[5]!,
-    alt: 'Delta Force Phoenix chams season 1 — operator glow and silhouette ESP',
-    caption: 'Phoenix chams S1',
-    captionDesc: 'Silhouette ESP preset for Hazard Operations and Warfare.',
+    src: ARC_RAIDERS_SUPABASE_IMAGES[5]!,
+    alt: 'Arc Raiders combat overlay with radar and threat markers',
+    caption: 'Radar stack',
+    captionDesc: 'Mini-map style intel for third-party fights near extract zones.',
+  },
+  {
+    src: ARC_RAIDERS_SUPABASE_IMAGES[6]!,
+    alt: 'Arc Raiders loader-status HUD tuned for extraction PvP',
+    caption: 'Full HUD preset',
+    captionDesc: 'Balanced visibility for solo runs and squad matchmaking.',
   },
 ];
 
-/** Product screenshot fallbacks (`npm run media:delta-force`). */
-export const DELTA_FORCE_LOCAL_IMAGES = [
-  '/images/delta-force/delta-force-screenshot-1.png',
-  '/images/delta-force/delta-force-screenshot-2.png',
-  '/images/delta-force/delta-force-screenshot-3.png',
+/** Product screenshot fallbacks (`npm run media:arc-raiders`). */
+export const ARC_RAIDERS_LOCAL_IMAGES = [
+  '/images/arc-raiders/arc-raiders-screenshot-1.png',
+  '/images/arc-raiders/arc-raiders-screenshot-2.png',
+  '/images/arc-raiders/arc-raiders-screenshot-3.png',
 ] as const;
 
 /** Default social / JSON-LD preview. */
-export const PRIMARY_HERO_IMAGE = DELTA_FORCE_SUPABASE_IMAGES[0]!;
+export const PRIMARY_HERO_IMAGE = ARC_RAIDERS_SUPABASE_IMAGES[0]!;
 
 /** Stable cover per blog slug (cycles Supabase media library). */
-export function deltaForceBlogImageForSlug(slug: string): string {
+export function arcRaidersBlogImageForSlug(slug: string): string {
   let hash = 0;
   for (let i = 0; i < slug.length; i++) {
     hash = (hash * 31 + slug.charCodeAt(i)) >>> 0;
   }
-  const index = hash % DELTA_FORCE_MEDIA_URLS.length;
-  return DELTA_FORCE_MEDIA_URLS[index]!;
+  const index = hash % ARC_RAIDERS_MEDIA_URLS.length;
+  return ARC_RAIDERS_MEDIA_URLS[index]!;
 }

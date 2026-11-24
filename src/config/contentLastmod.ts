@@ -1,9 +1,9 @@
 /**
- * Content dates for sitemap lastmod — bump PRODUCT_HUB_LASTMOD when tiers/pricing copy changes.
+ * Content dates for sitemap lastmod , bump PRODUCT_HUB_LASTMOD when tiers/pricing copy changes.
  */
 export const PRODUCT_HUB_LASTMOD = '2026-11-01';
 
-/** Rarely edited pages — bump when legal/support copy changes. */
+/** Rarely edited pages , bump when legal/support copy changes. */
 export const STATIC_PAGE_LASTMOD: Record<string, string> = {
   '/about/': '2026-10-01',
   '/support/': '2026-11-01',

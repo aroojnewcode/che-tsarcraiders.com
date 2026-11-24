@@ -28,8 +28,8 @@ const {
   ...rest
 } = Astro.props;
 
-const styleObj = typeof style === "string" ? {} : ((style as Record<string, string>) ?? {});
-const providerStyle = typeof style === "string" ? style : { "--sidebar-width": styleObj["--sidebar-width"] ?? "18rem", "--sidebar-width-icon": styleObj["--sidebar-width-icon"] ?? "3.5rem", ...styleObj };
+const styleObj = typeof style === "string" ? {}: ((style as Record<string, string>) ?? {});
+const providerStyle = typeof style === "string" ? style: { "--sidebar-width": styleObj["--sidebar-width"] ?? "18rem", "--sidebar-width-icon": styleObj["--sidebar-width-icon"] ?? "3.5rem", ...styleObj };
 ---
 
 <SidebarPrimitive.Provider

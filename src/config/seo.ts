@@ -10,12 +10,13 @@ export const SITE_ORIGIN = String(import.meta.env.SITE || `https://${t.site.doma
 );
 
 export const DEFAULT_OG_IMAGE = PRIMARY_HERO_IMAGE;
-export const DEFAULT_OG_IMAGE_WIDTH = 960;
-export const DEFAULT_OG_IMAGE_HEIGHT = 540;
+/** Matches primary Supabase hero asset (873×491). */
+export const DEFAULT_OG_IMAGE_WIDTH = 873;
+export const DEFAULT_OG_IMAGE_HEIGHT = 491;
 
 export const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID as string | undefined;
 
-/** @example @cheatsdeltaforce */
+/** @example @cheatsarcraiders */
 export const TWITTER_SITE = import.meta.env.PUBLIC_TWITTER_SITE as string | undefined;
 
 export const TWITTER_CREATOR = import.meta.env.PUBLIC_TWITTER_CREATOR as string | undefined;
@@ -28,7 +29,7 @@ export function getOrganizationSameAs(): string[] {
     .map((entry) => entry.trim())
     .filter(Boolean);
   if (fromEnv?.length) return fromEnv;
-  return DISCORD_URL ? [DISCORD_URL] : [];
+  return DISCORD_URL ? [DISCORD_URL]: [];
 }
 
 export const INDEXNOW_KEY = import.meta.env.INDEXNOW_KEY as string | undefined;
@@ -43,7 +44,7 @@ export function canonicalUrl(pathname: string, origin: string = SITE_ORIGIN): st
 
 export function absoluteAssetUrl(path: string): string {
   if (path.startsWith('http://') || path.startsWith('https://')) return path;
-  const normalized = path.startsWith('/') ? path : `/${path}`;
+  const normalized = path.startsWith('/') ? path: `/${path}`;
   return `${SITE_ORIGIN}${normalized}`;
 }
 

@@ -42,7 +42,7 @@ const tierSlugs = tiers.map((t) => t.slug);
 <section class="space-y-4" aria-labelledby="compare-heading">
   <header class="section-header">
     <p class="section-header__eyebrow">Compare</p>
-    <h2 id="compare-heading" class="section-header__title">Compare Delta Force hack plans</h2>
+    <h2 id="compare-heading" class="section-header__title">Compare Arc Raiders hack plans</h2>
     <p class="section-header__subtitle">Side-by-side look at what each tier includes.</p>
   </header>
 
@@ -65,7 +65,7 @@ const tierSlugs = tiers.map((t) => t.slug);
                   <Icon
                     name={tier.icon}
                     size={22}
-                    class={highlightSlug === tier.slug ? 'icon-app--primary' : ''}
+                    class={highlightSlug === tier.slug ? 'icon-app--primary': ''}
                     aria-hidden="true"
                   />
                   {tier.name}
@@ -88,8 +88,8 @@ const tierSlugs = tiers.map((t) => t.slug);
               const included = row[slug as keyof Pick<CompareRow, 'lite' | 'pro' | 'elite'>];
               return (
                 <TableCell class="text-center">
-                  <span aria-label={included ? 'Included' : 'Not included'}>
-                    <Icon name={included ? 'circleCheck' : 'x'} size={18} />
+                  <span aria-label={included ? 'Included': 'Not included'}>
+                    <Icon name={included ? 'circleCheck': 'x'} size={18} />
                   </span>
                 </TableCell>
               );

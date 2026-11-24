@@ -1,12 +1,12 @@
 import type { PageSeoEntry } from './pageSeoTypes';
 import { forumPosts } from '../data/forum';
 
-const TITLE_SUFFIX = ' | DF Forum';
+const TITLE_SUFFIX = ' | Arc Raiders Forum';
 const TITLE_MAX = 60;
 const DESC_MIN = 70;
 const DESC_MAX = 155;
 const DESC_PAD =
-  ' Delta Force Hawk Ops buyers discuss tiers, ACE status, and loader setup on cheatsdeltaforce.net.';
+  ' Arc Raiders buyers discuss tiers, anti-cheat status, and loader setup on cheatsarcraiders.com.';
 
 function truncate(text: string, max: number): string {
   const trimmed = text.trim();
@@ -23,7 +23,7 @@ function forumDescription(excerpt: string): string {
   let text = truncate(excerpt.trim(), DESC_MAX);
   if (text.length < DESC_MIN) {
     const room = DESC_MAX - text.length;
-    const pad = room > 0 ? truncate(DESC_PAD.trim(), room) : '';
+    const pad = room > 0 ? truncate(DESC_PAD.trim(), room): '';
     text = `${text}${pad}`.trim();
   }
   return truncate(text, DESC_MAX);

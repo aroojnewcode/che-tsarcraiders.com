@@ -6,7 +6,7 @@ interface Props {
   titleId?: string;
   centered?: boolean;
   wide?: boolean;
-  /** Prefer a single H1 per page — use h2 for secondary section headers. */
+  /** Prefer a single H1 per page , use h2 for secondary section headers. */
   headingLevel?: 'h1' | 'h2';
 }
 
@@ -31,5 +31,5 @@ const HeadingTag = headingLevel;
 >
   <p class="section-header__eyebrow">{eyebrow}</p>
   <HeadingTag id={titleId} class="section-header__title">{title}</HeadingTag>
-  {desc ? <p class="section-header__subtitle">{desc}</p> : null}
+  {desc ? <p class="section-header__subtitle">{desc}</p>: null}
 </header>

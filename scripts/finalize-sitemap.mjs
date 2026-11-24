@@ -4,7 +4,7 @@ import path from 'node:path';
 const root = process.cwd();
 const dist = path.join(root, 'dist');
 const source = path.join(dist, 'sitemap-0.xml');
-const siteOrigin = (process.env.SITEMAP_ORIGIN || 'https://cheatsdeltaforce.net').replace(/\/$/, '');
+const siteOrigin = (process.env.SITEMAP_ORIGIN || 'https://cheatsarcraiders.com').replace(/\/$/, '');
 const siteHostname = new URL(siteOrigin).hostname;
 const URLSET_NS = 'http://www.sitemaps.org/schemas/sitemap/0.9';
 
@@ -109,8 +109,50 @@ function dedupeEntries(rawEntries) {
   return [...byLoc.values()].sort((a, b) => a.loc.localeCompare(b.loc));
 }
 
+const FORUM_INDEX_ALLOWLIST = new Set(['/forum/choose-tier/']);
+const FORUM_THIN_BODY_MAX_CHARS = 220;
+
+/** Forum threads mirrored from blog are noindex; keep them out of sitemap-forum.xml if an old build included them. */
+function loadForumMirrorPathnames() {
+  const forumFile = path.join(root, 'src', 'data', 'forum.ts');
+  if (!fs.existsSync(forumFile)) return new Set();
+  const text = fs.readFileSync(forumFile, 'utf8');
+  const mirrorPaths = new Set();
+  const re = /slug:\s*"([^"]+)"[\s\S]*?sourcePath:\s*"([^"]+)"/g;
+  let match;
+  while ((match = re.exec(text)) !== null) {
+    const pathname = `/forum/${match[1]}/`;
+    if (!FORUM_INDEX_ALLOWLIST.has(pathname)) mirrorPaths.add(pathname);
+  }
+  return mirrorPaths;
+}
+
+const forumMirrorPathnames = loadForumMirrorPathnames();
+
+function loadForumThinPathnames() {
+  const forumFile = path.join(root, 'src', 'data', 'forum.ts');
+  if (!fs.existsSync(forumFile)) return new Set();
+  const text = fs.readFileSync(forumFile, 'utf8');
+  const thinPaths = new Set();
+  const blockRe = /slug:\s*"([^"]+)"[\s\S]*?body:\s*\[([\s\S]*?)\],\s*\n\s*comments:/g;
+  let match;
+  while ((match = blockRe.exec(text)) !== null) {
+    const bodyChunk = match[2].replace(/^\s*\/\/.*$/gm, '');
+    const bodyText = bodyChunk.replace(/["`\n]/g, ' ').replace(/\s+/g, ' ').trim();
+    if (bodyText.length < FORUM_THIN_BODY_MAX_CHARS) {
+      thinPaths.add(`/forum/${match[1]}/`);
+    }
+  }
+  return thinPaths;
+}
+
+const forumThinPathnames = loadForumThinPathnames();
+
 const parsed = urlBlocks.map(parseUrlBlock).filter(Boolean);
-const entries = dedupeEntries(parsed);
+const entries = dedupeEntries(parsed).filter((entry) => {
+  const pathname = pathnameFromLoc(entry.loc);
+  return !forumMirrorPathnames.has(pathname) && !forumThinPathnames.has(pathname);
+});
 
 const blogEntries = entries.filter((e) => matchesSection(pathnameFromLoc(e.loc), 'blog'));
 const forumEntries = entries.filter((e) => matchesSection(pathnameFromLoc(e.loc), 'forum'));
@@ -147,9 +189,13 @@ const indexXml = `<?xml version="1.0" encoding="UTF-8"?>
 `;
 
 fs.writeFileSync(path.join(dist, 'sitemap-index.xml'), indexXml, 'utf8');
-/** Legacy URL: index only (avoids duplicating every URL in a monolithic urlset + child files). */
+/** Canonical sitemap URL for robots and GSC (avoid duplicating urlsets). */
 fs.writeFileSync(path.join(dist, 'sitemap.xml'), indexXml, 'utf8');
-writeUrlset(path.join(dist, 'sitemap-0.xml'), entries);
+
+const legacySitemap0 = path.join(root, 'public', 'sitemap-0.xml');
+if (fs.existsSync(legacySitemap0)) fs.unlinkSync(legacySitemap0);
+const distLegacy = path.join(dist, 'sitemap-0.xml');
+if (fs.existsSync(distLegacy)) fs.unlinkSync(distLegacy);
 
 const publicDir = path.join(root, 'public');
 for (const name of [
@@ -158,7 +204,6 @@ for (const name of [
   'sitemap-pages.xml',
   'sitemap-blog.xml',
   'sitemap-forum.xml',
-  'sitemap-0.xml',
 ]) {
   fs.copyFileSync(path.join(dist, name), path.join(publicDir, name));
 }

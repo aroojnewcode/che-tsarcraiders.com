@@ -5,10 +5,9 @@ import sharp from 'sharp';
 const root = process.cwd();
 const widths = [320, 400, 512, 640, 960];
 const dirs = [
-  'public/images/gameplay',
   'public/images/product',
   'public/images/blog',
-  'public/images/delta-force',
+  'public/images/arc-raiders',
 ];
 
 const force = process.env.OPTIMIZE_IMAGES === '1' || process.env.OPTIMIZE_IMAGES === 'true';

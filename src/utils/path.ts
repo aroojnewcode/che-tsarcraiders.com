@@ -6,8 +6,8 @@ export function withTrailingSlash(path: string): string {
     return path;
   }
   const [pathname, hash = ''] = path.split('#');
-  const normalized = pathname === '/' || pathname.endsWith('/') ? pathname : `${pathname}/`;
-  return hash ? `${normalized}#${hash}` : normalized;
+  const normalized = pathname === '/' || pathname.endsWith('/') ? pathname: `${pathname}/`;
+  return hash ? `${normalized}#${hash}`: normalized;
 }
 
 /** Former /cheats/* URLs → current routes (301 targets match astro.config + scripts/redirects.mjs). */
@@ -32,10 +32,10 @@ export function normalizeInternalPath(href: string): string {
   }
 
   const hashIndex = href.indexOf('#');
-  const rawPath = hashIndex >= 0 ? href.slice(0, hashIndex) : href;
-  const hash = hashIndex >= 0 ? href.slice(hashIndex) : '';
+  const rawPath = hashIndex >= 0 ? href.slice(0, hashIndex): href;
+  const hash = hashIndex >= 0 ? href.slice(hashIndex): '';
 
-  let pathname = rawPath.startsWith('/') ? rawPath : `/${rawPath}`;
+  let pathname = rawPath.startsWith('/') ? rawPath: `/${rawPath}`;
   pathname = LEGACY_PATH_MAP[pathname] ?? pathname;
 
   return withTrailingSlash(pathname) + hash;
@@ -61,7 +61,7 @@ export function blogPostPath(slug: string): string {
   return `/blog/${slug}/`;
 }
 
-/** @deprecated Use productPath — hack tier pages live under products. */
+/** @deprecated Use productPath , hack tier pages live under products. */
 export function cheatPath(slug: string): string {
   return productPath(slug);
 }

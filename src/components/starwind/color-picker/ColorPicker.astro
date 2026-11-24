@@ -79,7 +79,7 @@ const {
 
 const resolvedFormat = format ?? formats[0] ?? "hex";
 const requestedFormats = Array.from(new Set(formats));
-const normalizedFormats = requestedFormats.includes(resolvedFormat) ? requestedFormats : [resolvedFormat, ...requestedFormats];
+const normalizedFormats = requestedFormats.includes(resolvedFormat) ? requestedFormats: [resolvedFormat, ...requestedFormats];
 ---
 
 {
@@ -105,7 +105,7 @@ const normalizedFormats = requestedFormats.includes(resolvedFormat) ? requestedF
         <>
           {Astro.slots.has("default") ? (
             <Fragment set:html={await Astro.slots.render("default", [initial])} />
-          ) : (
+          ): (
             <>
         {
           label != null && (
@@ -140,7 +140,7 @@ const normalizedFormats = requestedFormats.includes(resolvedFormat) ? requestedF
         </>
       )}
     </ColorPickerPrimitive.Root>
-  ) : (
+  ): (
     <Popover
       defaultOpen={defaultOpen}
       closeOnEscape={closeOnEscape}
@@ -171,7 +171,7 @@ const normalizedFormats = requestedFormats.includes(resolvedFormat) ? requestedF
           <>
             {Astro.slots.has("default") ? (
               <Fragment set:html={await Astro.slots.render("default", [initial])} />
-            ) : (
+            ): (
               <>
           {
             label != null && (
@@ -194,7 +194,7 @@ const normalizedFormats = requestedFormats.includes(resolvedFormat) ? requestedF
               <ColorPickerTrigger
                 initial={initial}
                 showValueText={showValueText}
-                aria-label={label ? `Open ${label.toLowerCase()} picker` : "Open color picker"}
+                aria-label={label ? `Open ${label.toLowerCase()} picker`: "Open color picker"}
               />
             </ColorPickerPrimitive.Control>
 
@@ -211,7 +211,7 @@ const normalizedFormats = requestedFormats.includes(resolvedFormat) ? requestedF
               avoidCollisions={avoidCollisions}
               portalContainer={portalContainer}
               disablePortal={disablePortal}
-              aria-label={label ? `${label} editor` : "Color editor"}
+              aria-label={label ? `${label} editor`: "Color editor"}
             />
           </>
 

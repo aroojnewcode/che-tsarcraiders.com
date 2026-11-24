@@ -24,11 +24,11 @@ const lastRowIndex = why.rows.length - 1;
       <p class="section-header__subtitle">{why.subtitle}</p>
     </header>
 
-    {/* Desktop comparison — centered, reference-style columns */}
+    {/* Desktop comparison , centered, reference-style columns */}
     <div
       class="mt-14 hidden justify-center lg:flex"
       role="table"
-      aria-label="Delta Force Hacks compared with typical providers"
+      aria-label="Arc Raiders Hacks compared with typical providers"
     >
       <div
         class="why-compare-layout grid w-full max-w-4xl grid-cols-[minmax(0,1fr)_9.25rem_9.25rem] items-stretch gap-x-10 xl:max-w-5xl xl:gap-x-14"
@@ -77,7 +77,7 @@ const lastRowIndex = why.rows.length - 1;
                     i === lastRowIndex && "why-compare-card-row--last",
                   ]}
                   role="cell"
-                  aria-label={`${why.usLabel}: included — ${row.title}`}
+                  aria-label={`${why.usLabel}: included , ${row.title}`}
                 >
                   <span class="flex size-11 shrink-0 items-center justify-center rounded-full bg-primary/15 ring-1 ring-primary/40">
                     <Icon name="circleCheck" size={20} />
@@ -110,7 +110,7 @@ const lastRowIndex = why.rows.length - 1;
                     i === lastRowIndex && "why-compare-card-row--last",
                   ]}
                   role="cell"
-                  aria-label={`${why.otherLabel}: not included — ${row.title}`}
+                  aria-label={`${why.otherLabel}: not included , ${row.title}`}
                 >
                   <span class="flex size-11 shrink-0 items-center justify-center rounded-full bg-muted/80 ring-1 ring-border">
                     <Icon name="x" size={18} class="text-muted-foreground" />

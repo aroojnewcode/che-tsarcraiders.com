@@ -7,7 +7,7 @@ loadDotEnv();
 const root = process.cwd();
 const dist = path.join(root, 'dist');
 const key = process.env.INDEXNOW_KEY?.trim();
-const host = process.env.INDEXNOW_HOST?.trim() || 'cheatsdeltaforce.net';
+const host = process.env.INDEXNOW_HOST?.trim() || 'cheatsarcraiders.com';
 
 if (!key) {
   console.log('IndexNow: skipped (INDEXNOW_KEY not set).');

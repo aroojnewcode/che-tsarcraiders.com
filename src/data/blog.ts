@@ -1,11 +1,11 @@
 export type { BlogBlock, BlogPostFull } from './blog/types';
 import { blogPosts as rawBlogPosts } from './blog/posts';
-import { deltaForceBlogImageForSlug } from '../config/media';
+import { arcRaidersBlogImageForSlug } from '../config/media';
 
-/** Blog cards and articles use Delta Force screenshots. */
+/** Blog cards and articles use Arc Raiders screenshots. */
 export const blogPosts = rawBlogPosts.map((post) => ({
   ...post,
-  image: deltaForceBlogImageForSlug(post.slug),
+  image: arcRaidersBlogImageForSlug(post.slug),
 }));
 
 export function getBlogPost(slug: string) {
@@ -28,7 +28,7 @@ export function getNonFeaturedBlogPosts() {
 export function getFeaturedBlogPosts(limit = 3) {
   const featured = getFeaturedBlogPost();
   const rest = blogPosts.filter((p) => p.slug !== featured?.slug);
-  return featured ? [featured, ...rest].slice(0, limit) : blogPosts.slice(0, limit);
+  return featured ? [featured, ...rest].slice(0, limit): blogPosts.slice(0, limit);
 }
 
 export function getRelatedBlogPosts(slug: string, limit = 3) {
@@ -65,5 +65,5 @@ export function getBlogPostTimestamp(date: string) {
 
 export function getBlogReadMinutes(readTime: string) {
   const match = readTime.match(/(\d+)/);
-  return match ? Number(match[1]) : 0;
+  return match ? Number(match[1]): 0;
 }

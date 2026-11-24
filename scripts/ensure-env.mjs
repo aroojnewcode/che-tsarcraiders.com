@@ -17,7 +17,7 @@ const template = fs.existsSync(examplePath)
   : '';
 const body =
   template.trim() +
-  `\n\nSITE_ORIGIN=https://cheatsdeltaforce.net\nSITEMAP_ORIGIN=https://cheatsdeltaforce.net\nINDEXNOW_KEY=${key}\nINDEXNOW_HOST=cheatsdeltaforce.net\nPUBLIC_GA_MEASUREMENT_ID=\n`;
+  `\n\nSITE_ORIGIN=https://cheatsarcraiders.com\nSITEMAP_ORIGIN=https://cheatsarcraiders.com\nINDEXNOW_KEY=${key}\nINDEXNOW_HOST=cheatsarcraiders.com\nPUBLIC_GA_MEASUREMENT_ID=\n`;
 
 fs.writeFileSync(envPath, body, 'utf8');
 console.log(`Created .env with INDEXNOW_KEY=${key}`);

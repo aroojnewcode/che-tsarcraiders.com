@@ -1,12 +1,12 @@
 {
-  "name": "cheatsdeltaforce",
+  "name": "cheatsarcraiders",
   "type": "module",
   "version": "0.0.1",
   "engines": {
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "astro dev --host 127.0.0.1 --port 4321",
+    "dev": "astro dev --host --port 4321",
     "build": "node scripts/emit-redirects.mjs && node scripts/emit-indexnow-key.mjs && node scripts/clean-dist.mjs && node scripts/optimize-images.mjs && astro build && node scripts/emit-redirects.mjs && node scripts/emit-indexnow-key.mjs && node scripts/prune-dist-images.mjs && node scripts/finalize-sitemap.mjs && node scripts/indexnow.mjs",
     "build:lean": "node scripts/emit-redirects.mjs && node scripts/clean-dist.mjs && astro build && node scripts/prune-dist-images.mjs && node scripts/finalize-sitemap.mjs",
     "seo:links": "node scripts/check-external-links.mjs",
@@ -14,7 +14,7 @@
     "start": "node scripts/serve.mjs",
     "astro": "astro",
     "optimize:images": "node scripts/optimize-images.mjs",
-    "media:delta-force": "node scripts/optimize-images.mjs",
+    "media:arc-raiders": "node scripts/optimize-images.mjs",
     "brand:icons": "node scripts/make-favicon.mjs",
     "brand:gun": "node scripts/prepare-gun-image.mjs",
     "env:init": "node scripts/ensure-env.mjs",
@@ -22,7 +22,6 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
-    "@jridgewell/trace-mapping": "^0.3.31",
     "@lucide/astro": "^1.48.0",
     "@starwind-ui/astro": "^1.2.1",
     "@tabler/icons": "^3.48.0",

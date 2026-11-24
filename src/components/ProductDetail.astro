@@ -33,9 +33,9 @@ const previewFeatures = product.features.slice(0, 6);
 const goodToKnow =
   typeof product.goodToKnow === 'string'
     ? product.goodToKnow
-    : Array.isArray(product.goodToKnow)
+   : Array.isArray(product.goodToKnow)
       ? product.goodToKnow.join(' ')
-      : '';
+     : '';
 
 const descriptionBlocks = [
   ...product.overview.paragraphs.map((text) => ({ type: 'p' as const, text })),
@@ -135,7 +135,7 @@ const showDescToggle = descriptionBlocks.length > 2;
         const panel = btn.closest('[data-desc]')?.querySelector('[data-desc-panel]');
         if (!panel) return;
         const collapsed = panel.classList.toggle('is-collapsed');
-        btn.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+        btn.setAttribute('aria-expanded', collapsed ? 'false': 'true');
       });
     });
     document.querySelectorAll('[data-scroll-target]').forEach((el) => {

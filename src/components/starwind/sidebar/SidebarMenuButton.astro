@@ -24,7 +24,7 @@ const {
   ...rest
 } = Astro.props;
 
-const Tag = asChild ? "div" : href ? "a" : "button";
+const Tag = asChild ? "div": href ? "a": "button";
 const buttonClassName = sidebarMenuButton({ variant, size, class: className });
 ---
 
@@ -41,8 +41,8 @@ const buttonClassName = sidebarMenuButton({ variant, size, class: className });
             data-tooltip={tooltip}
             href={href}
             data-slot="sidebar-menu-button"
-            type={Tag === "button" ? "button" : undefined}
-            data-as-child={asChild ? true : undefined}
+            type={Tag === "button" ? "button": undefined}
+            data-as-child={asChild ? true: undefined}
             {...rest}
           >
             <slot />
@@ -59,7 +59,7 @@ const buttonClassName = sidebarMenuButton({ variant, size, class: className });
         {tooltip}
       </TooltipContent>
     </Tooltip>
-  ) : (
+  ): (
     <SidebarPrimitive.MenuButton asChild={true}>
       <Tag
         class={buttonClassName}
@@ -69,8 +69,8 @@ const buttonClassName = sidebarMenuButton({ variant, size, class: className });
         data-tooltip={tooltip}
         href={href}
         data-slot="sidebar-menu-button"
-        type={Tag === "button" ? "button" : undefined}
-        data-as-child={asChild ? true : undefined}
+        type={Tag === "button" ? "button": undefined}
+        data-as-child={asChild ? true: undefined}
         {...rest}
       >
         <slot />

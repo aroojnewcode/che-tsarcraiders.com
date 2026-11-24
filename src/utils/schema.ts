@@ -26,11 +26,11 @@ export function websiteSchema() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     '@id': `${SITE_ORIGIN}/#website`,
-    name: 'Delta Force Hacks',
+    name: 'Arc Raiders Hacks',
     url: `${SITE_ORIGIN}/`,
     inLanguage: 'en-US',
     description:
-      'Shop undetected Delta Force hacks for PC—player ESP, loot ESP, soft aim, no recoil and stream-proof overlays at cheatsdeltaforce.net.',
+      'Arc Raiders cheats for PC: player ESP, ARC machine ESP, container loot ESP, soft aim, 2D radar and tiered loaders. Check live status before each Topside raid at cheatsarcraiders.com.',
     publisher: { '@id': `${SITE_ORIGIN}/#organization` },
   };
 }
@@ -42,11 +42,11 @@ export function organizationSchema() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     '@id': `${SITE_ORIGIN}/#organization`,
-    name: 'Delta Force Hacks',
+    name: 'Arc Raiders Hacks',
     url: `${SITE_ORIGIN}/`,
     logo: absoluteAssetUrl(SITE_LOGO),
     email: SUPPORT_EMAIL,
-    ...(sameAs.length > 0 ? { sameAs } : {}),
+    ...(sameAs.length > 0 ? { sameAs }: {}),
     contactPoint: [
       {
         '@type': 'ContactPoint',
@@ -70,7 +70,7 @@ export function collectionPageSchema(input: { name: string; description: string;
     inLanguage: 'en-US',
     isPartOf: {
       '@type': 'WebSite',
-      name: 'Delta Force Hacks',
+      name: 'Arc Raiders Hacks',
       url: `${SITE_ORIGIN}/`,
     },
   };
@@ -86,7 +86,7 @@ export function webPageSchema(input: { name: string; description: string; url: s
     inLanguage: 'en-US',
     isPartOf: {
       '@type': 'WebSite',
-      name: 'Delta Force Hacks',
+      name: 'Arc Raiders Hacks',
       url: `${SITE_ORIGIN}/`,
     },
   };
@@ -135,7 +135,7 @@ export function discussionForumPostingSchema(input: {
     url: canonicalUrl(input.url),
     author: { '@type': 'Person', name: input.author },
     commentCount: input.comments,
-    isPartOf: { '@type': 'CollectionPage', name: 'Delta Force Hacks Community Forum', url: canonicalUrl('/forum/') },
+    isPartOf: { '@type': 'CollectionPage', name: 'Arc Raiders Hacks Community Forum', url: canonicalUrl('/forum/') },
   };
 }
 
@@ -146,7 +146,7 @@ function offerUrl(path: string): string {
 
 const productOfferSeller = {
   '@type': 'Organization' as const,
-  name: 'Delta Force Hacks',
+  name: 'Arc Raiders Hacks',
 };
 
 function productOffersBlock(productSlug: string, checkoutUrl: string) {
@@ -194,9 +194,9 @@ export function productSchema(input: {
     sku: input.sku ?? input.url.replace(/\//g, '-'),
     brand: {
       '@type': 'Brand',
-      name: 'Delta Force Hacks',
+      name: 'Arc Raiders Hacks',
     },
-    ...(input.image ? { image: absoluteAssetUrl(input.image) } : {}),
+    ...(input.image ? { image: absoluteAssetUrl(input.image) }: {}),
     offers: productOffersBlock(input.productSlug, input.offerUrl),
   };
 }
@@ -235,17 +235,17 @@ export function articleSchema(input: {
     headline: input.name,
     description: input.description,
     url: canonicalUrl(input.url),
-    ...(input.image ? { image: absoluteAssetUrl(input.image) } : {}),
+    ...(input.image ? { image: absoluteAssetUrl(input.image) }: {}),
     datePublished: input.datePublished,
     dateModified: input.dateModified ?? input.datePublished,
     inLanguage: 'en-US',
     author: {
       '@type': 'Organization',
-      name: 'Delta Force Hacks',
+      name: 'Arc Raiders Hacks',
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Delta Force Hacks',
+      name: 'Arc Raiders Hacks',
       logo: {
         '@type': 'ImageObject',
         url: absoluteAssetUrl(SITE_LOGO),
@@ -266,6 +266,6 @@ export function parseBlogDate(date: string): string {
 
 /** Plain text for FAQ JSON-LD (strip HTML from linked answers). */
 export function faqAnswerPlainText(htmlOrText: string, htmlOverride?: string): string {
-  const raw = htmlOverride?.trim() ? htmlOverride : htmlOrText;
+  const raw = htmlOverride?.trim() ? htmlOverride: htmlOrText;
   return raw.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 }

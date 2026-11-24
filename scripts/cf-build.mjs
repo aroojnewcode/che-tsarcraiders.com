@@ -3,8 +3,8 @@ import { loadDotEnv } from './load-dotenv.mjs';
 
 loadDotEnv();
 
-/** Cloudflare Builds: bake canonical URLs for cheatsdeltaforce.net (override with SITE_ORIGIN / SITEMAP_ORIGIN in CI if needed). */
-const productionOrigin = 'https://cheatsdeltaforce.net';
+/** Cloudflare Builds: bake canonical URLs for cheatsarcraiders.com (override with SITE_ORIGIN / SITEMAP_ORIGIN in CI if needed). */
+const productionOrigin = 'https://cheatsarcraiders.com';
 process.env.SITE_ORIGIN ||= productionOrigin;
 process.env.SITEMAP_ORIGIN ||= productionOrigin;
 

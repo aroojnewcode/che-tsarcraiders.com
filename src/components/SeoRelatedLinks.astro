@@ -15,16 +15,16 @@ interface Props {
 }
 
 const defaultLinks: LinkItem[] = [
-  { href: ROUTES.products, label: 'Shop Delta Force hack products' },
-  { href: '/products/delta-force-hacks/elite/', label: 'Buy Elite ESP & aimbot' },
-  { href: '/products/delta-force-hacks/utilities/', label: 'Compare utilities' },
+  { href: ROUTES.products, label: 'Shop Arc Raiders hack products' },
+  { href: '/products/arc-raiders-hacks/elite/', label: 'Buy Elite ESP & aimbot' },
+  { href: '/products/arc-raiders-hacks/utilities/', label: 'Compare utilities' },
   { href: ROUTES.blog, label: 'Buy guides & tier tips' },
   { href: ROUTES.faq, label: 'Pre-purchase FAQ' },
   { href: ROUTES.reviews, label: 'Buyer reviews' },
 ];
 
-const { title = 'Shop Delta Force hacks & guides', links = defaultLinks } = Astro.props;
-const checkout = checkoutPath('deltaForce');
+const { title = 'Shop Arc Raiders hacks & guides', links = defaultLinks } = Astro.props;
+const checkout = checkoutPath('arcRaiders');
 const checkoutAttrs = externalLinkProps(checkout);
 ---
 

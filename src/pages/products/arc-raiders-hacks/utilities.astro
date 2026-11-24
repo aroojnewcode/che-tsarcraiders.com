@@ -23,22 +23,22 @@ import {
 } from '@/components/starwind/table';
 
 const utilities = productPages.filter((p) => p.kind === 'utility');
-const seo = resolvePageSeo('/products/delta-force-hacks/utilities/');
-const seoEntry = getPageSeoEntry('/products/delta-force-hacks/utilities/');
-const utilitiesH1 = seoEntry?.h1 ?? 'Delta Force Hack Utilities – HWID Spoofer, UGC & Skin Changer';
+const seo = resolvePageSeo('/products/arc-raiders-hacks/utilities/');
+const seoEntry = getPageSeoEntry('/products/arc-raiders-hacks/utilities/');
+const utilitiesH1 = seoEntry?.h1 ?? 'Arc Raiders Hack Utilities: HWID Spoofer, UGC & Skin Changer';
 const breadcrumbs = [
   { name: 'Home', path: '/' },
   { name: 'Products', path: productHub.path },
-  { name: 'Compare utilities', path: '/products/delta-force-hacks/utilities/' },
+  { name: 'Compare utilities', path: '/products/arc-raiders-hacks/utilities/' },
 ];
 
-const checkout = checkoutPath('deltaForce');
+const checkout = checkoutPath('arcRaiders');
 const checkoutAttrs = externalLinkProps(checkout);
 
 const utilityUseCases: Record<string, string> = {
-  'hwid-spoofer': 'New PC or hardware flag after a ban – reset how your machine appears before a new account.',
+  'hwid-spoofer': 'New PC or hardware flag after a ban: reset how your machine appears before a new account.',
   ugc: 'Structured appeal and account recovery workflows when access is restricted.',
-  'unlock-all': 'Local cosmetic preview and loadouts without unlocking every Delta Force cosmetic locally.',
+  'unlock-all': 'Local cosmetic preview and loadouts without unlocking every Arc Raiders cosmetic locally.',
 };
 ---
 
@@ -47,9 +47,9 @@ const utilityUseCases: Record<string, string> = {
   description={seo.description}
   jsonLd={[
     webPageSchema({
-      name: 'Compare Delta Force utilities',
+      name: 'Compare Arc Raiders utilities',
       description: seo.description,
-      url: '/products/delta-force-hacks/utilities/',
+      url: '/products/arc-raiders-hacks/utilities/',
     }),
     breadcrumbSchema(breadcrumbs),
     itemListSchema(
@@ -67,24 +67,24 @@ const utilityUseCases: Record<string, string> = {
       <header class="mt-6 max-w-3xl space-y-3">
         <h1 class="text-3xl font-bold uppercase md:text-4xl">{utilitiesH1}</h1>
         <p class="text-lg text-muted-foreground">
-          Cheat utility comparison for PC – match HWID Spoofer or UGC recovery to your ban or appeal goal before checkout.
+          Cheat utility comparison for PC: match HWID Spoofer or UGC recovery to your ban or appeal goal before checkout.
           For Skin Changer and Unlock All, see the{' '}
-          <a href="/products/delta-force-hacks/unlock-all/" class="text-primary underline-offset-2 hover:underline">Unlock All product page</a>.
+          <a href="/products/arc-raiders-hacks/unlock-all/" class="text-primary underline-offset-2 hover:underline">Unlock All product page</a>.
         </p>
       </header>
 
       <Prose class="mt-8 max-w-none text-muted-foreground">
         <h2>When to buy HWID Spoofer or UGC instead of a tier</h2>
         <p>
-          HWID Spoofer helps when ACE Anti-Cheat flagged your machine. UGC tools organize appeals when Steam or server
+          HWID Spoofer helps when Embark anti-cheat flagged your machine. UGC tools organize appeals when Steam or server
           access is restricted. Cosmetic previews live on the{' '}
-          <a href="/products/delta-force-hacks/unlock-all/">Unlock All / Skin Changer</a> page. Combat tiers (Lite, Pro, Elite)
+          <a href="/products/arc-raiders-hacks/unlock-all/">Unlock All / Skin Changer</a> page. Combat tiers (Lite, Pro, Elite)
           are on the <a href={productHub.path}>products hub</a> when you need ESP or aimbot.
         </p>
         <h3>How checkout works</h3>
         <p>
           Open a utility product page for screenshots and requirements, then use Get access on that page for secure
-          checkout. Need combat modules too? Compare the <a href="/products/delta-force-hacks/elite/">Elite tier</a> or read{' '}
+          checkout. Need combat modules too? Compare the <a href="/products/arc-raiders-hacks/elite/">Elite tier</a> or read{' '}
           <a href="/blog/features/">the features guide</a> before you buy.
         </p>
       </Prose>
@@ -128,7 +128,7 @@ const utilityUseCases: Record<string, string> = {
                 <p>
                   <strong class="text-foreground">Includes:</strong>{' '}
                   {product.features.slice(0, 4).join(' · ')}
-                  {product.more > 0 ? ` · +${product.more} more` : ''}
+                  {product.more > 0 ? ` · +${product.more} more`: ''}
                 </p>
               </CardContent>
             </Card>
@@ -141,7 +141,7 @@ const utilityUseCases: Record<string, string> = {
         <Button as="a" href={productHub.path} variant="outline">Back to products</Button>
       </div>
 
-      <SeoRelatedLinks title="Shop Delta Force hacks & utilities" />
+      <SeoRelatedLinks title="Shop Arc Raiders hacks & utilities" />
     </div>
   </section>
 </BaseLayout>

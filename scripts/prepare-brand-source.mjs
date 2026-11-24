@@ -7,9 +7,9 @@ import { existsSync } from 'node:fs';
 import path from 'node:path';
 
 const root = process.cwd();
-const defaultSrc = path.join(root, 'public/brand/delta-force-favicon-source.png');
+const defaultSrc = path.join(root, 'public/brand/arc-raiders-favicon-source.png');
 const input = process.argv[2] || process.env.BRAND_ICON_SOURCE || defaultSrc;
-const out = path.join(root, 'public/brand/delta-force-favicon-source.png');
+const out = path.join(root, 'public/brand/arc-raiders-favicon-source.png');
 
 if (!existsSync(input)) {
   console.error('Missing input:', input);

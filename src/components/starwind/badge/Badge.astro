@@ -9,10 +9,10 @@ type Props = HTMLAttributes<"div"> & Omit<HTMLAttributes<"a">, "type"> & Omit<Va
 const { variant, tone, appearance, eyebrow, size, class: className, ...rest } = Astro.props;
 
 const usesComposedBadgeStyle = tone !== undefined || appearance !== undefined;
-const resolvedVariant = (usesComposedBadgeStyle ? null : variant) as typeof variant;
-const resolvedTone = usesComposedBadgeStyle ? (tone ?? "neutral") : undefined;
-const resolvedAppearance = usesComposedBadgeStyle ? (appearance ?? "soft") : undefined;
-const Tag = rest.href ? "a" : "div";
+const resolvedVariant = (usesComposedBadgeStyle ? null: variant) as typeof variant;
+const resolvedTone = usesComposedBadgeStyle ? (tone ?? "neutral"): undefined;
+const resolvedAppearance = usesComposedBadgeStyle ? (appearance ?? "soft"): undefined;
+const Tag = rest.href ? "a": "div";
 ---
 
 <Tag

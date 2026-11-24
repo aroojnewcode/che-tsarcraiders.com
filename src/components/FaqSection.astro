@@ -29,7 +29,7 @@ const {
   items,
   eyebrow = 'FAQ',
   title = 'Straight answers before checkout.',
-  subtitle = 'Compatibility, bans and access—no vague promises.',
+  subtitle = 'Compatibility, bans and access,no vague promises.',
   titleId = 'faq-heading',
   showFilters = false,
   filterTopics,
@@ -60,7 +60,7 @@ const filters = filterTopics ?? (['all', 'plans', 'esp', 'scripts', 'safety', 'p
   id={sectionId}
   class:list={['py-16 md:py-24', className]}
   aria-labelledby={titleId}
-  data-faq-section={showFilters ? '' : undefined}
+  data-faq-section={showFilters ? '': undefined}
 >
   <div class="mx-auto max-w-6xl px-5">
     <div class:list={[contentAlign === 'center' && 'mx-auto max-w-3xl', contentAlign === 'left' && 'product-detail__narrow max-w-3xl']}>
@@ -74,7 +74,7 @@ const filters = filterTopics ?? (['all', 'plans', 'esp', 'scripts', 'safety', 'p
           headingLevel="h2"
           centered={centered}
         />
-      ) : null
+      ): null
     }
 
     {
@@ -82,7 +82,7 @@ const filters = filterTopics ?? (['all', 'plans', 'esp', 'scripts', 'safety', 'p
         <div
           class:list={[
             'mt-8 flex flex-wrap gap-2',
-            contentAlign === 'center' ? 'justify-center' : 'justify-start',
+            contentAlign === 'center' ? 'justify-center': 'justify-start',
           ]}
           data-faq-filters
         >

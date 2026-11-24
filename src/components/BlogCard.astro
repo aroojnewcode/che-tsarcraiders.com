@@ -7,7 +7,7 @@ import { blogPostPath } from '../utils/path';
 import type { BlogPost } from '../i18n/types';
 import { t } from '../i18n';
 import { getBlogPostTimestamp, getBlogReadMinutes } from '../data/blog';
-import { deltaForceBlogImageForSlug } from '../config/media';
+import { arcRaidersBlogImageForSlug } from '../config/media';
 import { blogTagIcons } from '../data/sectionIcons';
 import type { IconName } from './icons/types';
 import { Badge } from '@/components/starwind/badge';
@@ -20,7 +20,7 @@ interface Props {
   eager?: boolean;
   /** Show date on image (blog index grid) */
   showDate?: boolean;
-  /** Full-width split hero on blog index — same card UI as grid cards */
+  /** Full-width split hero on blog index , same card UI as grid cards */
   layout?: 'default' | 'featured';
   class?: string;
 }
@@ -29,7 +29,7 @@ const { post, index = 0, eager = false, showDate = false, layout = 'default', cl
   Astro.props;
 const isFeatured = layout === 'featured';
 const href = blogPostPath(post.slug);
-const cover = post.image?.trim() || deltaForceBlogImageForSlug(post.slug);
+const cover = post.image?.trim() || arcRaidersBlogImageForSlug(post.slug);
 const readCtaLabel = `Read ${post.slug.replace(/-/g, ' ')} guide`;
 const timestamp = getBlogPostTimestamp(post.date);
 const readMinutes = getBlogReadMinutes(post.readTime);
@@ -42,7 +42,7 @@ const tagIcon: IconName = blogTagIcons[post.tag] ?? 'tag';
     'blog-card group/card gap-0 overflow-visible border border-border py-0 pt-0 shadow-xs ring-0 ring-transparent hover:shadow-md has-data-[slot=card-footer]:pb-0',
     isFeatured
       ? 'blog-featured mt-8 md:mt-10 lg:grid lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch'
-      : 'flex h-full flex-col',
+     : 'flex h-full flex-col',
     className,
   ]}
   data-blog-card
@@ -63,13 +63,13 @@ const tagIcon: IconName = blogTagIcons[post.tag] ?? 'tag';
       >
         <ResponsiveImage
           src={cover}
-          alt={`${post.title} — Delta Force hacks guide`}
-          width={isFeatured ? 960 : 640}
-          height={isFeatured ? 540 : 360}
-          widths={isFeatured ? undefined : CARD_IMAGE_WIDTHS}
-          sizes={isFeatured ? '(min-width: 1024px) 560px, 100vw' : CARD_IMAGE_SIZES}
-          loading={eager ? 'eager' : 'lazy'}
-          fetchPriority={eager ? 'high' : undefined}
+          alt={`${post.title} , Arc Raiders hacks guide`}
+          width={isFeatured ? 960: 640}
+          height={isFeatured ? 540: 360}
+          widths={isFeatured ? undefined: CARD_IMAGE_WIDTHS}
+          sizes={isFeatured ? '(min-width: 1024px) 560px, 100vw': CARD_IMAGE_SIZES}
+          loading={eager ? 'eager': 'lazy'}
+          fetchPriority={eager ? 'high': undefined}
           class:list={[
             'size-full object-cover transition-transform duration-500 ease-out group-hover/card:scale-[1.03]',
             isFeatured && 'lg:absolute lg:inset-0 lg:h-full lg:w-full lg:max-w-none',
@@ -92,7 +92,7 @@ const tagIcon: IconName = blogTagIcons[post.tag] ?? 'tag';
             <Icon name="calendar" size={14} />
             {post.date}
           </Badge>
-        ) : (
+        ): (
           <Badge tone="neutral" appearance="frosted" size="sm" class="gap-1.5 shadow-sm">
             <Icon name="clock" size={14} />
             {post.readTime}
@@ -106,10 +106,10 @@ const tagIcon: IconName = blogTagIcons[post.tag] ?? 'tag';
       aria-hidden="true"
     />
       </a>
-    ) : null
+    ): null
   }
 
-  <div class:list={['blog-card__body', isFeatured ? 'blog-featured__body lg:border-l lg:border-border' : 'flex min-h-0 flex-1 flex-col']}>
+  <div class:list={['blog-card__body', isFeatured ? 'blog-featured__body lg:border-l lg:border-border': 'flex min-h-0 flex-1 flex-col']}>
     <CardContent
       class:list={[
         'flex flex-1 flex-col gap-2.5 p-4 pb-3',
@@ -128,7 +128,7 @@ const tagIcon: IconName = blogTagIcons[post.tag] ?? 'tag';
               {post.readTime}
             </Badge>
           </div>
-        ) : null
+        ): null
       }
       <CardTitle class="text-base font-semibold normal-case leading-snug tracking-tight md:text-[1.0625rem]">
         <a
@@ -142,7 +142,7 @@ const tagIcon: IconName = blogTagIcons[post.tag] ?? 'tag';
       <p
         class:list={[
           'text-sm leading-relaxed text-muted-foreground',
-          isFeatured ? 'line-clamp-4 md:line-clamp-5' : 'line-clamp-2',
+          isFeatured ? 'line-clamp-4 md:line-clamp-5': 'line-clamp-2',
         ]}
       >
         {post.desc}
@@ -154,18 +154,18 @@ const tagIcon: IconName = blogTagIcons[post.tag] ?? 'tag';
         'blog-card__footer mt-auto w-full max-w-full rounded-none border-border/80 bg-transparent px-4 pb-6 pt-4 shadow-none sm:px-5 sm:pb-6',
         isFeatured
           ? 'flex flex-row flex-wrap items-center justify-start gap-x-3 gap-y-2'
-          : 'grid grid-cols-1 items-stretch gap-2.5',
+         : 'grid grid-cols-1 items-stretch gap-2.5',
       ]}
     >
       <p class="blog-card__footer-meta text-sm text-muted-foreground">
         {
-          /* Home cards: read time on the cover — footer shows date only. Blog index: date on cover — footer shows read time. */
+          /* Home cards: read time on the cover , footer shows date only. Blog index: date on cover , footer shows read time. */
           !showDate ? (
             <>
               <Icon name="calendar" size={14} class="blog-card__footer-icon" aria-hidden="true" />
               <span>{post.date}</span>
             </>
-          ) : (
+          ): (
             <>
               <Icon name="clock" size={14} class="blog-card__footer-icon" aria-hidden="true" />
               <span>{post.readTime}</span>
@@ -180,7 +180,7 @@ const tagIcon: IconName = blogTagIcons[post.tag] ?? 'tag';
         size="sm"
         class:list={[
           'blog-card__read',
-          isFeatured ? 'ms-auto max-w-full shrink-0' : 'w-full max-w-none justify-center',
+          isFeatured ? 'ms-auto max-w-full shrink-0': 'w-full max-w-none justify-center',
         ]}
       >
         {readCtaLabel}

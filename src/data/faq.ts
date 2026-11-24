@@ -34,10 +34,10 @@ function link(text: string, href: string): string {
   return `<a href="${normalizeInternalPath(href)}">${text}</a>`;
 }
 
-const elite = link("Delta Force Elite", productPath("elite"));
+const elite = link("Arc Raiders Elite", productPath("elite"));
 const lite = link("Lite tier (ESP & radar)", ROUTES.products);
 const pro = link("Pro tier (aimbot & no recoil)", ROUTES.products);
-const productsHub = link("Delta Force hack products", ROUTES.products);
+const productsHub = link("Arc Raiders hack products", ROUTES.products);
 const hwid = link("HWID Spoofer", productPath("hwid-spoofer"));
 const ugc = link("UGC", productPath("ugc"));
 const skin = link("Skin Changer", productPath("unlock-all"));
@@ -45,18 +45,18 @@ const faqPage = link("full FAQ", ROUTES.faq);
 const blog = link("blog guides", ROUTES.blog);
 
 const guideFeatures = link(
-  "Delta Force hacks features guide",
+  "Arc Raiders hacks features guide",
   blogPostPath("features"),
 );
 const guideLiteVsPro = link("Lite vs Pro guide", blogPostPath("lite-vs-pro"));
 const guideElite = link("Elite tier guide", blogPostPath("elite"));
 const guideEsp = link("ESP and radar setup guide", blogPostPath("esp"));
 const guidePatch = link(
-  "ACE Anti-Cheat patch day checklist",
-  blogPostPath("ace-patch"),
+  "Embark anti-cheat patch day checklist",
+  blogPostPath("patch-day"),
 );
 const guideBuy = link(
-  "how to buy Delta Force hacks in 2026",
+  "how to buy Arc Raiders hacks in 2026",
   blogPostPath("buy-guide"),
 );
 const guideExternal = link("external cheat guide", blogPostPath("external"));
@@ -73,8 +73,8 @@ const guideHwid = link(
   blogPostPath("hwid"),
 );
 const guideBeInit = link(
-  "ACE Anti-Cheat failed to initialize troubleshooting guide",
-  blogPostPath("ace-error"),
+  "Embark anti-cheat failed to initialize troubleshooting guide",
+  blogPostPath("loader-error"),
 );
 const guideRecoil = link(
   "aimbot and recoil scripts guide",
@@ -86,9 +86,9 @@ export const siteFaqs: SiteFaqItem[] = [
     id: "status",
     topic: "setup",
     icon: "faqStatus",
-    q: "Where do I check if Delta Force hacks are online?",
+    q: "Where do I check if Arc Raiders hacks are online?",
     a: a(
-      "The live status banner is on cheatsdeltaforce.net and in the Discord #status channel. Always check it after a Delta Force update or a major anti-cheat patch, or an ACE Anti-Cheat update.",
+      "The live status banner is on cheatsarcraiders.com and in the Discord #status channel. Always check it after a Arc Raiders update or a major anti-cheat patch, or an Embark anti-cheat update.",
     ),
   },
   {
@@ -97,16 +97,16 @@ export const siteFaqs: SiteFaqItem[] = [
     icon: "faqAfterBuy",
     q: "What happens after I buy?",
     a: a(
-      "Your portal unlocks the loader, setup guide and config library via our secure checkout. Follow the guide before launching Delta Force, and start the loader before the game so ACE Anti-Cheat sees a clean launch order.",
+      "Your portal unlocks the loader, setup guide and config library via our secure checkout. Follow the guide before launching Arc Raiders, and start the loader before the game so Embark anti-cheat sees a clean launch order.",
     ),
   },
   {
     id: "ban-risk",
     topic: "safety",
     icon: "faqBanRisk",
-    q: "Can I get banned using Delta Force hacks?",
+    q: "Can I get banned using Arc Raiders hacks?",
     a: a(
-      "Yes. any third-party software carries risk. ACE Anti-Cheat, Level Infinite server-side checks and admin reports all evolve, and Delta Force bans can follow your Level Infinite account and hardware. Read the current status and accept the risk before use.",
+      "Yes. any third-party software carries risk. Embark anti-cheat, Embark server-side checks and admin reports all evolve, and Arc Raiders bans can follow your Embark account and hardware. Read the current status and accept the risk before use.",
     ),
   },
   {
@@ -115,7 +115,7 @@ export const siteFaqs: SiteFaqItem[] = [
     icon: "faqPlatforms",
     q: "Which platforms are supported?",
     a: a(
-      "Delta Force on Steam for PC, Windows 10/11 64-bit only. Delta Force Console Edition, macOS and Linux are not supported.",
+      "Arc Raiders on Steam for PC, Windows 10/11 64-bit only. Arc Raiders Console Edition, macOS and Linux are not supported.",
     ),
   },
   {
@@ -138,7 +138,7 @@ export const siteFaqs: SiteFaqItem[] = [
     id: "what-is-esp",
     topic: "esp",
     icon: "faqWhatIsEsp",
-    q: "What is Delta Force ESP and what does it show?",
+    q: "What is Arc Raiders ESP and what does it show?",
     a: `Player ESP draws boxes, names, health, distance and skeletons through walls and terrain. Loot ESP marks containers, stashes, armor plate spawns and dropped items. ${lite} covers the full awareness overlay. ${pro} and ${elite} add aim assist on top. Setup details are in the ${guideEsp}.`,
     scopes: ["lite", "pro", "elite"],
   },
@@ -147,7 +147,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: "esp",
     icon: "faqEspVsScripts",
     q: "What is the difference between ESP and aimbot?",
-    a: `ESP and radar are information overlays – they never move your mouse. Aimbot, Soft Aim and No Recoil are aim assist modules on ${pro} and ${elite}. You can run ESP-only on ${lite} and keep a much quieter footprint on a server.`,
+    a: `ESP and radar are information overlays: they never move your mouse. Aimbot, Soft Aim and No Recoil are aim assist modules on ${pro} and ${elite}. You can run ESP-only on ${lite} and keep a much quieter footprint on a server.`,
   },
   {
     id: "which-tier-esp",
@@ -162,14 +162,14 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: "scripts",
     icon: "faqWhichTierScripts",
     q: "Which tier includes Aimbot and No Recoil?",
-    a: `${pro} ships Aimbot, Soft Aim, Bone Select, Trigger Bot and No Recoil / Spread. ${elite} includes everything in Pro plus Objective Route Assist and Skin Changer. ${lite} has no aim assist – it is overlay only.`,
+    a: `${pro} ships Aimbot, Soft Aim, Bone Select, Trigger Bot and No Recoil / Spread. ${elite} includes everything in Pro plus Objective Route Assist and Skin Changer. ${lite} has no aim assist: it is overlay only.`,
     scopes: ["pro"],
   },
   {
     id: "aim-modes",
     topic: "scripts",
     icon: "faqEspVsScripts",
-    q: "Aimbot or Soft Aim – which should I use?",
+    q: "Aimbot or Soft Aim: which should I use?",
     a: `Aimbot locks on hard inside its FOV circle and is the most obvious in a killcam or spectate. Soft Aim only pulls the crosshair toward the target with smoothing, which looks closer to a human. Start with Soft Aim, a small FOV and a humanized smoothing value. See the ${guideRecoil}.`,
     scopes: ["pro", "elite"],
   },
@@ -177,8 +177,8 @@ export const siteFaqs: SiteFaqItem[] = [
     id: "no-recoil",
     topic: "scripts",
     icon: "faqWhichTierScripts",
-    q: "How does No Recoil work in Delta Force?",
-    a: `No Recoil / Spread compensates for weapon recoil with per-weapon profiles – assault rifle, shotgun, marksman rifle, sniper rifle, LMG and more. Keep compensation below 100% so sprays still look natural, and test each weapon in a private match or firing range before risking your account in ranked Warfare.`,
+    q: "How does No Recoil work in Arc Raiders?",
+    a: `No Recoil / Spread compensates for weapon recoil with per-weapon profiles: assault rifle, shotgun, marksman rifle, sniper rifle, LMG and more. Keep compensation below 100% so sprays still look natural, and test each weapon in a private match or firing range before risking your account in squad extraction PvP.`,
     scopes: ["pro", "elite"],
   },
   {
@@ -193,7 +193,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: "plans",
     icon: "faqEliteSlots",
     q: "Why is Elite limited slots?",
-    a: `Elite is a private build with direct dev support and priority patch delivery. Slot caps keep patch cycles fast, especially on Delta Force update and ACE Anti-Cheat patch days. Check the status banner before checkout, or read the ${guideElite}.`,
+    a: `Elite is a private build with direct dev support and priority patch delivery. Slot caps keep patch cycles fast, especially on Arc Raiders update and Embark anti-cheat patch days. Check the status banner before checkout, or read the ${guideElite}.`,
     scopes: ["elite"],
   },
   {
@@ -207,9 +207,18 @@ export const siteFaqs: SiteFaqItem[] = [
     id: "undetected",
     topic: "safety",
     icon: "faqUndetected",
-    q: "Are undetected Delta Force hacks guaranteed?",
+    q: "Are undetected Arc Raiders hacks guaranteed?",
     a: a(
-      "No. Undetected is the current status on the product page – not a permanent guarantee. Stop if the build shows updating, testing or detected, and never play on your main account while a status is unclear.",
+      "No. Undetected is the current status on the product page: not a permanent guarantee. Stop if the build shows updating, testing or detected, and never play on your main account while a status is unclear.",
+    ),
+  },
+  {
+    id: "eac-embark",
+    topic: "safety",
+    icon: "faqUndetected",
+    q: "Does Arc Raiders use Easy Anti-Cheat (EAC) with Embark?",
+    a: a(
+      "Yes. Arc Raiders on PC runs Easy Anti-Cheat (EAC) alongside Embark anti-cheat updates. Game patches can break loaders the same day. Check the live status banner before every Topside queue and follow the patch-day guide after each update.",
     ),
   },
   {
@@ -218,7 +227,7 @@ export const siteFaqs: SiteFaqItem[] = [
     icon: "faqEspSafer",
     q: "Is ESP-only safer than aimbot?",
     a: a(
-      "ESP is quieter than an obvious aimbot or no-recoil pattern in a killcam, but it is still a cheat. Admins, clips and ACE Anti-Cheat do not ignore overlays because aim assist is off. Wallbang-free play and sensible reaction timing reduce reports.",
+      "ESP is quieter than an obvious aimbot or no-recoil pattern in a killcam, but it is still a cheat. Admins, clips and Embark anti-cheat do not ignore overlays because aim assist is off. Wallbang-free play and sensible reaction timing reduce reports.",
     ),
   },
   {
@@ -226,22 +235,22 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: "products",
     icon: "faqHwidWhen",
     q: "When do I need the HWID Spoofer?",
-    a: `Use ${hwid} when a fresh Level Infinite account gets blocked instantly on one PC but works on another – a hardware-level restriction. It is not for account-only bans; see ${ugc} for appeal workflows instead.`,
+    a: `Use ${hwid} when a fresh Embark account gets blocked instantly on one PC but works on another: a hardware-level restriction. It is not for account-only bans; see ${ugc} for appeal workflows instead.`,
     scopes: ["hwid-spoofer"],
   },
   {
     id: "hwid-after-ban",
     topic: "safety",
     icon: "faqHwidWhen",
-    q: "Do I need a new account and a spoofer after an ACE Anti-Cheat ban?",
-    a: `Usually both: a new Level Infinite account with Delta Force, plus ${hwid} if the ban is tied to your hardware. Read the ${guideHwid} before buying anything, and never reuse the banned account on your main PC.`,
+    q: "Do I need a new account and a spoofer after an Embark anti-cheat ban?",
+    a: `Usually both: a new Embark account with Arc Raiders, plus ${hwid} if the ban is tied to your hardware. Read the ${guideHwid} before buying anything, and never reuse the banned account on your main PC.`,
   },
   {
     id: "ugc-what",
     topic: "products",
     icon: "faqUgcWhat",
     q: "What is UGC?",
-    a: `${ugc} (Unban & Governance Control) is an appeal workspace for Level Infinite and ACE Anti-Cheat bans and Steam restrictions – custom workflows and case tracking, not a guaranteed unban service.`,
+    a: `${ugc} (Unban & Governance Control) is an appeal workspace for Embark anti-cheat bans and Steam restrictions: custom workflows and case tracking, not a guaranteed unban service.`,
     scopes: ["ugc"],
   },
   {
@@ -256,22 +265,22 @@ export const siteFaqs: SiteFaqItem[] = [
     id: "external-loader",
     topic: "products",
     icon: "faqExternalLoader",
-    q: "Is the loader injected into the Delta Force folder?",
-    a: `Delta Force Hacks runs external with cloud config sync – no files are written into the Delta Force install directory. ACE Anti-Cheat risk still applies. See the ${guideExternal} and ${productsHub}.`,
+    q: "Is the loader injected into the Arc Raiders folder?",
+    a: `Arc Raiders Hacks runs external with cloud config sync: no files are written into the Arc Raiders install directory. Embark anti-cheat risk still applies. See the ${guideExternal} and ${productsHub}.`,
   },
   {
     id: "blog-vs-cheats",
     topic: "blog",
     icon: "faqBlogVsCheats",
-    q: "Are private match / bot lobby practice the same as Delta Force hacks?",
-    a: `No. in-game console commands like dev-only debug toggles only work for admins on servers you own or moderate. Paid Delta Force hacks are separate products for live sessions – see ${lite}, ${pro} and ${elite}, and the ${guideAdmin}.`,
+    q: "Are private match / bot lobby practice the same as Arc Raiders hacks?",
+    a: `No. in-game console commands like dev-only debug toggles only work for admins on servers you own or moderate. Paid Arc Raiders hacks are separate products for live sessions: see ${lite}, ${pro} and ${elite}, and the ${guideAdmin}.`,
   },
   {
     id: "blog-setup",
     topic: "blog",
     icon: "faqBlogSetup",
     q: "Where do blog setup guides point for purchase?",
-    a: `Guides link to tier pages and ${productsHub}. Checkout runs through our secure partner – never paste loader files from random Discord DMs. Walkthrough: ${guideBuy}.`,
+    a: `Guides link to tier pages and ${productsHub}. Checkout runs through our secure partner: never paste loader files from random Discord DMs. Walkthrough: ${guideBuy}.`,
   },
   {
     id: "compare-plans",
@@ -285,7 +294,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: "plans",
     icon: "faqWhoLite",
     q: "Who should stay on Lite?",
-    a: `Players who only want awareness – Player ESP, Loot ESP and radar – and will not touch aim assist. If you keep wanting recoil control, buy ${pro} instead.`,
+    a: `Players who only want awareness: Player ESP, Loot ESP and radar: and will not touch aim assist. If you keep wanting recoil control, buy ${pro} instead.`,
     scopes: ["lite"],
   },
   {
@@ -293,7 +302,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: "plans",
     icon: "faqWhoPro",
     q: "Who should buy Pro?",
-    a: `PvP players who want Aimbot, Soft Aim and No Recoil with ESP and radar included. Pro is the most popular tier at cheatsdeltaforce.net.`,
+    a: `PvP players who want Aimbot, Soft Aim and No Recoil with ESP and radar included. Pro is the most popular tier at cheatsarcraiders.com.`,
     scopes: ["pro"],
   },
   {
@@ -308,17 +317,17 @@ export const siteFaqs: SiteFaqItem[] = [
     id: "be-update",
     topic: "safety",
     icon: "faqBeUpdate",
-    q: "What should I do after a ACE Anti-Cheat or Delta Force update?",
+    q: "What should I do after a Embark anti-cheat or Arc Raiders update?",
     a: a(
-      "Check cheatsdeltaforce.net status and Discord #status. Do not launch until the banner shows online. Reload your loader, then use conservative presets and test on a private match or firing range first. The ACE Anti-Cheat patch day checklist covers the full routine.",
+      "Check cheatsarcraiders.com status and Discord #status. Do not launch until the banner shows online. Reload your loader, then use conservative presets and test on a private match or firing range first. The Embark anti-cheat patch day checklist covers the full routine.",
     ),
   },
   {
-    id: "ace-init",
+    id: "anti-cheat-init",
     topic: "setup",
     icon: "faqBeUpdate",
-    q: "ACE Anti-Cheat says it failed to initialize – is that a ban?",
-    a: `Usually not. It is most often a broken ACE Anti-Cheat install, a service conflict or a blocked driver. Verify Delta Force files in Steam, reinstall ACE Anti-Cheat from the Delta Force folder and restart before assuming a ban. See the ${guideBeInit}; if it is a real ban, check ${ugc}.`,
+    q: "Embark anti-cheat says it failed to initialize: is that a ban?",
+    a: `Usually not. It is most often a broken Embark anti-cheat install, a service conflict or a blocked driver. Verify Arc Raiders files in Steam, reinstall Embark anti-cheat from the Arc Raiders folder and restart before assuming a ban. See the ${guideBeInit}; if it is a real ban, check ${ugc}.`,
   },
   {
     id: "discord-help",
@@ -326,22 +335,22 @@ export const siteFaqs: SiteFaqItem[] = [
     icon: "faqDiscordHelp",
     q: "How do I get install help?",
     a: a(
-      "Open Discord after purchase with your order email, Windows version and Delta Force build number. Staff walk through loader setup live.",
+      "Open Discord after purchase with your order email, Windows version and Arc Raiders build number. Staff walk through loader setup live.",
     ),
   },
   {
     id: "server-types",
     topic: "plans",
     icon: "faqServerModes",
-    q: "Do tiers work on the map, Ranked and Custom matches?",
-    a: `Yes. ${lite}, ${pro} and ${elite} include presets for the map, Ranked and Custom matches in the portal. Tune ESP distance, aim FOV and smoothing before your first ranked session or POI push.`,
+    q: "Do tiers work on Topside, squad, and custom lobbies matches?",
+    a: `Yes. ${lite}, ${pro} and ${elite} include presets for Topside, squad, and custom lobbies matches in the portal. Tune ESP distance, aim FOV and smoothing before your first live Topside raid or POI push.`,
   },
   {
     id: "zoom-hack",
     topic: "esp",
     icon: "faqZoomHack",
     q: "Which tier includes FOV Hack?",
-    a: `FOV Hack ships on ${lite} and carries through ${pro} and ${elite}. A wider field of view helps in Warfare PvP and Hazard Operations lanes, but keep it near the default range so ACE does not flag unusual camera bounds.`,
+    a: `FOV Hack ships on ${lite} and carries through ${pro} and ${elite}. A wider field of view helps in extraction PvP PvP and Topside extraction runs lanes, but keep it near the default range so anti-cheat does not flag unusual camera bounds.`,
     scopes: ["lite"],
   },
   {
@@ -349,7 +358,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: "esp",
     icon: "faqWhatIsEsp",
     q: "What does Loot & Resource ESP highlight?",
-    a: `Containers, stashes, supply drops, ammo caches and armor plates, and dropped items – filtered by type and distance. All tiers include it, and the ${guideEsp} explains how to keep the screen readable.`,
+    a: `Containers, stashes, supply drops, ammo caches and armor plates, and dropped items: filtered by type and distance. All tiers include it, and the ${guideEsp} explains how to keep the screen readable.`,
     scopes: ["lite", "pro", "elite"],
   },
   {
@@ -364,9 +373,9 @@ export const siteFaqs: SiteFaqItem[] = [
     id: "private-cheats",
     topic: "safety",
     icon: "faqPrivateCheats",
-    q: "What are private Delta Force hacks?",
+    q: "What are private Arc Raiders hacks?",
     a: a(
-      "Private means per-user keys and maintained builds – not public zip packs. Delta Force Hacks ships portal delivery for ESP, aim assist and radar tiers.",
+      "Private means per-user keys and maintained builds: not public zip packs. Arc Raiders Hacks ships portal delivery for ESP, aim assist and radar tiers.",
     ),
   },
   {
@@ -374,7 +383,7 @@ export const siteFaqs: SiteFaqItem[] = [
     topic: "all",
     icon: "faqMore",
     q: "Where is the full FAQ?",
-    a: `This site includes landing FAQs and per-page sections. See the ${faqPage} for all product, cheat and blog answers – or read ${blog} for deep guides.`,
+    a: `This site includes landing FAQs and per-page sections. See the ${faqPage} for all product, cheat and blog answers: or read ${blog} for deep guides.`,
   },
 ];
 
@@ -391,7 +400,7 @@ export function getLandingFaqs(): SiteFaqItem[] {
   );
 }
 
-/** Pre-purchase only — used on /before-you-buy/, not the full /faq/ index. */
+/** Pre-purchase only , used on /before-you-buy/, not the full /faq/ index. */
 const BEFORE_YOU_BUY_FAQ_IDS = [
   "status",
   "after-buy",
@@ -481,7 +490,7 @@ export function getProductFaqs(
   const combined =
     kind === "tier"
       ? [...scoped, ...tierCompare, ...general.slice(0, 8)]
-      : [...scoped, ...general.slice(0, 6)];
+     : [...scoped, ...general.slice(0, 6)];
 
   const seen = new Set<string>();
   return combined.filter((item) => {
@@ -499,7 +508,7 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       icon: "faqBlogGuideStart",
       q: "Should I use private match / bot lobby practice on live multiplayer?",
       a: a(
-        "No. Private-match admin tools like dev-only debug toggles only work for admins on servers you own or moderate. Live-server play needs separate Delta Force hacks from cheatsdeltaforce.net tiers – and carries ban risk.",
+        "No. Private-match admin tools like dev-only debug toggles only work for admins on servers you own or moderate. Live-server play needs separate Arc Raiders hacks from cheatsarcraiders.com tiers: and carries ban risk.",
       ),
     },
     {
@@ -515,7 +524,7 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       icon: "faqBlogGuideStatus",
       q: "Is this guide still valid after a patch?",
       a: a(
-        "Check the article date and the live status banner. Patch-day articles note when modules change – Discord #status has the latest build notes after each Delta Force update or major patch.",
+        "Check the article date and the live status banner. Patch-day articles note when modules change: Discord #status has the latest build notes after each Arc Raiders update or major patch.",
       ),
     },
   ],
@@ -526,7 +535,7 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       icon: "faqBlogSetupLoader",
       q: "Where do I download the loader?",
       a: a(
-        "Only from your operator portal after checkout – not from third-party links in comments or DMs.",
+        "Only from your operator portal after checkout: not from third-party links in comments or DMs.",
       ),
     },
     {
@@ -535,7 +544,7 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       icon: "faqBlogSetupLobby",
       q: "Should I test on a private match or firing range first?",
       a: a(
-        "Yes. Load conservative presets on a low-pop or firing range or private match before busy the map or Zombies and Ranked lobbies. Tune aim FOV, smoothing and ESP distance caps over several sessions.",
+        "Yes. Load conservative presets on a low-pop or firing range or private match before busy the map or ARC machines and third-party Raiders lobbies. Tune aim FOV, smoothing and ESP distance caps over several sessions.",
       ),
     },
   ],
@@ -553,8 +562,8 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       id: "blog-updates-be",
       topic: "blog",
       icon: "faqBlogSecVac",
-      q: "How fast do builds update after a ACE Anti-Cheat patch?",
-      a: `Elite gets priority delivery; Lite and Pro follow once the build is verified. Do not launch until the banner is green – see the ${guidePatch}.`,
+      q: "How fast do builds update after a Embark anti-cheat patch?",
+      a: `Elite gets priority delivery; Lite and Pro follow once the build is verified. Do not launch until the banner is green: see the ${guidePatch}.`,
     },
   ],
   Tresourceshooting: [
@@ -562,9 +571,9 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       id: "blog-trouble-be",
       topic: "blog",
       icon: "faqBlogSecVac",
-      q: "Is an ACE Anti-Cheat error always a ban?",
+      q: "Is an Embark anti-cheat error always a ban?",
       a: a(
-        "No. Start with Steam file verification, a ACE Anti-Cheat reinstall and a clean restart. A ban message names the account or hardware; startup errors usually do not.",
+        "No. Start with Steam file verification, a Embark anti-cheat reinstall and a clean restart. A ban message names the account or hardware; startup errors usually do not.",
       ),
     },
   ],
@@ -575,7 +584,7 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       icon: "faqBlogSecVac",
       q: "Does this article guarantee undetected status?",
       a: a(
-        "No article replaces the live status banner. Undetected is a point-in-time label – stop if status shows updating or detected.",
+        "No article replaces the live status banner. Undetected is a point-in-time label: stop if status shows updating or detected.",
       ),
     },
   ],
@@ -604,7 +613,7 @@ const defaultBlogFaqs: SiteFaqItem[] = [
     icon: "faqBlogDefault3",
     q: "Will settings in this article work next patch?",
     a: a(
-      "Re-check status after every Delta Force update. Portal presets update with patch notes – reload configs instead of copying old sliders.",
+      "Re-check status after every Arc Raiders update. Portal presets update with patch notes: reload configs instead of copying old sliders.",
     ),
   },
 ];
@@ -647,7 +656,7 @@ export function getBlogFaqs(tag: string, slug: string): SiteFaqItem[] {
       topic: "products",
       icon: "faqBlogSlugHwid",
       q: "Does this article replace HWID or UGC products?",
-      a: `Recovery and ACE Anti-Cheat guides complement ${hwid} and ${ugc} – read product pages for workflow scope and realistic outcomes.`,
+      a: `Recovery and Embark anti-cheat guides complement ${hwid} and ${ugc}: read product pages for workflow scope and realistic outcomes.`,
     });
   }
   if (slug.includes("stream")) {
@@ -656,7 +665,7 @@ export function getBlogFaqs(tag: string, slug: string): SiteFaqItem[] {
       topic: "esp",
       icon: "faqStreamProof",
       q: "Does stream-proof mode hide everything from OBS?",
-      a: `It hides the cheat overlay on supported capture methods. Always record a local test with your exact OBS scene first – see the ${guideStream}.`,
+      a: `It hides the cheat overlay on supported capture methods. Always record a local test with your exact OBS scene first: see the ${guideStream}.`,
     });
   }
   if (slug.includes("skin")) {
@@ -690,6 +699,41 @@ export const compareRows = [
   {
     feature: "Loot & Resource ESP",
     icon: "lootEsp" as const,
+    lite: true,
+    pro: true,
+    elite: true,
+  },
+  {
+    feature: "ARC machine ESP & drone markers",
+    icon: "comparePlayerEsp" as const,
+    lite: true,
+    pro: true,
+    elite: true,
+  },
+  {
+    feature: "Container loot ESP & item filters",
+    icon: "lootEsp" as const,
+    lite: true,
+    pro: true,
+    elite: true,
+  },
+  {
+    feature: "OOF arrows & off-screen indicators",
+    icon: "compareMinimapHack" as const,
+    lite: true,
+    pro: true,
+    elite: true,
+  },
+  {
+    feature: "Memory aimbot & visibility checks",
+    icon: "featureAimbot" as const,
+    lite: false,
+    pro: true,
+    elite: true,
+  },
+  {
+    feature: "Private external loader (software path)",
+    icon: "compareStreamproof" as const,
     lite: true,
     pro: true,
     elite: true,

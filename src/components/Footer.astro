@@ -6,8 +6,8 @@ import { Separator } from '@/components/starwind/separator';
 const resourceLinks = [
   { href: '/blog/', label: 'Blog archive', ariaLabel: 'Blog' },
   { href: '/reviews/', label: 'Buyer reviews', ariaLabel: 'Reviews' },
-  { href: '/products/delta-force-hacks/elite/', label: 'Elite hacks', ariaLabel: 'Elite hacks' },
-  { href: '/products/delta-force-hacks/', label: 'Products & utilities', ariaLabel: 'Products' },
+  { href: '/products/arc-raiders-hacks/elite/', label: 'Elite hacks', ariaLabel: 'Elite hacks' },
+  { href: '/products/arc-raiders-hacks/', label: 'Products & utilities', ariaLabel: 'Products' },
   { href: '/support/', label: 'Discord loader ticket desk', ariaLabel: 'Support' },
 ];
 
@@ -24,7 +24,7 @@ const legalLinks = [
       <div class="space-y-4">
         <a href="/" class="inline-flex items-center gap-2.5 font-[family-name:var(--font-heading)] text-lg font-bold" aria-label={t.ui.homeAria}>
           <img src={SITE_LOGO} alt="" width={32} height={32} class="shrink-0 rounded-md" loading="lazy" decoding="async" />
-          <span aria-hidden="true">Delta Force <span class="text-primary">Cheats</span></span>
+          <span aria-hidden="true">Arc Raiders <span class="text-primary">Cheats</span></span>
         </a>
         <p class="text-sm text-muted-foreground">{t.footer.tagline}</p>
       </div>
@@ -38,7 +38,7 @@ const legalLinks = [
                 href={link.href}
                 class="text-sm text-muted-foreground hover:text-primary"
                 aria-label={link.ariaLabel}
-                {...(link.scrollTarget ? { 'data-scroll-target': link.scrollTarget } : {})}
+                {...(link.scrollTarget ? { 'data-scroll-target': link.scrollTarget }: {})}
               >
                 {link.label}
               </a>

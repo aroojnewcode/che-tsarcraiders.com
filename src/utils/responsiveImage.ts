@@ -30,7 +30,7 @@ export function responsiveSrcSet(src: string, widths: readonly number[] = DEFAUL
   return widths.map((width) => `${webpSrc(src, width)} ${width}w`).join(', ');
 }
 
-/** Smallest variant — used as img src so Lighthouse and no-srcset clients get the right size. */
+/** Smallest variant , used as img src so Lighthouse and no-srcset clients get the right size. */
 export function defaultWebpSrc(src: string, widths: readonly number[]): string {
   if (isRemoteAssetSrc(src)) return src;
   return webpSrc(src, widths[0] ?? 640);

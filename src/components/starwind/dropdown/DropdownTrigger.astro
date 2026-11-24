@@ -10,7 +10,7 @@ type Props = HTMLAttributes<"button"> & {
 const { asChild = false, class: className, ...rest } = Astro.props;
 
 const triggerBaseClassName = dropdownTrigger({ class: className });
-const triggerClassName = asChild ? className : triggerBaseClassName;
+const triggerClassName = asChild ? className: triggerBaseClassName;
 ---
 
 <MenuPrimitive.Trigger

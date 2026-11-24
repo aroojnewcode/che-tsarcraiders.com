@@ -5,7 +5,7 @@ function getCarouselRoot(wrap: HTMLElement): HTMLElement | null {
 }
 
 function getControl(root: HTMLElement, kind: 'previous' | 'next'): HTMLButtonElement | null {
-  const attr = kind === 'previous' ? 'data-sw-carousel-previous' : 'data-sw-carousel-next';
+  const attr = kind === 'previous' ? 'data-sw-carousel-previous': 'data-sw-carousel-next';
   return (
     root.querySelector<HTMLButtonElement>(`[${attr}]`) ??
     root.querySelector<HTMLButtonElement>(`[data-slot="carousel-${kind}"]`)

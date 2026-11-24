@@ -1,16 +1,16 @@
-import { CHECKOUT_URLS, DELTA_FORCE_CHECKOUT_URL } from './checkout-redirects.mjs';
+import { CHECKOUT_URLS, ARC_RAIDERS_CHECKOUT_URL } from './checkout-redirects.mjs';
 
 /** Zadeyo affiliate checkout destinations. */
 export const CHECKOUT = CHECKOUT_URLS;
 
 /** All Get access / Buy CTAs use this URL. */
-export const ZADEYO_CHECKOUT_URL = DELTA_FORCE_CHECKOUT_URL;
+export const ZADEYO_CHECKOUT_URL = ARC_RAIDERS_CHECKOUT_URL;
 
 export type CheckoutProduct = keyof typeof CHECKOUT;
 
 /** URL slug for /go/[slug]/ checkout redirect pages. */
 export const CHECKOUT_SLUGS: Record<CheckoutProduct, string> = {
-  deltaForce: 'delta-force',
+  arcRaiders: 'arc-raiders',
   skinChanger: 'skin-changer',
   hwidSpoofer: 'hwid-spoofer',
   ugc: 'ugc',
@@ -21,23 +21,23 @@ export const CHECKOUT_SLUG_TO_PRODUCT = Object.fromEntries(
   Object.entries(CHECKOUT_SLUGS).map(([product, slug]) => [slug, product as CheckoutProduct]),
 ) as Record<string, CheckoutProduct>;
 
-/** Zadeyo affiliate URL for visible “Get access” / buy CTAs (same tab — no target=_blank). */
-export function checkoutPath(product: CheckoutProduct = 'deltaForce'): string {
+/** Zadeyo affiliate URL for visible “Get access” / buy CTAs (same tab , no target=_blank). */
+export function checkoutPath(product: CheckoutProduct = 'arcRaiders'): string {
   return CHECKOUT[product];
 }
 
 /** Internal /go/* path (blog links, bookmarks); 302 to Zadeyo via public/_redirects. */
-export function checkoutRedirectPath(product: CheckoutProduct = 'deltaForce'): string {
+export function checkoutRedirectPath(product: CheckoutProduct = 'arcRaiders'): string {
   return `/go/${CHECKOUT_SLUGS[product]}/`;
 }
 
 /** Alias used by /go/[slug] static redirect pages. */
-export function checkoutExternalUrl(product: CheckoutProduct = 'deltaForce'): string {
+export function checkoutExternalUrl(product: CheckoutProduct = 'arcRaiders'): string {
   return CHECKOUT[product];
 }
 
 /** Default product checkout redirect (replaces legacy Discord CTAs). */
-export const PRIMARY_CHECKOUT_PATH = checkoutPath('deltaForce');
+export const PRIMARY_CHECKOUT_PATH = checkoutPath('arcRaiders');
 
 /** Map internal product slugs to checkout redirect paths. */
 export function checkoutForSlug(slug: string): string {
@@ -55,13 +55,13 @@ export function checkoutForSlug(slug: string): string {
     case 'pro':
     case 'elite':
     default:
-      return checkoutPath('deltaForce');
+      return checkoutPath('arcRaiders');
   }
 }
 
 /** Resolve blog CTA or legacy href values to internal checkout paths. */
 export function resolveCheckoutHref(href: string): string {
-  const normalized = href.startsWith('/') ? href : `/${href}`;
+  const normalized = href.startsWith('/') ? href: `/${href}`;
   const goMatch = normalized.match(/^\/go\/([^/]+)\/?$/);
   if (goMatch) {
     const product = CHECKOUT_SLUG_TO_PRODUCT[goMatch[1]];
@@ -76,28 +76,6 @@ export function resolveCheckoutHref(href: string): string {
     if (href === url || href.startsWith(`${url}&`) || href.startsWith(`${url}?`)) {
       return checkoutPath(product);
     }
-  }
-
-  // Zadeyo affiliate / legacy product paths → internal checkout
-  if (href.includes('%2Fproducts%2Fhwid-spoofer') || href.includes('/products/hwid-spoofer')) {
-    return checkoutPath('hwidSpoofer');
-  }
-  if (href.includes('%2Fproducts%2Fskin-changer') || href.includes('/products/skin-changer')) {
-    return checkoutPath('skinChanger');
-  }
-  if (href.includes('%2Fproducts%2Fugc') || href.includes('/products/ugc')) {
-    return checkoutPath('ugc');
-  }
-  if (href.includes('%2Fproducts%2Fcloud-dma') || href.includes('/products/cloud-dma')) {
-    return checkoutPath('cloudDma');
-  }
-  if (
-    href.includes('%2Fproducts%2Fdelta-force') ||
-    href.includes('/products/delta-force') ||
-    href.includes('%2Fproducts%2Fdelta-force') ||
-    href.includes('/products/delta-force')
-  ) {
-    return checkoutPath('deltaForce');
   }
 
   return href;

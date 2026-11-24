@@ -25,8 +25,8 @@ interface Props {
 
 const { images, id, variant = 'default', desktopOnly = false } = Astro.props;
 const isHero = variant === 'hero';
-const imageSizes = isHero ? HERO_IMAGE_SIZES : '(min-width: 1024px) 640px, 100vw';
-const imageWidths = isHero ? HERO_IMAGE_WIDTHS : undefined;
+const imageSizes = isHero ? HERO_IMAGE_SIZES: '(min-width: 1024px) 640px, 100vw';
+const imageWidths = isHero ? HERO_IMAGE_WIDTHS: undefined;
 ---
 
 <div
@@ -49,7 +49,7 @@ const imageWidths = isHero ? HERO_IMAGE_WIDTHS : undefined;
         <CarouselItem class="basis-full">
           <figure
             class:list={[
-              isHero ? 'aspect-[16/10] overflow-hidden rounded-lg bg-muted/30' : 'overflow-hidden rounded-lg',
+              isHero ? 'aspect-[16/10] overflow-hidden rounded-lg bg-muted/30': 'overflow-hidden rounded-lg',
             ]}
           >
             <ResponsiveImage
@@ -58,16 +58,16 @@ const imageWidths = isHero ? HERO_IMAGE_WIDTHS : undefined;
               width={960}
               height={540}
               widths={imageWidths}
-              loading={i === 0 ? 'eager' : 'lazy'}
-              fetchPriority={isHero && i === 0 ? 'high' : undefined}
+              loading={i === 0 ? 'eager': 'lazy'}
+              fetchPriority={isHero && i === 0 ? 'high': undefined}
               sizes={imageSizes}
               desktopOnly={desktopOnly}
-              class={isHero ? 'h-full w-full object-cover' : undefined}
+              class={isHero ? 'h-full w-full object-cover': undefined}
             />
             {(img.caption || img.captionDesc) && (
               <figcaption class:list={['mt-2 px-1 text-sm text-muted-foreground', isHero && 'sr-only']}>
                 <strong class="text-foreground">{img.caption}</strong>
-                {img.captionDesc && ` — ${img.captionDesc}`}
+                {img.captionDesc && ` , ${img.captionDesc}`}
               </figcaption>
             )}
           </figure>
@@ -96,8 +96,8 @@ const imageWidths = isHero ? HERO_IMAGE_WIDTHS : undefined;
             class="hero-embla-dot relative h-2 shrink-0 overflow-hidden rounded-full bg-white/30 transition-[width] duration-300 data-[active=false]:w-2 data-[active=true]:w-9"
             data-hero-embla-dot={i}
             aria-label={`Slide ${i + 1}`}
-            aria-selected={i === 0 ? 'true' : 'false'}
-            data-active={i === 0 ? 'true' : 'false'}
+            aria-selected={i === 0 ? 'true': 'false'}
+            data-active={i === 0 ? 'true': 'false'}
           >
             <span
               class="hero-embla-progress pointer-events-none absolute inset-y-0 left-0 w-0 rounded-full bg-primary"

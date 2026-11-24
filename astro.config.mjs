@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 import { sitemapSerialize } from './src/config/sitemap.ts';
 
-const siteOrigin = (process.env.SITE_ORIGIN || 'https://cheatsdeltaforce.net').replace(/\/$/, '');
+const siteOrigin = (process.env.SITE_ORIGIN || 'https://cheatsarcraiders.com').replace(/\/$/, '');
 
 export default defineConfig({
   site: siteOrigin,
@@ -18,7 +18,8 @@ export default defineConfig({
     enabled: false,
   },
   server: {
-    host: '127.0.0.1',
+    /** Listen on all interfaces so http://localhost:4321 and http://127.0.0.1:4321 both work. */
+    host: true,
     port: 4321,
   },
   integrations: [

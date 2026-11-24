@@ -1,4 +1,4 @@
-const storagePrefix = 'cheatsdeltaforce-forum-vote:';
+const storagePrefix = 'cheatsarcraiders-forum-vote:';
 
 export function initForumVotes(): void {
   document.querySelectorAll<HTMLElement>('[data-forum-card], [data-forum-vote]').forEach((post) => {
@@ -16,10 +16,10 @@ export function initForumVotes(): void {
 
     const baseCount = Number(post.dataset.upvotes ?? count.textContent ?? 0) || 0;
     const render = () => {
-      count.textContent = String(baseCount + (hasVoted ? 1 : 0));
+      count.textContent = String(baseCount + (hasVoted ? 1: 0));
       upvote.classList.toggle('is-upvoted', hasVoted);
       upvote.setAttribute('aria-pressed', String(hasVoted));
-      upvote.setAttribute('aria-label', hasVoted ? 'Remove your upvote' : 'Upvote this discussion');
+      upvote.setAttribute('aria-label', hasVoted ? 'Remove your upvote': 'Upvote this discussion');
     };
 
     upvote.addEventListener('click', () => {

@@ -25,7 +25,7 @@ const {
 } = Astro.props;
 
 const triggerBaseClassName = navigationMenuTrigger({ class: className });
-const triggerClassName = asChild ? className : triggerBaseClassName;
+const triggerClassName = asChild ? className: triggerBaseClassName;
 ---
 
 {
@@ -41,7 +41,7 @@ const triggerClassName = asChild ? className : triggerBaseClassName;
     >
       <slot />
     </NavigationMenuPrimitive.Trigger>
-  ) : (
+  ): (
     <NavigationMenuPrimitive.Trigger
       class={triggerClassName}
       asChild={asChild}

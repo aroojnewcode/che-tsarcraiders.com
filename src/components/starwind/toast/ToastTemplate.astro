@@ -19,8 +19,8 @@ const { variant = "default", ...rest } = Astro.props;
 <ToastPrimitive.Template variant={variant} {...rest}>
   <slot>
     <ToastPrimitive.Root
-      class={toastItem({ variant: variant === "loading" ? "default" : variant })}
-      variant={variant === "loading" ? "default" : variant}
+      class={toastItem({ variant: variant === "loading" ? "default": variant })}
+      variant={variant === "loading" ? "default": variant}
       data-slot="toast"
     >
       <ToastPrimitive.Content class={toastContent()} data-slot="toast-content">

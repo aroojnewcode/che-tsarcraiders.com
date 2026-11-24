@@ -1,6 +1,6 @@
 /**
- * Product & hero screenshots — Delta Force cheat gallery (Supabase library).
- * Optional local fallbacks: public/images/product/*.png via npm run media:delta-force
+ * Product & hero screenshots , Arc Raiders cheat gallery (Supabase library).
+ * Optional local fallbacks: public/images/product/*.png via npm run media:arc-raiders
  */
 
 export interface GallerySlideConfig {
@@ -14,28 +14,28 @@ export interface GallerySlideConfig {
 
 const productImage = (name: string) => `/images/product/${name}.png`;
 
-/** Three unique Delta Force shots — never duplicate src in one gallery. */
+/** Three unique Arc Raiders shots , never duplicate src in one gallery. */
 export const PRODUCT_GALLERY_SLIDES: GallerySlideConfig[] = [
   {
     id: 'awareness',
     src: productImage('awareness'),
-    alt: 'Delta Force player ESP highlighting squad members, enemy players and resources',
+    alt: 'Arc Raiders player ESP highlighting squad members, enemy players and resources',
     caption: 'Player & resource ESP',
-    captionDesc: 'Track squads, enemy players and lanes before you rotate on a Warfare or Hazard Operations objective.',
+    captionDesc: 'Track squads, enemy players and lanes before you rotate on a extraction PvP or Topside extraction runs objective.',
   },
   {
     id: 'combat',
     src: productImage('combat'),
-    alt: 'Delta Force combat overlay with aim assist during a PvP fight',
+    alt: 'Arc Raiders combat overlay with aim assist during a PvP fight',
     caption: 'Combat assist',
     captionDesc: 'Aim smoothing, FOV limits and ESP together for CQB and mid-range fights.',
   },
   {
     id: 'world',
     src: productImage('world'),
-    alt: 'Delta Force tactical sightline with map-style awareness',
+    alt: 'Arc Raiders tactical sightline with map-style awareness',
     caption: 'Map & objective awareness',
-    captionDesc: 'Orientation on Delta Force maps—see routes, objectives and hotspots before you rotate.',
+    captionDesc: 'Orientation on Arc Raiders maps,see routes, objectives and hotspots before you rotate.',
   },
 ];
 
@@ -67,5 +67,5 @@ export const PRODUCT_GALLERY_BY_TIER: Record<string, ProductGalleryId[]> = {
   'unlock-all': ['combat', 'world', 'awareness'],
 };
 
-/** Home hero carousel — one pass through all unique slides. */
+/** Home hero carousel , one pass through all unique slides. */
 export const HERO_GALLERY_IDS: ProductGalleryId[] = ['awareness', 'combat', 'world'];

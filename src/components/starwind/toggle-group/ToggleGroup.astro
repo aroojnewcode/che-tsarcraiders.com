@@ -28,15 +28,15 @@ const {
   ...rest
 } = Astro.props;
 
-const toggleGroupStyle = typeof style === "string" ? `--gap: ${spacing}; ${style}` : { "--gap": spacing, ...(style ?? {}) };
+const toggleGroupStyle = typeof style === "string" ? `--gap: ${spacing}; ${style}`: { "--gap": spacing, ...(style ?? {}) };
 ---
 
 <ToggleGroupPrimitive.Root
   class={toggleGroup({ class: className })}
   data-variant={variant}
   data-spacing={spacing}
-  data-horizontal={orientation === "horizontal" ? "" : undefined}
-  data-vertical={orientation === "vertical" ? "" : undefined}
+  data-horizontal={orientation === "horizontal" ? "": undefined}
+  data-vertical={orientation === "vertical" ? "": undefined}
   defaultValue={defaultValue}
   disabled={disabled}
   loopFocus={loopFocus}

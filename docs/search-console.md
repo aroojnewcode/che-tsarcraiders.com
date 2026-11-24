@@ -1,11 +1,11 @@
-# Search Console workflow (cheatsdeltaforce.net)
+# Search Console workflow (cheatsarcraiders.com)
 
 Use this checklist after each content or SEO deploy.
 
 ## Property & sitemap
 
-1. Open [Google Search Console](https://search.google.com/search-console) and add the **domain** property for `cheatsdeltaforce.net` if it is not already there.
-2. Under **Sitemaps**, submit: `https://cheatsdeltaforce.net/sitemap-index.xml`
+1. Open [Google Search Console](https://search.google.com/search-console) and add the **domain** property for `cheatsarcraiders.com` if it is not already there.
+2. Under **Sitemaps**, submit: `https://cheatsarcraiders.com/sitemap-index.xml`
 3. Confirm the sitemap reports success (no “couldn’t fetch” errors).
 
 ## After deploy
@@ -18,9 +18,9 @@ Use this checklist after each content or SEO deploy.
 
 | Intent | Primary URL |
 |--------|-------------|
-| Delta Force hacks, Delta Force hacks | `/` |
-| elite suite | `/products/delta-force-hacks/elite/` |
-| hwid, skin changer | `/products/delta-force-hacks/utilities/` |
+| Arc Raiders hacks, Arc Raiders hacks | `/` |
+| elite suite | `/products/arc-raiders-hacks/elite/` |
+| hwid, skin changer | `/products/arc-raiders-hacks/utilities/` |
 | setup / patch day | `/blog/` |
 | FAQ | `/faq/` |
 

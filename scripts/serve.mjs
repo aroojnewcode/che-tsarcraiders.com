@@ -4,7 +4,7 @@ import path from 'node:path';
 import zlib from 'node:zlib';
 import { resolvePathRedirect } from './redirects.mjs';
 
-const CANONICAL_HOST = 'cheatsdeltaforce.net';
+const CANONICAL_HOST = 'cheatsarcraiders.com';
 const distDir = path.resolve('dist');
 const port = Number(process.env.PORT) || 3000;
 

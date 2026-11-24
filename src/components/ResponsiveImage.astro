@@ -37,9 +37,9 @@ const isRaster = !isRemote && /\.(png|jpe?g|webp)$/i.test(src);
 const srcSet = responsiveSrcSet(src, widths);
 const imgSrc = desktopOnly
   ? 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
-  : defaultWebpSrc(src, widths);
-const pictureSizes = desktopOnly ? '(min-width: 1024px) 490px, 1px' : sizes;
-const pictureMedia = desktopOnly ? '(min-width: 1024px)' : undefined;
+ : defaultWebpSrc(src, widths);
+const pictureSizes = desktopOnly ? '(min-width: 1024px) 490px, 1px': sizes;
+const pictureMedia = desktopOnly ? '(min-width: 1024px)': undefined;
 ---
 
 {
@@ -48,7 +48,7 @@ const pictureMedia = desktopOnly ? '(min-width: 1024px)' : undefined;
       <source type="image/webp" srcset={srcSet} sizes={pictureSizes} media={pictureMedia} />
       <img
         src={imgSrc}
-        srcset={desktopOnly ? undefined : srcSet}
+        srcset={desktopOnly ? undefined: srcSet}
         alt={alt}
         width={width}
         height={height}
@@ -59,7 +59,7 @@ const pictureMedia = desktopOnly ? '(min-width: 1024px)' : undefined;
         class={className}
       />
     </picture>
-  ) : (
+  ): (
     <img
       src={src}
       alt={alt}

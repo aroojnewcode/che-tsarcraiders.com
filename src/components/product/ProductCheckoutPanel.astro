@@ -36,7 +36,7 @@ const buyLink = externalLinkProps(initialBuyHref);
       <div class="min-w-0 text-left">
         <p class="text-xs font-medium uppercase tracking-wider text-muted-foreground">Checkout</p>
         <h2 id={`checkout-${product.slug}`} class="text-base font-semibold leading-snug">
-          {isSinglePlan ? 'Purchase option' : 'Select subscription'}
+          {isSinglePlan ? 'Purchase option': 'Select subscription'}
         </h2>
       </div>
     </div>
@@ -45,7 +45,7 @@ const buyLink = externalLinkProps(initialBuyHref);
       <RadioGroup
         defaultValue={defaultPlan.id}
         name={`plan-${product.slug}`}
-        legend={isSinglePlan ? 'Purchase option' : 'Select subscription'}
+        legend={isSinglePlan ? 'Purchase option': 'Select subscription'}
         class="flex flex-col gap-2"
       >
         {
@@ -120,7 +120,7 @@ const buyLink = externalLinkProps(initialBuyHref);
 
         totalEl.textContent = `$${plan.priceUsd}`;
         noteEl.textContent = plan.priceNote;
-        const separator = buyUrl.includes('?') ? '&' : '?';
+        const separator = buyUrl.includes('?') ? '&': '?';
         buyBtn.href = `${buyUrl}${separator}plan=${plan.id}`;
       };
 

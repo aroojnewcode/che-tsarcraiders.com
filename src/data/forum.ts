@@ -84,7 +84,7 @@ const additionalGuidePosts: ForumPost[] = [
       "Player ESP breakdown: boxes, loot, armor plate spawns and radar covered in the ESP buy guide before checkout.",
     category: "Guides & Builds",
     categoryTone: "blue",
-    sourceTitle: "ESP and radar setup for Delta Force",
+    sourceTitle: "ESP and radar setup for Arc Raiders",
     sourcePath: "/blog/esp/",
     answer:
       "The guide covers player boxes, names, health and distance, skeleton ESP, loot and resource markers, and the radar overlay. The exact options depend on the selected product tier.",
@@ -100,7 +100,7 @@ const additionalGuidePosts: ForumPost[] = [
       "First-time ESP overlay setup: enable basics, confirm on a private match or firing range, then tune one setting at a time.",
     category: "Guides & Builds",
     categoryTone: "blue",
-    sourceTitle: "ESP and radar setup for Delta Force",
+    sourceTitle: "ESP and radar setup for Arc Raiders",
     sourcePath: "/blog/esp/",
     answer:
       "Use the setup guide to enable the overlay, choose readable colors, and check that the indicators do not cover your hotbar, health bars or the crosshair.",
@@ -116,7 +116,7 @@ const additionalGuidePosts: ForumPost[] = [
       "FOV hack tips: widen awareness without stretching the screen or making distant targets hard to track.",
     category: "Guides & Builds",
     categoryTone: "blue",
-    sourceTitle: "FOV hack guide for Delta Force",
+    sourceTitle: "FOV hack guide for Arc Raiders",
     sourcePath: "/blog/fov/",
     answer:
       "There is no single ideal FOV for every player. The guide recommends adjusting gradually and checking that you can still judge distance, recoil and enemy movement at range.",
@@ -148,7 +148,7 @@ const additionalGuidePosts: ForumPost[] = [
       "Practice recoil profiles one weapon at a time on a private match or firing range wall before live PvP.",
     category: "Guides & Builds",
     categoryTone: "blue",
-    sourceTitle: "Aimbot bone select and recoil scripts for Delta Force",
+    sourceTitle: "Aimbot bone select and recoil scripts for Arc Raiders",
     sourcePath: "/blog/bones/",
     answer:
       "Choose one weapon and one profile to test at a time. The guide walks through example profiles for the assault rifle, shotgun, marksman rifle and sniper rifle, and explains how bone selection fits with recoil compensation.",
@@ -196,7 +196,7 @@ const additionalGuidePosts: ForumPost[] = [
       "Skin Changer / Unlock All: local weapon and clothing previews, limits, and what other players see.",
     category: "General",
     categoryTone: "purple",
-    sourceTitle: "Skin changer and Unlock All for Delta Force",
+    sourceTitle: "Skin changer and Unlock All for Arc Raiders",
     sourcePath: "/blog/skins/",
     answer:
       "The guide describes Skin Changer as a local cosmetic preview utility for weapon skins, clothing and operator and weapon camos. It explains setup, supported options, and how to restore your default appearance.",
@@ -205,19 +205,19 @@ const additionalGuidePosts: ForumPost[] = [
     tip: "Cosmetic changes are local previews that other players do not see; check the guide for current limitations and setup steps.",
   }),
   guideDiscussion({
-    slug: "ace-init",
-    title: "ACE Anti-Cheat failed to initialize – what should I try first?",
+    slug: "anti-cheat-init",
+    title: "Embark anti-cheat failed to initialize: what should I try first?",
     upvotes: 24,
     excerpt:
-      "ACE Anti-Cheat failed to initialize: verify Steam files and reinstall ACE Anti-Cheat before assuming a ban.",
+      "Embark anti-cheat failed to initialize: verify Steam files and reinstall Embark anti-cheat before assuming a ban.",
     category: "Patch Talk",
     categoryTone: "orange",
-    sourceTitle: "ACE Anti-Cheat failed to initialize in Delta Force",
-    sourcePath: "/blog/ace-error/",
+    sourceTitle: "Embark anti-cheat failed to initialize in Arc Raiders",
+    sourcePath: "/blog/loader-error/",
     answer:
       "The tresourceshooting guide says the message can result from game-file problems or software conflicts and does not always mean an account ban. First verify game files through Steam.",
     detail:
-      "It also recommends fully exiting Steam, reinstalling ACE Anti-Cheat from the game install folder, restarting the PC, and checking for conflicting overlays or drivers before trying more disruptive steps.",
+      "It also recommends fully exiting Steam, reinstalling Embark anti-cheat from the game install folder, restarting the PC, and checking for conflicting overlays or drivers before trying more disruptive steps.",
     tip: "Test a normal Steam launch before starting other software so you can narrow down the cause.",
   }),
   guideDiscussion({
@@ -228,13 +228,13 @@ const additionalGuidePosts: ForumPost[] = [
       "External cheat loader explained: separate process, overlay UI, portal updates vs risky injectors.",
     category: "General",
     categoryTone: "purple",
-    sourceTitle: "Delta Force external cheat guide",
+    sourceTitle: "Arc Raiders external cheat guide",
     sourcePath: "/blog/external/",
     answer:
       "The article uses “external” to describe software that runs separately from the game process and presents its interface as an overlay.",
     detail:
       "It discusses the architecture at a high level and explains setup, patch updates, and the differences described between external and internal tools.",
-    tip: "Check compatibility and current status information whenever the game or ACE Anti-Cheat receives an update.",
+    tip: "Check compatibility and current status information whenever the game or Embark anti-cheat receives an update.",
   }),
   guideDiscussion({
     slug: "stream-check",
@@ -244,7 +244,7 @@ const additionalGuidePosts: ForumPost[] = [
       "Stream-proof setup: record an OBS test so ESP overlays stay off your VOD before you go live.",
     category: "Guides & Builds",
     categoryTone: "blue",
-    sourceTitle: "Stream-proof overlay setup for Delta Force",
+    sourceTitle: "Stream-proof overlay setup for Arc Raiders",
     sourcePath: "/blog/stream-proof/",
     answer:
       "Record a short local test with the exact OBS scene and capture mode you plan to use, then review the playback for any overlay elements.",
@@ -254,16 +254,16 @@ const additionalGuidePosts: ForumPost[] = [
   }),
   guideDiscussion({
     slug: "hwid-check",
-    title: "After an ACE Anti-Cheat ban, what should I check on HWID?",
+    title: "After an Embark anti-cheat ban, what should I check on HWID?",
     upvotes: 33,
     excerpt:
-      "HWID Spoofer vs new account after a ACE Anti-Cheat hardware flag – checks before Discord support.",
+      "HWID Spoofer vs new account after a Embark anti-cheat hardware flag: checks before Discord support.",
     category: "General",
     categoryTone: "purple",
-    sourceTitle: "HWID spoofer vs new account after an ACE Anti-Cheat ban",
+    sourceTitle: "HWID spoofer vs new account after an Embark anti-cheat ban",
     sourcePath: "/blog/hwid/",
     answer:
-      "Start by checking the account and device instructions for your product. The guide explains common HWID questions, when a new Level Infinite account is enough, and when a reset request may be needed.",
+      "Start by checking the account and device instructions for your product. The guide explains common HWID questions, when a new Embark account is enough, and when a reset request may be needed.",
     detail:
       "Avoid changing several system settings at once. If the product does not recognize your device, contact support with the relevant error details.",
     tip: "Use the official support path for device resets instead of relying on unrelated third-party tools.",
@@ -273,10 +273,10 @@ const additionalGuidePosts: ForumPost[] = [
     title: "What to review before installing cheat tools?",
     upvotes: 18,
     excerpt:
-      "Before installing cheat tools: status banner, Windows/Steam notes, and official setup on cheatsdeltaforce.net.",
+      "Before installing cheat tools: status banner, Windows/Steam notes, and official setup on cheatsarcraiders.com.",
     category: "Community",
     categoryTone: "green",
-    sourceTitle: "Delta Force hack features: aimbot, ESP, no recoil and more",
+    sourceTitle: "Arc Raiders hack features: aimbot, ESP, no recoil and more",
     sourcePath: "/blog/features/",
     answer:
       "Read the feature and setup information first, confirm that it matches your system, and check the current update and status notes.",
@@ -289,10 +289,10 @@ const additionalGuidePosts: ForumPost[] = [
     title: "How do I choose the right hack tier to buy?",
     upvotes: 48,
     excerpt:
-      "Pick Lite, Pro or Elite hack tools by feature set, then follow secure checkout on cheatsdeltaforce.net.",
+      "Pick Lite, Pro or Elite hack tools by feature set, then follow secure checkout on cheatsarcraiders.com.",
     category: "Community",
     categoryTone: "green",
-    sourceTitle: "How to buy Delta Force hacks in 2026",
+    sourceTitle: "How to buy Arc Raiders hacks in 2026",
     sourcePath: "/blog/buy-guide/",
     answer:
       "The buying guide recommends comparing included features and choosing the tier that fits your needs before continuing through the official checkout.",
@@ -310,16 +310,16 @@ const playerDiscussionThreads: ForumPost[] = [
     slug: "esp-vs-radar",
     category: "Guides & Builds",
     categoryTone: "blue",
-    title: "ESP vs Radar – Which One Do Players Prefer?",
+    title: "ESP vs Radar: Which One Do Players Prefer?",
     excerpt:
-      "I've been looking into different Delta Force tools lately. I see a lot of discussions about ESP and radar. What are the main differences between them, and which one do players generally find easier to understand?",
+      "I've been looking into different Arc Raiders tools lately. I see a lot of discussions about ESP and radar. What are the main differences between them, and which one do players generally find easier to understand?",
     author: "RogueHunter",
     age: "5 hours ago",
     commentsCount: 11,
     upvotes: 88,
     flair: "Discussion",
     body: [
-      "I've been looking into different Delta Force tools lately. I see a lot of discussions about ESP and radar. What are the main differences between them, and which one do players generally find easier to understand?",
+      "I've been looking into different Arc Raiders tools lately. I see a lot of discussions about ESP and radar. What are the main differences between them, and which one do players generally find easier to understand?",
     ],
     comments: [
       {
@@ -337,18 +337,18 @@ const playerDiscussionThreads: ForumPost[] = [
     ],
   },
   {
-    slug: "delta-force-update-tool-compatibility",
+    slug: "arc-raiders-update-tool-compatibility",
     category: "Patch Talk",
     categoryTone: "orange",
-    title: "Does Delta Force Update Break Third-Party Tools?",
+    title: "Does Arc Raiders Update Break Third-Party Tools?",
     excerpt:
-      "Every major update seems to change something. Do third-party tools usually need updates after a new Delta Force patch?",
+      "Every major update seems to change something. Do third-party tools usually need updates after a new Arc Raiders patch?",
     author: "NightRaid",
     age: "Yesterday",
     commentsCount: 14,
     upvotes: 72,
     body: [
-      "Every major update seems to change something. Do third-party tools usually need updates after a new Delta Force patch?",
+      "Every major update seems to change something. Do third-party tools usually need updates after a new Arc Raiders patch?",
     ],
     comments: [
       {
@@ -366,19 +366,19 @@ const playerDiscussionThreads: ForumPost[] = [
     ],
   },
   {
-    slug: "best-delta-force-maps-for-beginners",
+    slug: "best-arc-raiders-maps-for-beginners",
     category: "Community",
     categoryTone: "green",
-    title: "Best Maps for Beginners in Delta Force",
+    title: "Best Maps for Beginners in Arc Raiders",
     excerpt:
-      "I'm relatively new to Delta Force and still struggle with learning maps. Which map should I focus on first?",
+      "I'm relatively new to Arc Raiders and still struggle with learning maps. Which map should I focus on first?",
     author: "NewRecruit",
     age: "Yesterday",
     commentsCount: 10,
     upvotes: 55,
     flair: "New players",
     body: [
-      "I'm relatively new to Delta Force and still struggle with learning maps. Which map should I focus on first?",
+      "I'm relatively new to Arc Raiders and still struggle with learning maps. Which map should I focus on first?",
     ],
     comments: [
       {
@@ -396,10 +396,10 @@ const playerDiscussionThreads: ForumPost[] = [
     ],
   },
   {
-    slug: "delta-force-account-security",
+    slug: "arc-raiders-account-security",
     category: "General",
     categoryTone: "purple",
-    title: "How Do You Keep Your Level Infinite Account Secure?",
+    title: "How Do You Keep Your Embark Account Secure?",
     excerpt:
       "I've seen people lose accounts because they downloaded suspicious files. What precautions should everyone take?",
     author: "LootRunner",
@@ -425,19 +425,19 @@ const playerDiscussionThreads: ForumPost[] = [
     ],
   },
   {
-    slug: "delta-force-tool-features-discussion",
+    slug: "arc-raiders-tool-features-discussion",
     category: "General",
     categoryTone: "purple",
-    title: "What Features Matter Most When Comparing Delta Force Tools?",
+    title: "What Features Matter Most When Comparing Arc Raiders Tools?",
     excerpt:
-      "When comparing different Delta Force tools, what do you usually check first? Compatibility, performance, features, or support?",
+      "When comparing different Arc Raiders tools, what do you usually check first? Compatibility, performance, features, or support?",
     author: "NightRaid",
     age: "2 days ago",
     commentsCount: 13,
     upvotes: 49,
     flair: "Discussion",
     body: [
-      "When comparing different Delta Force tools, what do you usually check first? Compatibility, performance, features, or support?",
+      "When comparing different Arc Raiders tools, what do you usually check first? Compatibility, performance, features, or support?",
     ],
     comments: [
       {
@@ -458,7 +458,7 @@ const playerDiscussionThreads: ForumPost[] = [
     slug: "favorite-map",
     category: "General",
     categoryTone: "purple",
-    title: "Which Delta Force map do you enjoy playing the most?",
+    title: "Which Arc Raiders map do you enjoy playing the most?",
     excerpt:
       "the map is still my go-to because I know most of the routes, but ruined cities has some really interesting fights. What map do you guys prefer and why?",
     author: "RaidRunner",
@@ -467,7 +467,7 @@ const playerDiscussionThreads: ForumPost[] = [
     upvotes: 94,
     flair: "Active",
     body: [
-      "I've been playing Delta Force for a while now, and I'm curious about everyone's favorite map. the map is still my go-to because I know most of the routes, but ruined cities has some really interesting fights. What map do you guys prefer and why?",
+      "I've been playing Arc Raiders for a while now, and I'm curious about everyone's favorite map. the map is still my go-to because I know most of the routes, but ruined cities has some really interesting fights. What map do you guys prefer and why?",
     ],
     comments: [
       {
@@ -503,7 +503,7 @@ const playerDiscussionThreads: ForumPost[] = [
     upvotes: 67,
     flair: "Discussion",
     body: [
-      "Not everyone wants to burn every gadget charge on one life. I've been experimenting with budget AR and SMG builds that still compete in squad PvP. What loadouts are you running when you want to save your killstreak rewards?",
+      "Not everyone wants to burn every gadget charge on one life. I've been experimenting with budget AR and SMG builds that still compete in squad PvP on Topside. What loadouts are you running when you want to save meds and ammo for extract?",
     ],
     comments: [
       {
@@ -601,16 +601,16 @@ const playerDiscussionThreads: ForumPost[] = [
     slug: "beginner-mistakes",
     category: "Community",
     categoryTone: "green",
-    title: "What are the biggest mistakes new Delta Force players make?",
+    title: "What are the biggest mistakes new Arc Raiders players make?",
     excerpt:
-      "I recently started playing and honestly, there's a lot to learn. Between camos, loadouts, playlists, battle pass tiers, and ranked resets, it can get overwhelming.",
+      "I recently started playing and honestly, there's a lot to learn. Between camos, loadouts, playlists, battle pass tiers, and season resets, it can get overwhelming.",
     author: "NewSeason",
     age: "2 days ago",
     commentsCount: 11,
     upvotes: 61,
     flair: "New players",
     body: [
-      "I recently started playing and honestly, there's a lot to learn. Between camos, loadouts, playlists, battle pass tiers, and ranked resets, it can get overwhelming. What advice would you give someone starting their first season?",
+      "I recently started playing and honestly, there's a lot to learn. Between camos, loadouts, playlists, battle pass tiers, and season resets, it can get overwhelming. What advice would you give someone starting their first season?",
     ],
     comments: [
       {
@@ -663,7 +663,7 @@ const communityThreads: ForumPost[] = [
         author: "guide_team",
         age: "1 hour ago",
         score: 9,
-        body: "The ESP guide has a starter layout – change one slider per session.",
+        body: "The ESP guide has a starter layout: change one slider per session.",
       },
       {
         author: "night_owl",
@@ -687,7 +687,7 @@ const communityThreads: ForumPost[] = [
     flair: "Support",
     body: [
       "Blue warning on first run. I matched the file hash in the portal, then used More info → Run anyway.",
-      "If it still fails, note the exact error for a ticket – screenshots of the whole desktop are not much help.",
+      "If it still fails, note the exact error for a ticket: screenshots of the whole desktop are not much help.",
     ],
     comments: [
       {
@@ -759,7 +759,7 @@ const communityThreads: ForumPost[] = [
         author: "guide_team",
         age: "10 hours ago",
         score: 8,
-        body: "Never share login credentials – tickets are the path for license questions.",
+        body: "Never share login credentials: tickets are the path for license questions.",
       },
       {
         author: "squad_lead",
@@ -810,7 +810,7 @@ const communityThreads: ForumPost[] = [
     commentsCount: 2,
     upvotes: 22,
     body: [
-      "First ticket was a wall of pictures and no order ID. Second try: checkout email, Windows version, loader message copy-paste – reply the same evening.",
+      "First ticket was a wall of pictures and no order ID. Second try: checkout email, Windows version, loader message copy-paste: reply the same evening.",
     ],
     comments: [
       {
@@ -845,7 +845,7 @@ const communityThreads: ForumPost[] = [
         author: "solo_main",
         age: "18 hours ago",
         score: 7,
-        body: "Still run an OBS test if you stream – wrong capture source leaks overlays.",
+        body: "Still run an OBS test if you stream: wrong capture source leaks overlays.",
       },
       {
         author: "guide_team",
@@ -867,8 +867,8 @@ const communityThreads: ForumPost[] = [
     upvotes: 37,
     flair: "Pro tier",
     body: [
-      "Cranked smoothing, small aim FOV, practiced on an AK in offline mode until flicks looked human.",
-      "Chest bone only until recoil felt controlled without the assist fighting me.",
+      "Cranked smoothing, small aim FOV, practiced in a private Topside lobby until flicks looked human on my usual assault rifle.",
+      "Chest bone only until recoil felt controlled without the assist fighting me on Pro presets.",
     ],
     comments: [
       {
@@ -881,7 +881,7 @@ const communityThreads: ForumPost[] = [
         author: "guide_team",
         age: "1 day ago",
         score: 8,
-        body: "Aim guide has conservative defaults – start there.",
+        body: "Aim guide has conservative defaults: start there.",
       },
       {
         author: "cave_hunter",
@@ -909,7 +909,7 @@ const communityThreads: ForumPost[] = [
         author: "dpi_fixer",
         age: "36 hours ago",
         score: 9,
-        body: "Also check which GPU drives which cable – sounds dumb but it mattered for me.",
+        body: "Also check which GPU drives which cable: sounds dumb but it mattered for me.",
       },
       {
         author: "guide_team",
@@ -959,7 +959,7 @@ const communityThreads: ForumPost[] = [
     commentsCount: 2,
     upvotes: 34,
     body: [
-      "Bought Lite for ESP only, added Pro a month later. Portal showed an upgrade option – configs stayed, new combat tab appeared. Had to tune aim modules from scratch though.",
+      "Bought Lite for ESP only, added Pro a month later. Portal showed an upgrade option: configs stayed, new combat tab appeared. Had to tune aim modules from scratch though.",
     ],
     comments: [
       {
@@ -981,7 +981,7 @@ const communityThreads: ForumPost[] = [
     category: "General",
     categoryTone: "purple",
     title: "How long does UGC paperwork usually take?",
-    excerpt: "Expect weeks, not hours – and not every case succeeds.",
+    excerpt: "Expect weeks, not hours: and not every case succeeds.",
     author: "appeal_wait",
     age: "3 days ago",
     commentsCount: 3,
@@ -989,7 +989,7 @@ const communityThreads: ForumPost[] = [
     flair: "UGC",
     body: [
       "Submitted evidence through UGC workflows, tracked status in the dashboard. First reply from platform support took eleven days. Final outcome was a partial lift, not a full account reset.",
-      "The tool organized emails better than a random spreadsheet – not a magic button.",
+      "The tool organized emails better than a random spreadsheet: not a magic button.",
     ],
     comments: [
       {
@@ -1052,7 +1052,7 @@ const communityThreads: ForumPost[] = [
     upvotes: 27,
     flair: "Cloud DMA",
     body: [
-      "Thought Cloud DMA included ESP. It does not – portal onboarding is for the DMA path. Still needed Pro for the modules I wanted in raid.",
+      "Thought Cloud DMA included ESP. It does not: portal onboarding is for the DMA path. Still needed Pro for the modules I wanted in raid.",
     ],
     comments: [
       {
@@ -1137,7 +1137,7 @@ const communityThreads: ForumPost[] = [
     commentsCount: 2,
     upvotes: 16,
     body: [
-      "Used to toggle everything in the inventory UI. Now I enable the full overlay only after I spawn – less visual noise while sorting gear.",
+      "Used to toggle everything in the inventory UI. Now I enable the full overlay only after I spawn: less visual noise while sorting gear.",
     ],
     comments: [
       {
@@ -1178,7 +1178,7 @@ const communityThreads: ForumPost[] = [
         author: "patient_buyer",
         age: "4 days ago",
         score: 4,
-        body: "Chargebacks burn portal access – ticket first.",
+        body: "Chargebacks burn portal access: ticket first.",
       },
     ],
   },
@@ -1222,7 +1222,7 @@ const communityThreads: ForumPost[] = [
     commentsCount: 2,
     upvotes: 15,
     body: [
-      "Tried anyway – launcher errors and BE never happy. Built a small Windows box instead. Compatibility page matches what I saw.",
+      "Tried anyway: launcher errors and BE never happy. Built a small Windows box instead. Compatibility page matches what I saw.",
     ],
     comments: [
       {
@@ -1250,7 +1250,7 @@ const communityThreads: ForumPost[] = [
     commentsCount: 3,
     upvotes: 38,
     body: [
-      "Stopped wearing good headphones for a month, leaned on radar only. Deaths up. Back to proper audio, radar as backup – not replacement.",
+      "Stopped wearing good headphones for a month, leaned on radar only. Deaths up. Back to proper audio, radar as backup: not replacement.",
     ],
     comments: [
       {
@@ -1284,7 +1284,7 @@ const communityThreads: ForumPost[] = [
     commentsCount: 2,
     upvotes: 22,
     body: [
-      "Portal downloads were slow but okay. In-session micro-stutter on wireless. Cable to the router fixed latency jitter – not magic, just stable ping.",
+      "Portal downloads were slow but okay. In-session micro-stutter on wireless. Cable to the router fixed latency jitter: not magic, just stable ping.",
     ],
     comments: [
       {
@@ -1369,7 +1369,7 @@ const communityThreads: ForumPost[] = [
     upvotes: 44,
     flair: "Patch",
     body: [
-      "Banner went green, then yellow, then green again within an hour. Staff posted a “stable build” message after – learned to wait for that second note.",
+      "Banner went green, then yellow, then green again within an hour. Staff posted a “stable build” message after: learned to wait for that second note.",
     ],
     comments: [
       {
@@ -1482,7 +1482,7 @@ const communityThreads: ForumPost[] = [
     commentsCount: 2,
     upvotes: 18,
     body: [
-      'Full radar on public matches felt like cheating myself – in-game audio cues matter. I run a "minimal" preset with player ESP only.',
+      'Full radar on public matches felt like cheating myself: in-game audio cues matter. I run a "minimal" preset with player ESP only.',
     ],
     comments: [
       {
@@ -1524,7 +1524,7 @@ const communityThreads: ForumPost[] = [
         author: "guide_team",
         age: "9 days ago",
         score: 3,
-        body: "Workflow tips are personal – focus on what you can read mid-fight.",
+        body: "Workflow tips are personal: focus on what you can read mid-fight.",
       },
     ],
   },
@@ -1580,7 +1580,7 @@ const communityThreads: ForumPost[] = [
         author: "late_spawn",
         age: "10 days ago",
         score: 6,
-        body: "Still check corners – dots are not wall hacks.",
+        body: "Still check corners: dots are not wall hacks.",
       },
       {
         author: "guide_team",
@@ -1608,10 +1608,10 @@ const forumPostsSource: ForumPost[] = [
     upvotes: 128,
     flair: "Guide Q&A",
     sourceTitle:
-      "Delta Force hacks guide: loader setup in Single-player range or single-player sessions",
+      "Arc Raiders hacks guide: loader setup in Single-player range or single-player sessions",
     sourcePath: "/blog/cheat-codes/",
     body: [
-      "Live sessions use normal matchmaking – you are not hosting a private server. Tools run through the loader from your portal, not in-game codes.",
+      "Live sessions use normal matchmaking: you are not hosting a private server. Tools run through the loader from your portal, not in-game codes.",
       "Test in offline or a low-stakes run first: import a conservative preset, verify alignment, then go live when the status banner is green.",
     ],
     comments: [
@@ -1619,19 +1619,19 @@ const forumPostsSource: ForumPost[] = [
         author: "base_builder_42",
         age: "1 hour ago",
         score: 24,
-        body: "Single-player range first saved me – caught overlay scaling issues before I took loot to a live session.",
+        body: "Single-player range first saved me: caught overlay scaling issues before I took loot to a live session.",
       },
       {
         author: "m4_main",
         age: "48 min. ago",
         score: 11,
-        body: "Status banner is non-negotiable after Delta Force patches. Wait for the build note in Discord #status.",
+        body: "Status banner is non-negotiable after Arc Raiders patches. Wait for the build note in Discord #status.",
       },
       {
         author: "loot_runner",
         age: "35 min. ago",
         score: 8,
-        body: "Loader is the product. Random console lists from other games do not apply to Delta Force.",
+        body: "Loader is the product. Random console lists from other games do not apply to Arc Raiders.",
       },
     ],
   },
@@ -1650,7 +1650,7 @@ const forumPostsSource: ForumPost[] = [
     sourceTitle: "How to use your loader after checkout",
     sourcePath: "/blog/use-codes/",
     body: [
-      "Delta Force Hacks run through the external loader – not in-game console codes. On a private match or firing range session, install the loader, import a conservative preset, and verify ESP before you join for the map or live multiplayer matches.",
+      "Arc Raiders Hacks run through the external loader: not in-game console codes. On a private match or firing range session, install the loader, import a conservative preset, and verify ESP before you join for the map or live multiplayer matches.",
       "If a module does nothing, confirm the live status banner is online, restart the loader after patches, and open a Discord ticket with your order ID.",
     ],
     comments: [
@@ -1680,7 +1680,7 @@ const forumPostsSource: ForumPost[] = [
     commentsCount: 2,
     upvotes: 64,
     flair: "Guide Q&A",
-    sourceTitle: "Delta Force aim and recoil practice tips",
+    sourceTitle: "Arc Raiders aim and recoil practice tips",
     sourcePath: "/blog/console-tips/",
     body: [
       "Practice on your own private match or firing range session. Give yourself the weapon and ammo, spray at a wall from a fixed distance, and compare each burst so you can see how the pattern climbs and drifts.",
@@ -1706,7 +1706,7 @@ const forumPostsSource: ForumPost[] = [
     category: "Patch Talk",
     categoryTone: "orange",
     title:
-      "What should I check before playing after a ACE Anti-Cheat or game patch?",
+      "What should I check before playing after a Embark anti-cheat or game patch?",
     excerpt:
       "The patch-day checklist recommends checking build status, updating, and testing on a private match or firing range before a real session.",
     author: "guide_team",
@@ -1714,10 +1714,10 @@ const forumPostsSource: ForumPost[] = [
     commentsCount: 2,
     upvotes: 42,
     flair: "Guide Q&A",
-    sourceTitle: "ACE Anti-Cheat patch day checklist for Delta Force hacks",
-    sourcePath: "/blog/ace-patch/",
+    sourceTitle: "Embark anti-cheat patch day checklist for Arc Raiders hacks",
+    sourcePath: "/blog/patch-day/",
     body: [
-      "Check the current build and status notice first. After a game or ACE Anti-Cheat update, wait for a compatible build, update the loader, then verify the setup on a quiet or private match or firing range session before returning to busy live multiplayer matches.",
+      "Check the current build and status notice first. After a game or Embark anti-cheat update, wait for a compatible build, update the loader, then verify the setup on a quiet or private match or firing range session before returning to busy live multiplayer matches.",
       "If anything behaves unexpectedly, stop and review the status notes rather than assuming the old setup still applies. The checklist covers the patch-day routine in more detail.",
     ],
     comments: [
@@ -1775,7 +1775,7 @@ const forumPostsSource: ForumPost[] = [
     upvotes: 27,
     flair: "Guide Q&A",
     sourceTitle:
-      "Delta Force hacks guide: loader setup in Single-player range or single-player sessions",
+      "Arc Raiders hacks guide: loader setup in Single-player range or single-player sessions",
     sourcePath: "/blog/cheat-codes/",
     body: [
       "Use the private match or firing range session with the same weapon and ammo each attempt. Spray at a wall from a fixed distance and compare bursts so you see climb and horizontal drift.",

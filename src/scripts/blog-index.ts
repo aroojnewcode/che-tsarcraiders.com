@@ -18,7 +18,7 @@ export function initBlogIndexFilters(emptyMessage?: string) {
     filters.forEach((btn) => {
       const value = btn.getAttribute('data-blog-filter') ?? 'all';
       const active = value === tag;
-      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+      btn.setAttribute('aria-pressed', active ? 'true': 'false');
       btn.classList.toggle('is-active', active);
     });
   };
@@ -59,7 +59,7 @@ export function initBlogIndexFilters(emptyMessage?: string) {
     const next =
       tag === 'all'
         ? `${window.location.pathname}`
-        : `${window.location.pathname}?topic=${encodeURIComponent(tag)}`;
+       : `${window.location.pathname}?topic=${encodeURIComponent(tag)}`;
     window.history.replaceState(null, '', next);
   };
 

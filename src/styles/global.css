@@ -421,7 +421,7 @@ html.dark a.nav-link[data-nav-link]:hover .icon-app {
   color: var(--primary-foreground);
 }
 
-/* Navbar corner: weapon mark, then DELTA FORCE CHEATS on hover — no frame/box */
+/* Navbar corner: weapon mark, then ARC RAIDERS CHEATS on hover — no frame/box */
 .brand-corner {
   position: relative;
   z-index: 60;

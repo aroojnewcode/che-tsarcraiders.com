@@ -35,11 +35,11 @@ const {
 } = Astro.props;
 
 const resolvedValue = value ?? defaultValue;
-const values = Array.isArray(resolvedValue) ? resolvedValue : [resolvedValue];
-const getPercentage = (item: number) => (max === min ? 0 : ((item - min) / (max - min)) * 100);
-const rangeStart = values.length > 1 ? getPercentage(Math.min(...values)) : 0;
-const rangeEnd = values.length > 1 ? getPercentage(Math.max(...values)) : getPercentage(values[0] ?? min);
-const rangeStyle = orientation === "horizontal" ? { left: `${rangeStart}%`, width: `${rangeEnd - rangeStart}%` } : { bottom: `${rangeStart}%`, height: `${rangeEnd - rangeStart}%` };
+const values = Array.isArray(resolvedValue) ? resolvedValue: [resolvedValue];
+const getPercentage = (item: number) => (max === min ? 0: ((item - min) / (max - min)) * 100);
+const rangeStart = values.length > 1 ? getPercentage(Math.min(...values)): 0;
+const rangeEnd = values.length > 1 ? getPercentage(Math.max(...values)): getPercentage(values[0] ?? min);
+const rangeStyle = orientation === "horizontal" ? { left: `${rangeStart}%`, width: `${rangeEnd - rangeStart}%` }: { bottom: `${rangeStart}%`, height: `${rangeEnd - rangeStart}%` };
 ---
 
 <SliderPrimitive.Root
@@ -80,7 +80,7 @@ const rangeStyle = orientation === "horizontal" ? { left: `${rangeStart}%`, widt
         <SliderPrimitive.Thumb
           class={sliderThumb({ variant })}
           index={index}
-          style={orientation === "horizontal" ? { left: `${getPercentage(values[index] ?? min)}%` } : { bottom: `${getPercentage(values[index] ?? min)}%` }}
+          style={orientation === "horizontal" ? { left: `${getPercentage(values[index] ?? min)}%` }: { bottom: `${getPercentage(values[index] ?? min)}%` }}
           data-orientation={orientation}
           data-slot="slider-thumb"
         />

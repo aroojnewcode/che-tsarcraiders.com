@@ -28,11 +28,11 @@ const {
 
 const videoType = src.includes("youtube.com/shorts/") || src.includes("youtu.be/shorts/")
   ? "youtube-shorts"
-  : src.includes("youtube.com") ||
+ : src.includes("youtube.com") ||
       src.includes("youtu.be") ||
       src.includes("youtube-nocookie.com")
     ? "youtube"
-    : "native";
+   : "native";
 const youtubeId = videoType !== "native"
   ? ([
       /youtube\.com\/shorts\/([^?&]+)/,
@@ -43,7 +43,7 @@ const youtubeId = videoType !== "native"
     ]
       .map((pattern) => src.match(pattern)?.[1])
       .find(Boolean) ?? null)
-  : null;
+ : null;
 const isShort = videoType === "youtube-shorts";
 const embedUrl = youtubeId
   ? (() => {
@@ -58,10 +58,10 @@ const embedUrl = youtubeId
 
       const baseUrl = "https://www.youtube-nocookie.com/embed/" + youtubeId;
       const queryString = params.toString();
-      return queryString ? baseUrl + "?" + queryString : baseUrl;
+      return queryString ? baseUrl + "?" + queryString: baseUrl;
     })()
-  : null;
-const iframeSrc = srcdoc ? undefined : (embedUrl ?? undefined);
+ : null;
+const iframeSrc = srcdoc ? undefined: (embedUrl ?? undefined);
 ---
 
 {
@@ -80,7 +80,7 @@ const iframeSrc = srcdoc ? undefined : (embedUrl ?? undefined);
     >
       <track kind="captions" />
     </video>
-  ) : (
+  ): (
     <iframe
       data-sw-video
       class={video({ class: className })}
@@ -90,7 +90,7 @@ const iframeSrc = srcdoc ? undefined : (embedUrl ?? undefined);
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerpolicy="strict-origin-when-cross-origin"
       allowfullscreen
-      data-video-type={isShort ? "youtube-shorts" : "youtube"}
+      data-video-type={isShort ? "youtube-shorts": "youtube"}
       {...rest}
       data-slot="video"
     />
